@@ -3,6 +3,7 @@ import pox.openflow.libopenflow_01 as of
 from pox.lib.addresses import IPAddr
 from pox.lib.util import dpid_to_str
 import pox.lib.packet as pkt
+from pox.forwarding.l2_learning import LearningSwitch
 import networkFirewalls
 import webserver
 import subprocess
@@ -40,6 +41,21 @@ class controller (object):
         # For the webserver part, you might need a record of switches that are already connected to the controller. 
         # Please keep them in "devices".
         # For instance: self.devices[len(self.devices)] = fw
+        
+        dpid = event.dpid
+
+        if dpid == 1 or dpid == 2 or dpid == 3 or dpid == 4:
+            l2_instance = LearningSwitch(event.connection, False)
+            self.devices[len(self.devices)] = l2_instance
+            print(dpid, l2_instance.macToPort, self.devices)
+
+        if dpid == 5:
+            fw1 = networkFirewalls.FW1(event.connection)
+            self.devices[len(self.devices)] = fw1
+
+        if dpid == 6:
+            fw2 = networkFirewalls.FW2(event.connection)
+            self.devices[len(self.devices)] = fw2
 
         return
 
@@ -53,7 +69,14 @@ class controller (object):
         """
        
         # TODO: More logic needed here!
-        self.firstSeenAt[mac] = (where, datetime.datetime.now().isoformat())
+        
+        if mac in self.firstSeenAt:
+            return
+        
+        else:
+            self.firstSeenAt[mac] = (where, datetime.datetime.now().isoformat())
+            print(self.firstSeenAt[mac])
+
 
 
     def flush(self):
@@ -64,6 +87,14 @@ class controller (object):
         2) clear the mac learning table in each l2_learning switch (Python side) 
         3) clear the firstSeenAt dictionary: it's like starting from an empty state
         """
+        for key, value in self.devices.items():
+            value.macToPort = {}
+
+        self.firstSeenAt.clear()
+
+        for connection in core.openflow._connections.values():
+            connection.send(of.ofp_flow_mod(command=of.OFPFC_DELETE))
+
         return
 
 

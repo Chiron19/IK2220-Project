@@ -1,4 +1,3 @@
-
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.node import Switch
@@ -9,7 +8,6 @@ from mininet.node import OVSSwitch
 
 class MyTopo(Topo):
     def __init__(self):
-
         # Initialize topology
         Topo.__init__(self)
 
@@ -19,18 +17,67 @@ class MyTopo(Topo):
 
         # Initialize hosts
         h1 = self.addHost('h1', ip='100.0.0.10/24')
+
         h2 = self.addHost('h2', ip='100.0.0.11/24')
+
+        h3 = self.addHost('h3', ip='100.0.0.50/24')
+
+        h4 = self.addHost('h4', ip='100.0.0.51/24')
+
+        ws1 = self.addHost('ws1', ip='100.0.0.40/24')
+
+        ws2 = self.addHost('ws2', ip='100.0.0.41/24')
+
+        ws3 = self.addHost('ws3', ip='100.0.0.42/24')
 
         # Initial switches
         sw1 = self.addSwitch('sw1', dpid="1")
 
+        sw2 = self.addSwitch('sw2', dpid="2")
+
+        sw3 = self.addSwitch('sw3', dpid="3")
+
+        sw4 = self.addSwitch('sw4', dpid="4")
+
+        fw1 = self.addSwitch('fw1', dpid="5")
+
+        fw2 = self.addSwitch('fw2', dpid="6")
+
         # Defining links
+        # pub_z
         self.addLink(h1, sw1)
+
         self.addLink(h2, sw1)
+
+        self.addLink(fw1, sw1)
+
+        self.addLink(fw1, sw2)
+        # pri_Z
+        self.addLink(fw2, sw2)
+
+        self.addLink(fw2, sw3)
+
+        self.addLink(h3, sw3)
+
+        self.addLink(h4, sw3)
+        # DZ
+        self.addLink(sw4, sw2)
+
+        self.addLink(ws1, sw4)
+
+        self.addLink(ws2, sw4)
+
+        self.addLink(ws3, sw4)
+
 
 def startup_services(net):
     # Start http services and executing commands you require on each host...
     ### COMPLETE THIS PART ###
+    for ser in ["ws1", "ws2", "ws3"]:
+        
+        net.get(ser).cmd("python3 -m http.server 80 &")
+        print("[{}] Web server start:80".format(ser))
+
     pass
 
 
@@ -63,4 +110,8 @@ if __name__ == "__main__":
     # You may need some commands before stopping the network! If you don't, leave it empty
     ### COMPLETE THIS PART ###
 
+    # Delete all links
+    for link in net.links:
+        net.delLink(link)
+        
     net.stop()

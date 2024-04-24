@@ -33,12 +33,8 @@ def htmlify(content, req, replace=True):
 def macs_map():
     res = ""
     res += f"Global MAC table\n"
-    res += f"Fill it with a proper content\n"
-    res += f"For instance:\n"
-    res += f"11:22:33:44:55:66 : switch 1 - port 1 @ 2023-03-10 23:48:00"
-    res += f"11:22:33:44:44:33 : switch 2 - port 4 @ 2023-03-10 23:42:00"
-    res += f"11:22:33:44:11:22 : switch 3 - port 1 @ 2023-03-10 23:48:01"
-    res += f"11:11:22:44:44:44 : switch 3 - port 2 @ 2023-03-11 23:43:01"
+    for key, value in controller.firstSeenAt.items():
+        res += f"{key} : {value[0]} @ {value[1]}\n"
     return htmlify(res, request, True)
 
 
@@ -50,17 +46,11 @@ def macs_map():
 def macs():
 
     res = ""
-    res += f"Fill it with a proper content\n"
-    res += f"For instance:\n"
-    res += f"MAC table for switch 1:\n"
-    res += f"* port 1 - 11:22:33:44:55:66\n"
-    res += f"MAC table for switch 2:\n"
-    res += f"* port 4 - 11:22:33:44:44:33\n"
-    res += f"* port 1 - 11:22:33:44:55:66\n"
-    res += f"MAC table for switch 2:\n"
-    res += f"* port 4 - 11:22:33:44:44:33\n"
-    res += f"* port 2 - 11:22:33:44:55:66\n"
-    res += f"* port 3 - 11:22:33:44:33:33\n"
+    for key, value in controller.devices.items():
+        res += f"MAC table for switch {key}\n"
+        for ether, port in value.macToPort.items():
+            res += f"Port {port} - {ether}\n"
+        res += "\n"
     return htmlify(res, request, True)
 
 
