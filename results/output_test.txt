@@ -1,0 +1,27 @@
+[ws1] Web server start:80
+[ws2] Web server start:80
+[ws3] Web server start:80
+h1 ping h2 working as expected, ping True
+h2 ping h1 working as expected, ping True
+h3 ping h4 working as expected, ping True
+h4 ping h3 working as expected, ping True
+h3 ping h1 working as expected, ping True
+h1 ping h3 working as expected, ping False
+h3 ping h2 working as expected, ping True
+h2 ping h3 working as expected, ping False
+h4 ping h1 working as expected, ping True
+h1 ping h4 working as expected, ping False
+h4 ping h2 working as expected, ping True
+h2 ping h4 working as expected, ping False
+h1 ping ws1 working as expected, ping False
+h2 ping ws1 working as expected, ping False
+h3 ping ws1 working as expected, ping False
+h4 ping ws1 working as expected, ping False
+h1 http request ws1 successfully
+h3 http request ws1 successfully
+h1 http request ws2 successfully
+h3 http request ws2 successfully
+h1 http request ws3 successfully
+h3 http request ws3 successfully
+Passed 22/22 tests.
+mininet> 

@@ -27,36 +27,56 @@ def run_tests(net):
     ws3 = net.get('ws3')
 
     time.sleep(1)
+    
+    total_tests = pass_tests = 0
 
     # Launch ping tests
-    testing.ping(h1, h2, True)
+    total_tests += 1; pass_tests += testing.ping(h1, h2, True)
     
-    testing.ping(h3, h4, True)
+    total_tests += 1; pass_tests += testing.ping(h2, h1, True)
+    
+    total_tests += 1; pass_tests += testing.ping(h3, h4, True)
+    
+    total_tests += 1; pass_tests += testing.ping(h4, h3, True)
 
-    testing.ping(h3, h1, True)
+    total_tests += 1; pass_tests += testing.ping(h3, h1, True)
 
-    testing.ping(h1, h3, False)
+    total_tests += 1; pass_tests += testing.ping(h1, h3, False)
 
-    testing.ping(h3, h2, True)
+    total_tests += 1; pass_tests += testing.ping(h3, h2, True)
 
-    testing.ping(h2, h3, False)
+    total_tests += 1; pass_tests += testing.ping(h2, h3, False)
+    
+    total_tests += 1; pass_tests += testing.ping(h4, h1, True)
 
-    testing.ping(h1, ws1, False)
+    total_tests += 1; pass_tests += testing.ping(h1, h4, False)
 
-    testing.ping(h3, ws1, False)
+    total_tests += 1; pass_tests += testing.ping(h4, h2, True)
 
+    total_tests += 1; pass_tests += testing.ping(h2, h4, False)
+
+    total_tests += 1; pass_tests += testing.ping(h1, ws1, False)
+    
+    total_tests += 1; pass_tests += testing.ping(h2, ws1, False)
+
+    total_tests += 1; pass_tests += testing.ping(h3, ws1, False)
+    
+    total_tests += 1; pass_tests += testing.ping(h4, ws1, False)
+    
     # curl
-    testing.curl(h1, ws1, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h1, ws1, expected=True)
 
-    testing.curl(h3, ws1, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h3, ws1, expected=True)
     
-    testing.curl(h1, ws2, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h1, ws2, expected=True)
 
-    testing.curl(h3, ws2, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h3, ws2, expected=True)
     
-    testing.curl(h1, ws3, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h1, ws3, expected=True)
 
-    testing.curl(h3, ws3, expected=True)
+    total_tests += 1; pass_tests += testing.curl(h3, ws3, expected=True)
+    
+    print(f"Passed {pass_tests}/{total_tests} tests.")
 
 
 if __name__ == "__main__":

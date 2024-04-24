@@ -47,7 +47,7 @@ class controller (object):
         if dpid == 1 or dpid == 2 or dpid == 3 or dpid == 4:
             l2_instance = LearningSwitch(event.connection, False)
             self.devices[len(self.devices)] = l2_instance
-            print(dpid, l2_instance.macToPort, self.devices)
+            # print(dpid, l2_instance.macToPort, self.devices)
 
         if dpid == 5:
             fw1 = networkFirewalls.FW1(event.connection)

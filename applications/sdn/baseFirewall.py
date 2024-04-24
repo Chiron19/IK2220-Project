@@ -114,39 +114,47 @@ class Firewall (l2_learning.LearningSwitch):
             if icmp_packet:
                 print(icmp_packet.type)
                 if icmp_packet.type == 0:
-                    print("ping coming back to private zone")
+                    print(f"{src_addr} -> {dst_addr}: ping response to private zone, ALLOW")
                     return True
                           
                           	
         for rule in self.rules:
-          #fw_hwport = rules[0]
-          #protocol = rules[1]
-          #source_subnet = rules[2]
-          #tcp_source_port = rules[3]
-          #destination_subnet = rules[4]
-          #tcp_dest_port = rules[5]
-          #allow_or_block = rules[6]
+            #fw_hardware_port = rules[0]
+            #protocol = rules[1]
+            #src_subnet = rules[2]
+            #tcp_src_port = rules[3]
+            #dst_subnet = rules[4]
+            #tcp_dst_port = rules[5]
+            #allow_or_block = rules[6]
 
-          print("checking individual conditions")
-          print(f"src addr: {src_addr}")
-          print(f"dst addr: {dst_addr}")
-          print(f"received on port {input_port}: ", input_port)
-          print("Rule 0 {}".format((r0 := (rule[0] == input_port))))
-          print("Rule 1 {}".format((r1 := self.protocol_check(rule[1],tcp_udp))))
-          print("Rule 2 {}".format((r2 := self.subnet_check(rule[2], src_addr))))
-          print("Rule 3 {}".format((r3 := self.tcp_port_check(rule[3], tcp_src_port))))
-          print("Rule 4 {}".format((r4 := self.subnet_check(rule[4], dst_addr))))
-          print("Rule 5 {}".format((r5 := self.tcp_port_check(rule[5], tcp_dst_port))))
-          print("Rule 6 {}".format((r6 := rule[6])))
-          print("end checking") 
+            r0 = (rule[0] == input_port)
+            r1 = self.protocol_check(rule[1],tcp_udp)
+            r2 = self.subnet_check(rule[2], src_addr)
+            r3 = self.tcp_port_check(rule[3], tcp_src_port)
+            r4 = self.subnet_check(rule[4], dst_addr)
+            r5 = self.tcp_port_check(rule[5], tcp_dst_port)
+            r6 = rule[6]
+            
+            # print("checking individual conditions")
+            # print(f"src addr: {src_addr}")
+            # print(f"dst addr: {dst_addr}")
+            # print(f"received on port Input Port: {input_port}")
+            # print(f"Rule 0 {r0}")
+            # print(f"Rule 1 {r1}")
+            # print(f"Rule 2 {r2}")
+            # print(f"Rule 3 {r3}")
+            # print(f"Rule 4 {r4}")
+            # print(f"Rule 5 {r5}")
+            # print(f"Rule 6 {r6}")
+            # print("end checking") 
           
-          if r0 and r1 and r2 and r3 and r4 and r5:
-            if rule[6] == 'allow':
-                print("ALLOWED")
-                return True
-            elif rule[6] == 'block':
-                print("BLOCKED")
-                return False
+            if r0 and r1 and r2 and r3 and r4 and r5:
+                if rule[6] == 'allow':
+                    print(f"{src_addr} -> {dst_addr}: ALLOWED [{r0}, {r1}, {r2}, {r3}, {r4}, {r5}, {r6}]")
+                    return True
+                elif rule[6] == 'block':
+                    print(f"{src_addr} -> {dst_addr}: BLOCKED [{r0}, {r1}, {r2}, {r3}, {r4}, {r5}, {r6}]")
+                    return False
        
 
         print("NO FIREWALL CONDITIONS MATCHED")
@@ -212,20 +220,20 @@ class Firewall (l2_learning.LearningSwitch):
         # ip_or_not = packet.find('IPV4') or packet.find('ICMP')
         ip_or_not = (packet.type == pkt.ethernet.IP_TYPE)
         
-        print("Packet Overview:", packet, type(packet), packet.type, ip_or_not)
+        # print("Packet Overview:", packet, type(packet), packet.type, ip_or_not)
         
         if ip_or_not: 
             if self.has_access(packet, event.port):
                 print(f"\n{self.name} : Packet allowed by the Firewall")
                 log.info(f"\n{self.name} : Packet allowed by the Firewall")
                 self.install_allow(packet, received_port)
-                print(packet, "\n")
+                # print(packet, "\n")
             
             else:
                 print(f"\n{self.name} : Packet blocked by the Firewall!")
                 log.warning(f"\n{self.name} : Packet blocked by the Firewall!")
                 self.install_block(packet, received_port)
-                print(packet, "\n")
+                # print(packet, "\n")
                 return
         
         
