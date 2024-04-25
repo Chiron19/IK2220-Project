@@ -112,7 +112,7 @@ class Firewall (l2_learning.LearningSwitch):
             icmp_packet = ip_packet.find('icmp')
             print(icmp_packet)
             if icmp_packet:
-                print(icmp_packet.type)
+                # print(icmp_packet.type)
                 if icmp_packet.type == 0:
                     print(f"{src_addr} -> {dst_addr}: ping response to private zone, ALLOW")
                     return True
@@ -224,13 +224,13 @@ class Firewall (l2_learning.LearningSwitch):
         
         if ip_or_not: 
             if self.has_access(packet, event.port):
-                print(f"\n{self.name} : Packet allowed by the Firewall")
+                # print(f"\n{self.name} : Packet allowed by the Firewall")
                 log.info(f"\n{self.name} : Packet allowed by the Firewall")
                 self.install_allow(packet, received_port)
                 # print(packet, "\n")
             
             else:
-                print(f"\n{self.name} : Packet blocked by the Firewall!")
+                # print(f"\n{self.name} : Packet blocked by the Firewall!")
                 log.warning(f"\n{self.name} : Packet blocked by the Firewall!")
                 self.install_block(packet, received_port)
                 # print(packet, "\n")
