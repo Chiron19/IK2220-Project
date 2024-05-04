@@ -1,5 +1,11 @@
 ## How to run the project
 
+For single test, run `make app` in a terminal first, then run `make topo` in another terminal.
+
+For batch test, run `make test` in a terminal directly, result logs would appear in the "result" directory. After finishing, run `make report` manually to concentrate the output files into a single report.
+
+If encountering "controller is currently running" or other problems, close all terminals and run `make clean`. It will kill all processes and remove file linkings and Python cache files, except for results or report.
+
 **make topo:**
 
 Starts mininet topology
@@ -22,3 +28,6 @@ Restarts topology, and the sdn controller. Then it runs provided test scenarios.
 
 Removes all junks added to different directories to run the application.
 
+**make report:**
+
+Generate report with output files automatically.
