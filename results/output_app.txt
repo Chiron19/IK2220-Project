@@ -3,315 +3,73 @@ POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
  * Debug mode: off
 DEBUG:core:POX 0.7.0 (gar) going up...
 DEBUG:core:Running on CPython (3.10.6/Mar 10 2023 10:55:28)
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8080
- * Running on http://10.0.2.15:8080
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
 DEBUG:core:Platform is Linux-5.15.0-67-generic-x86_64-with-glibc2.35
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
 WARNING:version:You're running Python 3.10.
 WARNING:version:If you run into problems, try using a supported version.
 INFO:core:POX 0.7.0 (gar) is up.
 DEBUG:openflow.of_01:Listening on 0.0.0.0:6633
-INFO:openflow.of_01:[00-00-00-00-00-05 1] connected
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.0.103:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:openflow.of_01:[00-00-00-00-00-03 6] connected
+INFO:openflow.of_01:[00-00-00-00-00-05 2] connected
 Firewall FW1 is running
-INFO:openflow.of_01:[00-00-00-00-00-03 2] connected
 INFO:openflow.of_01:[00-00-00-00-00-06 3] connected
 Firewall FW2 is running
-INFO:openflow.of_01:[00-00-00-00-00-01 4] connected
-INFO:openflow.of_01:[00-00-00-00-00-02 5] connected
-INFO:openflow.of_01:[00-00-00-00-00-04 6] connected
-('switch 6 - port 2', '2024-04-25T13:27:58.770835')
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-('switch 5 - port 1', '2024-04-25T13:27:59.270152')
-100.0.0.10 -> 100.0.0.11: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:01.1
-('switch 6 - port 1', '2024-04-25T13:27:59.289852')
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:02.2
-('switch 6 - port 2', '2024-04-25T13:27:59.534950')
-('switch 5 - port 2', '2024-04-25T13:27:59.551274')
-('switch 5 - port 2', '2024-04-25T13:27:59.565106')
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:04.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:04.3
-('switch 5 - port 1', '2024-04-25T13:27:59.790314')
-('switch 5 - port 2', '2024-04-25T13:27:59.794969')
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:01 unknown -- flooding
+INFO:openflow.of_01:[00-00-00-00-00-02 4] connected
+INFO:openflow.of_01:[00-00-00-00-00-01 5] connected
+INFO:openflow.of_01:[00-00-00-00-00-04 7] connected
+('switch 6 - port 1', '2024-05-04T14:56:36.421084')
+('switch 6 - port 2', '2024-05-04T14:56:36.441252')
+('switch 6 - port 1', '2024-05-04T14:56:36.537191')
+('switch 5 - port 1', '2024-05-04T14:56:36.543949')
+('switch 5 - port 1', '2024-05-04T14:56:36.605873')
+('switch 5 - port 2', '2024-05-04T14:56:36.767489')
+('switch 5 - port 2', '2024-05-04T14:56:36.841325')
+('switch 5 - port 2', '2024-05-04T14:56:36.870255')
+('switch 5 - port 2', '2024-05-04T14:56:36.964671')
+('switch 5 - port 1', '2024-05-04T14:56:36.988702')
+('switch 5 - port 2', '2024-05-04T14:56:36.990212')
+('switch 5 - port 2', '2024-05-04T14:56:37.030356')
+('switch 6 - port 2', '2024-05-04T14:56:37.058464')
+('switch 6 - port 2', '2024-05-04T14:56:37.309190')
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:01.1
+Packet Overview: [00:00:00:00:00:03>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:4c6][ICMP id:19513 seq:1]
 100.0.0.50 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 65531
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:01 unknown -- flooding
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:01 unknown -- flooding
+Rule Installed on Output Port: 1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:01.1
+Packet Overview: [00:00:00:00:00:03>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:527f][ICMP id:19513 seq:2]
 100.0.0.50 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 65531
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:01 unknown -- flooding
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:01 unknown -- flooding
+Rule Installed on Output Port: 1
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.3 -> 00:00:00:00:00:01.1
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.3
-None
-[t:ECHO_REPLY c:0 chk:51ad][ICMP id:2891 seq:1]
-100.0.0.10 -> 100.0.0.50: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:03 IP] 2048 True [t:ECHO_REPLY c:0 chk:cc20][ICMP id:19513 seq:3]
 Rule Installed on Output Port: 2
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.2
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:03 IP] 2048 True [t:ECHO_REPLY c:0 chk:df8f][ICMP id:19513 seq:4]
+Rule Installed on Output Port: 2
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.2
-None
-[t:ECHO_REPLY c:0 chk:51ad][ICMP id:2891 seq:1]
-100.0.0.10 -> 100.0.0.50: ping response to private zone, ALLOW
+DEBUG:openflow.of_01:1 connection aborted
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:01.1
+Packet Overview: [00:00:00:00:00:03>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:44df][ICMP id:19513 seq:31]
+100.0.0.50 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.2
+Rule Installed on Output Port: 1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:01.1
+Packet Overview: [00:00:00:00:00:03>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:299][ICMP id:19513 seq:32]
+100.0.0.50 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
+INFO:baseFirewall:
+FW1 : Packet allowed by the Firewall
+Rule Installed on Output Port: 1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.3 -> 00:00:00:00:00:01.1
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:03.3
-None
-[t:ECHO_REQUEST c:0 chk:918d][ICMP id:56148 seq:1]
-100.0.0.10 -> 100.0.0.50: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-('switch 5 - port 2', '2024-04-25T13:28:00.811316')
-('switch 5 - port 2', '2024-04-25T13:28:01.065511')
-('switch 6 - port 1', '2024-04-25T13:28:01.108824')
-('switch 6 - port 2', '2024-04-25T13:28:01.328261')
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-100.0.0.50 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 65531
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-100.0.0.50 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 65531
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:03.3
-('switch 5 - port 1', '2024-04-25T13:28:03.641534')
-None
-[t:ECHO_REPLY c:0 chk:800d][ICMP id:49937 seq:1]
-100.0.0.11 -> 100.0.0.50: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:03 IP] 2048 True [t:ECHO_REPLY c:0 chk:fc38][ICMP id:19513 seq:33]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:03.2
-None
-[t:ECHO_REPLY c:0 chk:800d][ICMP id:49937 seq:1]
-100.0.0.11 -> 100.0.0.50: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:03.3
-None
-[t:ECHO_REQUEST c:0 chk:159][ICMP id:29512 seq:1]
-100.0.0.11 -> 100.0.0.50: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-('switch 5 - port 2', '2024-04-25T13:28:04.396632')
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:01.1
-100.0.0.51 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:01.1
-100.0.0.51 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.3
-None
-[t:ECHO_REPLY c:0 chk:67bc][ICMP id:55440 seq:1]
-100.0.0.10 -> 100.0.0.51: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.2
-None
-[t:ECHO_REPLY c:0 chk:67bc][ICMP id:55440 seq:1]
-100.0.0.10 -> 100.0.0.51: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:04.3
-None
-[t:ECHO_REQUEST c:0 chk:e339][ICMP id:26425 seq:1]
-100.0.0.10 -> 100.0.0.51: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:02.1
-100.0.0.51 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:02.1
-100.0.0.51 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:04.3
-None
-[t:ECHO_REPLY c:0 chk:2844][ICMP id:16535 seq:1]
-100.0.0.11 -> 100.0.0.51: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:04.2
-None
-[t:ECHO_REPLY c:0 chk:2844][ICMP id:16535 seq:1]
-100.0.0.11 -> 100.0.0.51: ping response to private zone, ALLOW
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 00:00:00:00:00:04.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:04.3
-None
-[t:ECHO_REQUEST c:0 chk:1dbd][ICMP id:56191 seq:1]
-100.0.0.11 -> 100.0.0.51: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:05.3
-100.0.0.10 -> 100.0.0.40: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:05.3
-100.0.0.11 -> 100.0.0.40: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:05.1
-100.0.0.50 -> 100.0.0.40: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW2 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.3 -> 00:00:00:00:00:05.1
-100.0.0.51 -> 100.0.0.40: BLOCKED [True, True, True, True, True, True, block]
-WARNING:baseFirewall:
-FW2 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:05.3
-100.0.0.10 -> 100.0.0.40: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:05.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:05.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:05.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.3 -> 00:00:00:00:00:01.1
-100.0.0.40 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:05.1
-100.0.0.50 -> 100.0.0.40: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:05.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:05.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 00:00:00:00:00:05.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.2 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.3 -> 00:00:00:00:00:03.2
-[TCP 80>42844 seq:2032304307 ack:3631511311 f:SA opt:MSS,SACKPERM,TSOPT,NOP,WSOPT]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:05.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:06.3
-100.0.0.10 -> 100.0.0.41: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:06.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:06.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:01.1
-100.0.0.41 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:06.1
-100.0.0.50 -> 100.0.0.41: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:06.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:06.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 00:00:00:00:00:06.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.3 -> 00:00:00:00:00:03.2
-[TCP 80>34362 seq:1400253746 ack:3003153917 f:SA opt:MSS,SACKPERM,TSOPT,NOP,WSOPT]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.3
-100.0.0.10 -> 100.0.0.42: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:07.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 00:00:00:00:00:01.1
-100.0.0.42 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:07.1
-100.0.0.50 -> 100.0.0.42: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:07.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.2 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 00:00:00:00:00:07.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.4 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 00:00:00:00:00:03.2
-[TCP 80>45830 seq:1731737916 ack:1562753864 f:SA opt:MSS,SACKPERM,TSOPT,NOP,WSOPT]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:03.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.1 -> 00:00:00:00:00:03.2
-INFO:openflow.of_01:[00-00-00-00-00-05 1] closed
-INFO:openflow.of_01:[00-00-00-00-00-03 2] closed
-INFO:openflow.of_01:[00-00-00-00-00-06 3] closed
-INFO:openflow.of_01:[00-00-00-00-00-01 4] closed
-INFO:openflow.of_01:[00-00-00-00-00-02 5] closed
-INFO:openflow.of_01:[00-00-00-00-00-04 6] closed

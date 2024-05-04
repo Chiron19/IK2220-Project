@@ -1,7 +1,7 @@
 import topology
 
 
-def ping(client, server, expected, count=1, wait=3):
+def ping(client, server, expected, count=5, wait=3):
 
     # TODO: What if ping fails? How long does it take? Add a timeout to the command!
     cmd = f"ping {server.IP()} -c {count} -W {wait} >/dev/null 2>&1; echo $?"

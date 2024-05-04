@@ -32,8 +32,8 @@ class FW1 (Firewall):
         Firewall.__init__(self, connection, "FW1")
         self.rules = [
             [1, 'TCP', 'any', 'any', '100.0.0.40/28', '80', 'allow'], # allow Pbz to Dmz http
-            [1, 'any', 'any', 'any', 'any', 'any', 'block'], # block all outbound from Pbz
             [2, 'any', 'any', 'any', 'any', 'any', 'allow'] # allow all inbound to Pbz
+            # [1, 'any', 'any', 'any', 'any', 'any', 'block'] # block all outbound from Pbz (Default Drop)
         ]
 
 

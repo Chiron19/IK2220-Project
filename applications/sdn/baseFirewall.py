@@ -18,6 +18,7 @@ log = core.getLogger()
 class Firewall (l2_learning.LearningSwitch):
 
     rules = []
+    rules_for_specific_reply_packets = []
 
     def __init__(self, connection, name):
 
@@ -97,25 +98,28 @@ class Firewall (l2_learning.LearningSwitch):
         src_addr = ipp_payload.srcip
         dst_addr = ipp_payload.dstip
         
+        ###
+        ### UNSAFE AND NOT-MODULAR SOLUTION (HARD-CODED RULES) ###
+        ###
         # stateless firewall cannot distinguish if a packet is response, check specifically
         # check for messages coming back to h3, h4
         # if dst_addr in prz subnet, only response allow
-        prz = '100.0.0.48/30'
-        if self.subnet_check(prz, dst_addr):
-            # check TCP
-            tcp_packet = ip_packet.find('tcp')
-            print(tcp_packet)
-            if tcp_packet:
-                if tcp_packet.ACK:
-                    return True
-            # check ICMP
-            icmp_packet = ip_packet.find('icmp')
-            print(icmp_packet)
-            if icmp_packet:
-                # print(icmp_packet.type)
-                if icmp_packet.type == 0:
-                    print(f"{src_addr} -> {dst_addr}: ping response to private zone, ALLOW")
-                    return True
+        # prz = '100.0.0.48/30'
+        # if self.subnet_check(prz, dst_addr):
+        #     # check TCP
+        #     tcp_packet = ip_packet.find('tcp')
+        #     print(tcp_packet)
+        #     if tcp_packet:
+        #         if tcp_packet.ACK:
+        #             return True
+        #     # check ICMP
+        #     icmp_packet = ip_packet.find('icmp')
+        #     print(icmp_packet)
+        #     if icmp_packet:
+        #         # print(icmp_packet.type)
+        #         if icmp_packet.type == 0:
+        #             print(f"{src_addr} -> {dst_addr}: ping response to private zone, ALLOW")
+        #             return True
                           
                           	
         for rule in self.rules:
@@ -162,10 +166,9 @@ class Firewall (l2_learning.LearningSwitch):
 
     # On receiving a packet from dataplane, your firewall should process incoming event and apply the correct OF rule on the device.
     
-    def install_allow(self, packet, received_port):
-        match_obj = of.ofp_match.from_packet(packet, received_port)
+    def install_allow(self, packet, received_port, install_allow_reverse = False):
         msg = of.ofp_flow_mod()
-        msg.match = match_obj
+        msg.match = of.ofp_match.from_packet(packet, received_port)
         
         out_port = -1
         
@@ -178,12 +181,27 @@ class Firewall (l2_learning.LearningSwitch):
         else:
             out_port = of.OFPP_FLOOD 	                
         
-        
+    
         print(f"Rule Installed on Output Port: {out_port}")
         msg.actions.append(of.ofp_action_output(port = out_port))
         msg.idle_timeout = 10
         msg.hard_timeout = 30
         self.connection.send(msg)
+        
+        if install_allow_reverse:
+            self.rules_for_specific_reply_packets.append(of.ofp_match(in_port = out_port, 
+                                                                      dl_src = packet.dst, 
+                                                                      dl_dst = packet.src, 
+                                                                      dl_type = packet.type, 
+                                                                      nw_src = packet.payload.dstip, 
+                                                                      nw_dst = packet.payload.srcip, 
+                                                                      nw_proto = packet.payload.protocol))
+            # print("Rules for specific reply packets Count:", 
+            #       len(self.rules_for_specific_reply_packets), 
+            #       "\n", 
+            #       self.rules_for_specific_reply_packets, 
+            #       "---End---")
+            
         return
         
     def install_block(self, packet, received_port):
@@ -222,19 +240,41 @@ class Firewall (l2_learning.LearningSwitch):
         
         # print("Packet Overview:", packet, type(packet), packet.type, ip_or_not)
         
-        if ip_or_not: 
+        if ip_or_not:
+            print("Packet Overview:", packet, packet.type, ip_or_not, packet.find('icmp'))
+            
+            # Check if on reply rule list (reply packet bypass firewall and remove corresponding entry from list)
+            rule_from_packet = of.ofp_match(in_port = received_port, 
+                                            dl_src = packet.src, 
+                                            dl_dst = packet.dst, 
+                                            dl_type = packet.type, 
+                                            nw_src = packet.payload.srcip, 
+                                            nw_dst = packet.payload.dstip, 
+                                            nw_proto = packet.payload.protocol)
+            # if str(packet.payload.srcip) == "100.0.0.10":    
+            #     print(rule_from_packet, "Rule from packet")
+            #     for rule in self.rules_for_specific_reply_packets:
+            #         print(rule, "Rules for specific reply packets")
+            #     print("----------------------")
+            if rule_from_packet in self.rules_for_specific_reply_packets:
+                self.rules_for_specific_reply_packets.remove(rule_from_packet)
+                self.install_allow(packet, received_port)
+                return
+            
+            # Check if packet is allowed by the firewall
             if self.has_access(packet, event.port):
                 # print(f"\n{self.name} : Packet allowed by the Firewall")
                 log.info(f"\n{self.name} : Packet allowed by the Firewall")
-                self.install_allow(packet, received_port)
+                self.install_allow(packet, received_port, True)
                 # print(packet, "\n")
             
             else:
                 # print(f"\n{self.name} : Packet blocked by the Firewall!")
                 log.warning(f"\n{self.name} : Packet blocked by the Firewall!")
-                self.install_block(packet, received_port)
+                # self.install_block(packet, received_port)
                 # print(packet, "\n")
-                return
+   
+            return
         
         
         super(Firewall, self)._handle_PacketIn(event)
