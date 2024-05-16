@@ -20,15 +20,17 @@ class MyTopo(Topo):
 
         h2 = self.addHost('h2', ip='100.0.0.11/24')
 
-        h3 = self.addHost('h3', ip='100.0.0.50/24')
+        h3 = self.addHost('h3', ip='10.0.0.50/24')
 
-        h4 = self.addHost('h4', ip='100.0.0.51/24')
+        h4 = self.addHost('h4', ip='10.0.0.51/24')
 
         ws1 = self.addHost('ws1', ip='100.0.0.40/24')
 
         ws2 = self.addHost('ws2', ip='100.0.0.41/24')
 
         ws3 = self.addHost('ws3', ip='100.0.0.42/24')
+
+        insp = self.addHost('insp', ip='100.0.0.30/24')
 
         # Initial switches
         sw1 = self.addSwitch('sw1', dpid="1")
@@ -43,6 +45,12 @@ class MyTopo(Topo):
 
         fw2 = self.addSwitch('fw2', dpid="6")
 
+        lb = self.addSwitch('lb', dpid="7")
+
+        ids = self.addSwitch('ids', dpid="8") 
+
+        napt = self.addSwitch('napt', dpid="9")
+
         # Defining links
         # pub_z
         self.addLink(h1, sw1)
@@ -53,15 +61,23 @@ class MyTopo(Topo):
 
         self.addLink(fw1, sw2)
         # pri_Z
-        self.addLink(fw2, sw2)
+        self.addLink(fw2, napt)
 
-        self.addLink(fw2, sw3)
+        self.addLink(napt, sw3)
 
         self.addLink(h3, sw3)
 
         self.addLink(h4, sw3)
+
+        self.addLink(fw2, sw2)
         # DZ
-        self.addLink(sw4, sw2)
+        self.addLink(ids, sw2)
+
+        self.addLink(lb, ids)
+
+        self.addLink(ids, insp)
+
+        self.addLink(sw4, lb)
 
         self.addLink(ws1, sw4)
 
