@@ -2,7 +2,29 @@ Unable to contact the remote controller at 127.0.0.1:6633
 [ws1] Web server start:80
 [ws2] Web server start:80
 [ws3] Web server start:80
+tcpdump on insp start
+----------- Basic Ping Test-----------
+h1 ping h2 working as expected, ping True
 h3 ping h1 working as expected, ping True
 h1 ping h3 working as expected, ping False
-Passed 2/2 tests.
+h3 ping h2 working as expected, ping True
+h2 ping h3 working as expected, ping False
+h1 ping ws1 working as expected, ping False
+h3 ping ws1 working as expected, ping False
+----------- Virtual Address Ping Test-----------
+h1 ping virtual IP  100.0.0.45  working as expected, ping True
+h2 ping virtual IP  100.0.0.45  working as expected, ping True
+h3 ping virtual IP  100.0.0.45  working as expected, ping True
+h4 ping virtual IP  100.0.0.45  working as expected, ping True
+----------- HTTP method Test-----------
+h1 operates GET IDS System works correctly
+h1 operates POST IDS System works correctly
+h1 operates PUT IDS System works correctly
+----------- Linux and SQL code injection Test-----------
+h1 operates PUT IDS System works correctly
+h1 operates PUT IDS System works correctly
+h1 operates PUT IDS System works correctly
+h1 operates PUT IDS System works correctly
+h1 operates PUT IDS System works correctly
+Passed 19/19 tests.
 mininet> 

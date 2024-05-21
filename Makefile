@@ -18,6 +18,8 @@ ifeq ($(wildcard $(poxdir)/ext/baseController.py),)
 app:
 	sudo ln -s $(CURDIR)/applications/sdn/*.py $(poxdir)/ext
 	sudo chmod -x $(poxdir)/ext/*.py
+	sudo ln -s $(CURDIR)/applications/nfv/*.click $(poxdir)/ext
+	sudo chmod -x $(poxdir)/ext/*.click
 	ls $(poxdir)/ext
 	@make app
 endif

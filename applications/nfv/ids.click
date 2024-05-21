@@ -1,3 +1,5 @@
+Script(print "Test IDS if running?????")
+
 //ids-eth3<->insp-eth0 (OK OK)  #TO INSP
 //ids-eth2<->sw2-eth3 (OK OK)   #TO SWITCH2/OUTSIDE ZONES
 //lb1-eth2<->ids-eth1 (OK OK)   #TO WEB SERVERS/LOAD BALANCER
@@ -101,23 +103,22 @@ serverPacketType[0] -> serverARP -> toSWITCH;
 serverPacketType[1] -> serverIP -> FixedForwarder -> toSWITCH;
 serverPacketType[2] -> serverDrop -> Discard;
 
-DriverManager(pause , print > ./click_results/ids.report  " 
+DriverManager(pause , print > ./results/ids.report  " 
 =================== IDS Report ===================
-Input Packet rate (pps): $(add $(switchInput.rate) $(serverInput.rate))
+Input Packet Rate (pps):    $(add $(switchInput.rate) $(serverInput.rate))
+Output Packet Rate (pps):   $(add $(switchOutput.rate) $(serverOutput.rate))
 
-Output Packet rate (pps): $(add $(switchOutput.rate) $(serverOutput.rate))
+Total # of  input packets:  $(add $(switchInput.count) $(serverInput.count))
+Total # of  output packets: $(add $(switchOutput.count) $(serverOutput.count))
 
-Total # of   input packets:  $(add $(switchInput.count) $(serverInput.count))
-Total # of   output packets:  $(add $(switchOutput.count) $(serverOutput.count))
+Total # of  IP  packets:    $(add $(switchIP.count) $(serverIP.count))
+Total # of  ARP  packets:   $(add $(switchARP.count) $(serverARP.count)) 
+Total # of  HTTP packets:   $(httpPacket.count) 
 
-Total # of   IP  packets:  $(add $(switchIP.count) $(serverIP.count))
-Total # of   ARP  packets:  $(add $(switchARP.count) $(serverARP.count)) 
-Total # of   HTTP packets:  $(httpPacket.count) 
+Total # of  PUT packets:    $(putOptions.count)
+Total # of  POST packets:   $(postOptions.count) 
 
-Total # of   PUT packets:  $(putOptions.count)
-Total # of   POST packets:  $(postOptions.count) 
-
-Total # of   to INSP packets: $(toInsp.count)
-Total # of   dropped packets:  $(add $(switchDrop.count) $(serverDrop.count))
+Total # of  to INSP packets:    $(toInsp.count)
+Total # of  dropped packets:    $(add $(switchDrop.count) $(serverDrop.count))
 =================================================
-" );
+");

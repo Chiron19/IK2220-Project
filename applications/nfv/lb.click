@@ -1,4 +1,5 @@
 // Element Definitions
+Script(print "Test LB if running?????")
 
 elementclass IPChecksumFixer { $print |
     input ->
@@ -118,20 +119,19 @@ ipPacketClassifierInt[1] -> [0]ipRewrite
 ipPacketClassifierInt[2] -> cntDropFromSvrIP -> Discard
 
 // Report
-DriverManager(wait, print > ./click_results/lb.report "
-    =================== LB1 Report ===================
-    Input Packet rate (pps): $(add $(avgCntToExt.rate) $(avgCntToInt.rate))
-    Output Packet rate (pps): $(add $(avgCntFromExt.rate) $(avgCntFromInt.rate))
+DriverManager(wait, print > ./results/lb.report "
+=================== LB1 Report ===================
+Input Packet Rate (pps):    $(add $(avgCntToExt.rate) $(avgCntToInt.rate))
+Output Packet Rate (pps):   $(add $(avgCntFromExt.rate) $(avgCntFromInt.rate))
 
-        
-    Total number of input packets: $(add $(avgCntToExt.count) $(avgCntToInt.count))
-    Total number of output packets: $(add $(avgCntFromExt.count) $(avgCntFromInt.count))
+Total # of  input packets:  $(add $(avgCntToExt.count) $(avgCntToInt.count))
+Total # of  output packets: $(add $(avgCntFromExt.count) $(avgCntFromInt.count))
 
-    Total number of ARP requests: $(add $(cntArpReqExt.count) $(cntArpReqSrv.count))
-    Total number of ARP responses: $(add $(cntArpRspExt.count) $(cntArpRspSrv.count))
+Total # of  ARP requests:   $(add $(cntArpReqExt.count) $(cntArpReqSrv.count))
+Total # of  ARP responses:  $(add $(cntArpRspExt.count) $(cntArpRspSrv.count))
 
-    Total number of service packets: $(add $(cntLbServedFromSrv.count) $(cntLbServedFromExt.count))
-    Total number of ICMP report: $(add $(cntIcmpFromInt.count) $(cntIcmpFromExt.count))
-    Total number of dropped packets: $(add $(cntDropFromSvrEth.count) $(cntDropFromSvrIP.count) $(cntDropFromExtEth.count) $(cntDropFromExtIP.count))
-    =================================================
+Total # of  service packets:    $(add $(cntLbServedFromSrv.count) $(cntLbServedFromExt.count))
+Total # of  ICMP packets:       $(add $(cntIcmpFromInt.count) $(cntIcmpFromExt.count))
+Total # of  dropped packets:    $(add $(cntDropFromSvrEth.count) $(cntDropFromSvrIP.count) $(cntDropFromExtEth.count) $(cntDropFromExtIP.count))
+=================================================
 ")

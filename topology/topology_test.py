@@ -8,6 +8,9 @@ from mininet.node import OVSSwitch
 from topology import *
 import testing
 import time
+import sys
+sys.path.insert(0, '.')
+from applications.sdn import click_wrapper
 
 
 topos = {'mytopo': (lambda: MyTopo())}
@@ -130,12 +133,12 @@ if __name__ == "__main__":
                   cleanup=True)
 
     # Start the network
+    startup_services(net)
     
     net.get("h3").cmd("ip route add default via 10.0.0.1")
     net.get("h4").cmd("ip route add default via 10.0.0.1")
     net.start()
 
-    startup_services(net)
     run_tests(net)
 
     # Start the CLI
@@ -145,5 +148,7 @@ if __name__ == "__main__":
     ### COMPLETE THIS PART ###
     for link in net.links:
         net.delLink(link)
+        
+    click_wrapper.killall_click()
 
     net.stop()

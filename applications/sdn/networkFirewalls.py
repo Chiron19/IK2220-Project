@@ -31,15 +31,16 @@ class FW1 (Firewall):
 
         Firewall.__init__(self, connection, "FW1")
         self.rules = [
-            # test
-            [1, 'any', 'any', 'any', 'any', 'any', 'allow']
-            [2, 'any', 'any', 'any', 'any', 'any', 'allow']
+            ### test
+            # [1, 'any', 'any', 'any', 'any', 'any', 'allow'],
+            # [2, 'any', 'any', 'any', 'any', 'any', 'allow']
 
 
-
-            # [1, 'TCP', 'any', 'any', '100.0.0.40/28', '80', 'allow'], # allow Pbz to Dmz http
-            # [2, 'any', 'any', 'any', 'any', 'any', 'allow'] # allow all inbound to Pbz
-            # # [1, 'any', 'any', 'any', 'any', 'any', 'block'] # block all outbound from Pbz (Default Drop)
+            ### experiment
+            [1, 'TCP', 'any', 'any', '100.0.0.40/28', '80', 'allow'], # allow Pbz to Dmz http
+            [1, 'any', 'any', 'any', '100.0.0.45/32', 'any', 'allow'], # allow Pbz to ping Virtual IP only (phase 2 requirement)
+            [2, 'any', 'any', 'any', 'any', 'any', 'allow'] # allow all inbound to Pbz
+            # [1, 'any', 'any', 'any', 'any', 'any', 'block'] # block all outbound from Pbz (Default Drop)
         ]
 
 
@@ -55,15 +56,15 @@ class FW2 (Firewall):
 
         Firewall.__init__(self, connection, "FW2")
         self.rules = [
-            # test
-            [1, 'any', 'any', 'any', 'any', 'any', 'allow']
-            [2, 'any', 'any', 'any', 'any', 'any', 'allow']
+            ### test
+            # [1, 'any', 'any', 'any', 'any', 'any', 'allow'],
+            # [2, 'any', 'any', 'any', 'any', 'any', 'allow']
 
 
 
-
-            # [2, 'TCP', 'any', 'any', '100.0.0.40/28', '80', 'allow'], # allow Prz to Dmz http
-            # [2, 'any', 'any', 'any', '100.0.0.40/28', 'any', 'block'], # block Prz to Dmz others
-            # [1, 'any', 'any', 'any', 'any', 'any', 'allow'], # allow all inbound to Prz
-            # [2, 'any', 'any', 'any', 'any', 'any', 'allow'] # allow all outbound from Prz
+            ### experiment
+            [2, 'TCP', 'any', 'any', '10.0.0.40/28', '80', 'allow'], # allow Prz to Dmz http
+            [2, 'any', 'any', 'any', '10.0.0.40/28', 'any', 'block'], # block Prz to Dmz others
+            [1, 'any', 'any', 'any', 'any', 'any', 'allow'], # allow all inbound to Prz
+            [2, 'any', 'any', 'any', 'any', 'any', 'allow'] # allow all outbound from Prz
         ]

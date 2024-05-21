@@ -21,7 +21,8 @@ def start_click(configuration, parameters, stdout="/tmp/click.out", stderr="/tmp
 
     # TODO: What do you want to do with the outputs?
     # Maybe you want them to a file? tee and > can be your friends!
-    redirect = ""
+    redirect = "2>&1 | tee " + stdout
+    # redirect = ""  # Testing without redirecting
 
     cmd = f"sudo click {configuration} {redirect} &"
     print(f"Launching click with command {cmd}")

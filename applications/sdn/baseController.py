@@ -25,6 +25,16 @@ class controller (object):
 
         webserver.webserver(self)
         core.openflow.addListeners(self)
+    
+    def launch_click_napt(self, dpid):
+        # click_napt = click_wrapper.start_click("applications/nfv/napt.click", "", "results/napt.stdout", "results/napt.stderr")
+        click_napt = click_wrapper.start_click("applications/nfv/napt.click", "", "results/napt.stdout", "results/napt.stderr")
+
+    def launch_click_ids(self, dpid):
+        click_ids = click_wrapper.start_click("applications/nfv/ids.click", "", "results/ids.stdout", "results/ids.stderr") 
+
+    def launch_click_lb(self, dpid):
+        click_lb = click_wrapper.start_click("applications/nfv/lb.click", "", "results/lb.stdout", "results/lb.stderr")
 
     def _handle_ConnectionUp(self, event):
         
@@ -37,7 +47,6 @@ class controller (object):
 
         # In phase 2, you will need to run your network functions on the controller. Here is just an example how you can do it (Please ignore this for phase 1):
         # click = click_wrapper.start_click("../nfv/forwarder.click", "", "/tmp/forwarder.stdout", "/tmp/forwarder.stderr")
-        click = click_wrapper.start_click("../nfv/napt.click", "", "/tmp/napt.stdout", "/tmp/napt.stderr")
 
         # For the webserver part, you might need a record of switches that are already connected to the controller. 
         # Please keep them in "devices".
@@ -57,6 +66,18 @@ class controller (object):
         if dpid == 6:
             fw2 = networkFirewalls.FW2(event.connection)
             self.devices[len(self.devices)] = fw2
+        
+        if dpid == 7:
+            self.launch_click_lb(event.dpid)
+            log.info("\nStarting click process for LB Switch = %d" % event.dpid)
+
+        if dpid == 8:
+            self.launch_click_ids(event.dpid)
+            log.info("\nStarting a Click process for IDS Switch %d" % event.dpid)
+
+        if dpid == 9:
+            self.launch_click_napt(event.dpid)
+            log.info("\nStarting a Click process for NAPT Switch %d" % event.dpid)
 
         return
 

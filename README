@@ -31,3 +31,38 @@ Removes all junks added to different directories to run the application.
 **make report:**
 
 Generate report with output files automatically.
+
+**about Click**
+```
+cd /opt/click
+make clean
+make -j4
+sudo make install
+```
+
+A more detailed troubleshooting, since some of you seems to face the same "Illegal instruction issue":
+
+1) ensure you have virtualization support enabled. This is a BIOS setting, and you can verify this in the task manager
+
+2) run lscpu in your VM. If you miss the "avx" flag at the "Flags" the hypervisor may be doing something restrictive (I for instance have it when running under QEMU on Linux, but some students don't have it when running on Virtualbox in Windows - I am not sure why).
+
+To work around to this, you can try to re-compile click without avx support:
+
+```
+cd /opt/click
+make clean
+./configure --enable-user-multithread --enable-multithread --enable-all-elements --enable-ip6 --enable-nanotimestamp --enable-intel-cpu --enable-analysis --enable-ipsec --enable-local --enable-simple --disable-linuxmodule --disable-wifi --disable-avx2
+make -j 4
+sudo make install
+```
+
+Before running this, give your VM more cores. On "modern" CPUs it should be fine to give 4-6 cores without affecting too much the rest of the system. I'll also suggest to give at least 4GB of RAM, if your system allows (assuming you have >= 8GB on your system).
+
+Disabling avx shouldn't affect click performance for your tests, and shouldn't break any other functionality.
+
+This seems to be a more in depth solution, if you are curious: https://stackoverflow.com/questions/65780506/how-to-enable-avx-avx2-in-virtualbox-6-1-16-with-ubuntu-20-04-64bit 
+https://forums.virtualbox.org/viewtopic.php?f=25&t=99390
+
+However, I didn't validated these instructions and I don't recommend changing random settings unless you know what you are doing!
+
+Edited by Massimo Girondi on 15 May at 18:10

@@ -1,0 +1,3 @@
+Click NAPT on napt-eth1 napt-eth2
+Test NAPT if running?????
+FromDevice(napt-eth1): recvfrom: Network is down
