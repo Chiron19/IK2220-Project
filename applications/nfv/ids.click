@@ -100,7 +100,7 @@ serverPacketType[0] -> serverARP -> toSWITCH;
 serverPacketType[1] -> serverIP -> FixedForwarder -> toSWITCH;
 serverPacketType[2] -> serverDrop -> Discard;
 
- DriverManager(pause , print > /home/ik2220/version1/click_results/ids.report  " 
+ DriverManager(wait, print > ./results/lb.report "
 
       =================== IDS Report ===================
       Input Packet rate (pps): $(add $(switchInput.rate) $(serverInput.rate))
