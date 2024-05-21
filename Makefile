@@ -2,7 +2,8 @@ poxdir ?= /opt/pox
 SRC_FILES := $(filter-out $(poxdir)/ext/skeleton.py $(poxdir)/ext/README, $(wildcard $(poxdir)/ext/*))
 OUT_LOG_CTRL_PLANE="./results/output_app.txt"
 OUT_LOG_TEST_RESULT="./results/output_test.txt"
-OUT_REPORT="./phase_1_report"
+# OUT_REPORT="./phase_1_report"
+OUT_REPORT="./phase_2_report"
 
 # Complete the makefile as you prefer!
 topo:

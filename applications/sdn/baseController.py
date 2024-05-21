@@ -37,6 +37,7 @@ class controller (object):
 
         # In phase 2, you will need to run your network functions on the controller. Here is just an example how you can do it (Please ignore this for phase 1):
         # click = click_wrapper.start_click("../nfv/forwarder.click", "", "/tmp/forwarder.stdout", "/tmp/forwarder.stderr")
+        click = click_wrapper.start_click("../nfv/napt.click", "", "/tmp/napt.stdout", "/tmp/napt.stderr")
 
         # For the webserver part, you might need a record of switches that are already connected to the controller. 
         # Please keep them in "devices".

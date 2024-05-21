@@ -25,12 +25,18 @@ def run_tests(net):
     ws1 = net.get('ws1')
     ws2 = net.get('ws2')
     ws3 = net.get('ws3')
+    
+    insp = net.get('insp')
+    lb1 = net.get('lb')
+    ids = net.get('ids')
+    napt = net.get('napt')
 
     time.sleep(1)
     
     total_tests = pass_tests = 0
 
     # Launch ping tests
+    # phase 1
     # total_tests += 1; pass_tests += testing.ping(h1, h2, True)
     
     # total_tests += 1; pass_tests += testing.ping(h2, h1, True)
@@ -39,9 +45,9 @@ def run_tests(net):
     
     # total_tests += 1; pass_tests += testing.ping(h4, h3, True)
 
-    total_tests += 1; pass_tests += testing.ping(h3, h1, True)
+    # total_tests += 1; pass_tests += testing.ping(h3, h1, True)
 
-    total_tests += 1; pass_tests += testing.ping(h1, h3, False)
+    # total_tests += 1; pass_tests += testing.ping(h1, h3, False)
 
     # total_tests += 1; pass_tests += testing.ping(h3, h2, True)
 
@@ -76,6 +82,34 @@ def run_tests(net):
 
     # total_tests += 1; pass_tests += testing.curl(h3, ws3, expected=True)
     
+    # phase 2
+    print("----------- Basic Ping Test-----------")   
+    total_tests += 1; pass_tests += testing.ping(h1, h2, True)
+    total_tests += 1; pass_tests += testing.ping(h3, h1, True)
+    total_tests += 1; pass_tests += testing.ping(h1, h3, False)
+    total_tests += 1; pass_tests += testing.ping(h3, h2, True)
+    total_tests += 1; pass_tests += testing.ping(h2, h3, False)
+    total_tests += 1; pass_tests += testing.ping(h1, ws1, False)
+    total_tests += 1; pass_tests += testing.ping(h3, ws1, False)
+
+    print("----------- Virtual Address Ping Test-----------")
+    total_tests += 1; pass_tests += testing.ping_virtual(h1, True)
+    total_tests += 1; pass_tests += testing.ping_virtual(h2, True)
+    total_tests += 1; pass_tests += testing.ping_virtual(h3, True)
+    total_tests += 1; pass_tests += testing.ping_virtual(h4, True)
+
+    print("----------- HTTP method Test-----------")
+    total_tests += 1; pass_tests += testing.http_test(h1, "GET", "/get", "", False)
+    total_tests += 1; pass_tests += testing.http_test(h1, "POST", "/post", "", True)
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "", True)
+
+    print("----------- Linux and SQL code injection Test-----------")
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "cat /etc/passwd ", False)
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "cat /var/log/ ", False)
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "INSERT", False)
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "UPDATE", False)
+    total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "DELETE", False)
+    
     print(f"Passed {pass_tests}/{total_tests} tests.")
 
 
@@ -96,6 +130,9 @@ if __name__ == "__main__":
                   cleanup=True)
 
     # Start the network
+    
+    net.get("h3").cmd("ip route add default via 10.0.0.1")
+    net.get("h4").cmd("ip route add default via 10.0.0.1")
     net.start()
 
     startup_services(net)
