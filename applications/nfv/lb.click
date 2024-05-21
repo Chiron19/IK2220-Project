@@ -4,18 +4,15 @@ Script(print "Test LB if running?????")
 elementclass IPChecksumFixer { $print |
     input ->
     SetIPChecksum ->
-    class::IPClassifier(tcp, udp, -)
+    class::IPClassifier(tcp, -)
 
     class[0] -> Print(TCP, ACTIVE $print) -> SetTCPChecksum -> output
-    class[1] -> Print(UDP, ACTIVE $print) -> SetUDPChecksum -> output
-    class[2] -> Print(OTH, ACTIVE $print) -> output
+    class[1] -> Print(OTH, ACTIVE $print) -> output
 }
 
 elementclass FixedForwarder {
     input ->
-    Print(BEFORESTRIP, -1) ->
     Strip(14) ->
-    Print(BEFORECHECKSUM, -1) ->
     SetIPChecksum ->
     CheckIPHeader ->
     IPChecksumFixer(0) ->
@@ -25,58 +22,57 @@ elementclass FixedForwarder {
 
 // Counters
 
-avgCntToExt, avgCntFromExt, avgCntToInt, avgCntFromInt :: AverageCounter
-cntArpReqSrv, cntArpReqExt, cntArpRspSrv, cntArpRspExt :: Counter
-cntDropFromExtEth, cntDropFromExtIP, cntDropFromSvrEth, cntDropFromSvrIP :: Counter
-cntLbServedFromExt, cntLbServedFromSrv, cntIcmpFromExt, cntIcmpFromInt :: Counter
+clientInputCount, serverInputCount, clientOutputCount, serverOutputCount :: AverageCounter
+ArpReqSrvCounter, ArpReqExtCounter, ArpRspSrvCounter, ArpRspExtCounter :: Counter
+dropcountFromExtEth, dropcountFromExtIP, dropcountFromSvrEth, dropcountFromSvrIP :: Counter
+Lb1servedFromExtcounter, Lb1servedFromSrvcounter, IcmpFromExtcounter, IcmpFromIntcounter :: Counter
+
 
 // Devices
 
-fromExt :: FromDevice(lb-eth2, METHOD LINUX, SNIFFER false)
-fromInt :: FromDevice(lb-eth1, METHOD LINUX, SNIFFER false)
-toIntDevice :: ToDevice(lb-eth1, METHOD LINUX)
-toExtDevice :: ToDevice(lb-eth2, METHOD LINUX)
+fromClient :: FromDevice(lb-eth2, METHOD LINUX, SNIFFER false)
+fromServer :: FromDevice(lb-eth1, METHOD LINUX, SNIFFER false)
+toServerDevice :: ToDevice(lb-eth1, METHOD LINUX)
+toClientDevice :: ToDevice(lb-eth2, METHOD LINUX)
 
 // Queues
 
-toInt :: Queue -> avgCntToInt -> toIntDevice
-toExt :: Queue -> avgCntToExt -> toExtDevice
+toServer :: Queue -> serverOutputCount -> toServerDevice
+toClient :: Queue -> clientOutputCount -> toClientDevice
 
 // Classifiers
 
-ExtClassifier, IntClassifier :: Classifier(
-    12/0806 20/0001, // ARP request
-    12/0806 20/0002, // ARP response
-    12/0800,         // IP
-    -                // Others
-)
+ClientClassifier, ServerClassifier :: Classifier(
+    12/0806 20/0001,    // ARP request
+    12/0806 20/0002,    // ARP response
+    12/0800,            // IP
+    -                   // Others
+);
 
-ipPacketClassifierExt :: IPClassifier(
+ipPacketClassifierClient :: IPClassifier(
     dst 100.0.0.45 and icmp,        // ICMP
     dst 100.0.0.45 port 80 and tcp, // TCP
     -                               // Others
-)
+);
 
-ipPacketClassifierInt :: IPClassifier(
+ipPacketClassifierServer :: IPClassifier(
     dst 100.0.0.45 and icmp type echo,  // ICMP to lb
     src port 80 and tcp,                // TCP
     -                                   // Others
-)
+);                                   
+
 
 // ARP Queriers and Responders
 
-arpQuerierExt :: ARPQuerier(100.0.0.45, lb-eth2)
-arpQuerierInt :: ARPQuerier(100.0.0.45, lb-eth1)
-arpRespondExt :: ARPResponder(100.0.0.45 lb-eth2)
-arpRespondInt :: ARPResponder(100.0.0.45 lb-eth1)
+arpQuerierClient :: ARPQuerier(100.0.0.45, lb-eth2)
+arpQuerierServer :: ARPQuerier(100.0.0.45, lb-eth1)
+arpRespondClient :: ARPResponder(100.0.0.45 lb-eth2)
+arpRespondServer :: ARPResponder(100.0.0.45 lb-eth1)
 
 // IP Packets
 
-ipPacketExt :: GetIPAddress(16) -> Print(TOEXT_GETIPADDRESS16, -1, ACTIVE 1) -> CheckIPHeader -> Print(TOEXT_CHECKHEADER, -1, ACTIVE 1) ->
-[0]arpQuerierExt -> Print(ARPQUERIER, -1, ACTIVE 1) -> toExt
-
-ipPacketInt :: GetIPAddress(16) -> Print(TOINT_GETIPADDRESS16, -1, ACTIVE 1) -> CheckIPHeader -> 
-[0]arpQuerierInt -> Print(TOINT_AFTERARP, -1, ACTIVE 1) -> toInt
+ipPacketClient :: GetIPAddress(16) -> CheckIPHeader -> [0]arpQuerierClient -> toClient
+ipPacketServer :: GetIPAddress(16) -> CheckIPHeader -> [0]arpQuerierServer -> toServer
 
 // Round Robin IP Mapper and IP Rewriter
 
@@ -84,54 +80,54 @@ roundRobin :: RoundRobinIPMapper(
     100.0.0.45 - 100.0.0.40 - 0 1,
     100.0.0.45 - 100.0.0.41 - 0 1,
     100.0.0.45 - 100.0.0.42 - 0 1
-)
+);
 
 ipRewrite :: IPRewriter(roundRobin)
 
-ipRewrite[0] -> ipPacketInt
-ipRewrite[1] -> ipPacketExt
+ipRewrite[0] -> ipPacketServer
+ipRewrite[1] -> ipPacketClient
 
 // Packet Routing and Processing
 
-fromExt -> avgCntFromExt -> ExtClassifier
+fromClient -> clientInputCount -> ClientClassifier
 
-ExtClassifier[0] -> cntArpReqExt -> arpRespondExt -> toExt                // ARP request
-ExtClassifier[1] -> cntArpRspExt -> [1]arpQuerierExt                      // ARP response
-ExtClassifier[2] -> cntLbServedFromExt -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierExt    // IP
-ExtClassifier[3] -> cntDropFromExtEth -> Discard                          // Others
+ClientClassifier[0] -> ArpReqExtCounter -> arpRespondClient -> toClient     // ARP request
+ClientClassifier[1] -> ArpRspExtCounter -> [1]arpQuerierClient              // ARP response
+ClientClassifier[2] -> Lb1servedFromExtcounter -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierClient  // IP
+ClientClassifier[3] -> dropcountFromExtEth -> Discard                       // Others
 
 // icmp
-ipPacketClassifierExt[0] -> cntIcmpFromExt -> Print(CLASSIFIED_Ext_PING, -1) -> ICMPPingResponder -> ipPacketExt
+ipPacketClassifierClient[0] -> IcmpFromExtcounter -> ICMPPingResponder -> ipPacketClient
 
 // permited ip packet, lb apply
-ipPacketClassifierExt[1] -> [0]ipRewrite
-ipPacketClassifierExt[2] -> cntDropFromExtIP -> Discard
+ipPacketClassifierClient[1] -> [0]ipRewrite
+ipPacketClassifierClient[2] -> dropcountFromExtIP -> Discard
 
-fromInt -> avgCntFromInt -> IntClassifier
+fromServer -> serverInputCount -> ServerClassifier
 
-IntClassifier[0] -> cntArpReqSrv -> arpRespondInt -> toInt                // ARP request
-IntClassifier[1] -> cntArpRspSrv -> [1]arpQuerierInt                      // ARP response
-IntClassifier[2] -> cntLbServedFromSrv -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierInt    // IP
-IntClassifier[3] -> cntDropFromSvrEth -> Discard                          // Others
+ServerClassifier[0] -> ArpReqSrvCounter -> arpRespondServer -> toServer         // ARP request
+ServerClassifier[1] -> ArpRspSrvCounter -> [1]arpQuerierServer                  // ARP response
+ServerClassifier[2] -> Lb1servedFromSrvcounter -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierServer  // IP
+ServerClassifier[3] -> dropcountFromSvrEth -> Discard                           // Others
 
-ipPacketClassifierInt[0] -> cntIcmpFromInt -> ICMPPingResponder -> ipPacketInt
-ipPacketClassifierInt[1] -> [0]ipRewrite
-ipPacketClassifierInt[2] -> cntDropFromSvrIP -> Discard
+ipPacketClassifierServer[0] -> IcmpFromIntcounter -> ICMPPingResponder -> ipPacketServer
+ipPacketClassifierServer[1] -> [0]ipRewrite
+ipPacketClassifierServer[2] -> dropcountFromSvrIP -> Discard
 
 // Report
 DriverManager(wait, print > ./results/lb.report "
 =================== LB1 Report ===================
-Input Packet Rate (pps):    $(add $(avgCntToExt.rate) $(avgCntToInt.rate))
-Output Packet Rate (pps):   $(add $(avgCntFromExt.rate) $(avgCntFromInt.rate))
+Input Packet Rate (pps):    $(add $(clientInputCount.rate) $(serverInputCount.rate))
+Output Packet Rate (pps):   $(add $(clientOutputCount.rate) $(serverOutputCount.rate))
 
-Total # of  input packets:  $(add $(avgCntToExt.count) $(avgCntToInt.count))
-Total # of  output packets: $(add $(avgCntFromExt.count) $(avgCntFromInt.count))
+Total # of  input packets:  $(add $(clientInputCount.count) $(serverInputCount.count))
+Total # of  output packets: $(add $(clientOutputCount.count) $(serverOutputCount.count))
 
-Total # of  ARP requests:   $(add $(cntArpReqExt.count) $(cntArpReqSrv.count))
-Total # of  ARP responses:  $(add $(cntArpRspExt.count) $(cntArpRspSrv.count))
+Total # of  ARP requests:   $(add $(ArpReqExtCounter.count) $(ArpReqSrvCounter.count))
+Total # of  ARP responses:  $(add $(ArpRspExtCounter.count) $(ArpRspSrvCounter.count))
 
-Total # of  service packets:    $(add $(cntLbServedFromSrv.count) $(cntLbServedFromExt.count))
-Total # of  ICMP packets:       $(add $(cntIcmpFromInt.count) $(cntIcmpFromExt.count))
-Total # of  dropped packets:    $(add $(cntDropFromSvrEth.count) $(cntDropFromSvrIP.count) $(cntDropFromExtEth.count) $(cntDropFromExtIP.count))
+Total # of  service packets:    $(add $(Lb1servedFromSrvcounter.count) $(Lb1servedFromExtcounter.count))
+Total # of  ICMP packets:       $(add $(IcmpFromIntcounter.count) $(IcmpFromExtcounter.count))
+Total # of  dropped packets:    $(add $(dropcountFromSvrEth.count) $(dropcountFromSvrIP.count) $(dropcountFromExtEth.count) $(dropcountFromExtIP.count))
 =================================================
 ")
