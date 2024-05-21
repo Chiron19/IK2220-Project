@@ -1,7 +1,7 @@
 import topology
 from time import sleep
 
-def ping(client, server, expected, count=5, wait=3):
+def ping(client, server, expected, count=1, wait=1):
 
     # TODO: What if ping fails? How long does it take? Add a timeout to the command!
     cmd = f"ping {server.IP()} -c {count} -W {wait} >/dev/null 2>&1; echo $?"
@@ -56,7 +56,7 @@ def curl(client, server, method="GET", payload="", port=80, expected=True):
         print(client.name, "http request", server.name, "failed")
         return False
 
-def ping_virtual(client, expected, virtual_ip="100.0.0.45", count=5, wait=1):
+def ping_virtual(client, expected, virtual_ip="100.0.0.45", count=1, wait=1):
     """
     ping virtual IP address, simply using ping function but substituting the dst_ip with the virtual IP address
     """

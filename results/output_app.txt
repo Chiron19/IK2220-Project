@@ -9,685 +9,616 @@ WARNING:version:You're running Python 3.10.
 WARNING:version:If you run into problems, try using a supported version.
 INFO:core:POX 0.7.0 (gar) is up.
 DEBUG:openflow.of_01:Listening on 0.0.0.0:6633
-INFO:openflow.of_01:[00-00-00-00-00-06 7] connected
-Firewall FW2 is running
-INFO:openflow.of_01:[00-00-00-00-00-02 2] connected
-INFO:openflow.of_01:[00-00-00-00-00-04 4] connected
-INFO:openflow.of_01:[00-00-00-00-00-05 6] connected
-Firewall FW1 is running
-INFO:openflow.of_01:[00-00-00-00-00-03 1] connected
-INFO:openflow.of_01:[00-00-00-00-00-07 3] connected
-Launching click with command sudo click applications/nfv/lb.click 2>&1 | tee results/lb.stdout &
-Click launched with PID 29114
-INFO:baseController:
-Starting click process for LB Switch = 7
-INFO:openflow.of_01:[00-00-00-00-00-09 5] connected
-Launching click with command sudo click applications/nfv/napt.click 2>&1 | tee results/napt.stdout &
-Click launched with PID 29117
-INFO:baseController:
-Starting a Click process for NAPT Switch 9
-INFO:openflow.of_01:[00-00-00-00-00-01 8] connected
-INFO:openflow.of_01:[00-00-00-00-00-08 9] connected
-Launching click with command sudo click applications/nfv/ids.click 2>&1 | tee results/ids.stdout &
-Click launched with PID 29118
-INFO:baseController:
-Starting a Click process for IDS Switch 8
-('switch 5 - port 1', '2024-05-21T14:07:11.463984')
-('switch 5 - port 2', '2024-05-21T14:07:11.466287')
-('switch 6 - port 1', '2024-05-21T14:07:11.530067')
-Test LB if running?????
-('switch 5 - port 1', '2024-05-21T14:07:11.555808')
-Click NAPT on napt-eth1 napt-eth2
-Test NAPT if running?????
-Test IDS if running?????
-('switch 6 - port 2', '2024-05-21T14:07:11.613543')
-('switch 5 - port 1', '2024-05-21T14:07:11.631850')
-('switch 6 - port 1', '2024-05-21T14:07:11.790487')
-('switch 5 - port 2', '2024-05-21T14:07:11.797849')
-('switch 5 - port 2', '2024-05-21T14:07:12.045576')
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:01.1
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:8080
  * Running on http://192.168.0.103:8080
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-Packet Overview: [1a:8b:3e:b1:17:24>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:e844][ICMP id:36286 seq:1]
+INFO:openflow.of_01:[00-00-00-00-00-05 6] connected
+Firewall FW1 is running
+INFO:openflow.of_01:[00-00-00-00-00-07 1] connected
+Launching click with command sudo click applications/nfv/lb.click 2>&1 | tee results/lb.stdout &
+Click launched with PID 7732
+INFO:baseController:
+Starting click process for LB Switch = 7
+INFO:openflow.of_01:[00-00-00-00-00-03 2] connected
+INFO:openflow.of_01:[00-00-00-00-00-02 3] connected
+INFO:openflow.of_01:[00-00-00-00-00-04 4] connected
+INFO:openflow.of_01:[00-00-00-00-00-09 5] connected
+Launching click with command sudo click applications/nfv/napt.click 2>&1 | tee results/napt.stdout &
+Click launched with PID 7733
+INFO:baseController:
+Starting a Click process for NAPT Switch 9
+INFO:openflow.of_01:[00-00-00-00-00-06 7] connected
+Firewall FW2 is running
+INFO:openflow.of_01:[00-00-00-00-00-01 8] connected
+INFO:openflow.of_01:[00-00-00-00-00-08 9] connected
+Launching click with command sudo click applications/nfv/ids.click 2>&1 | tee results/ids.stdout &
+Click launched with PID 7734
+INFO:baseController:
+Starting a Click process for IDS Switch 8
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-21T20:50:27.076330')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 6 - port 1', '2024-05-21T20:50:27.121514')
+('switch 5 - port 1', '2024-05-21T20:50:27.131264')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 6 - port 1', '2024-05-21T20:50:27.146379')
+Click NAPT on napt-eth1 napt-eth2
+Test NAPT if running?????
+('switch 5 - port 2', '2024-05-21T20:50:27.162010')
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 6 - port 2', '2024-05-21T20:50:27.196384')
+Test LB if running?????
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-21T20:50:27.214999')
+Test IDS if running?????
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
+('switch 5 - port 1', '2024-05-21T20:50:27.983106')
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:3bcf][ICMP id:23085 seq:1]
+NO FIREWALL CONDITIONS MATCHED
+WARNING:baseFirewall:
+FW1 : Packet blocked by the Firewall!
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
+('switch 5 - port 1', '2024-05-21T20:50:28.030088')
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:ebd7][ICMP id:59090 seq:1]
 100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:01.1
-Packet Overview: [1a:8b:3e:b1:17:24>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:f36a][ICMP id:36286 seq:2]
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
+Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:ebd7][ICMP id:59090 seq:1]
 100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.3
-Packet Overview: [00:00:00:00:00:01>1a:8b:3e:b1:17:24 IP] 2048 True [t:ECHO_REPLY c:0 chk:d2f8][ICMP id:36286 seq:3]
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
+Packet Overview: [00:00:00:00:00:01>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f3d7][ICMP id:59090 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-Packet Overview: [00:00:00:00:00:01>1a:8b:3e:b1:17:24 IP] 2048 True [t:ECHO_REPLY c:0 chk:3b01][ICMP id:36286 seq:4]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+Packet Overview: [00:00:00:00:00:01>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f3d7][ICMP id:59090 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 1a:8b:3e:b1:17:24.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.3
-Packet Overview: [1a:8b:3e:b1:17:24>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:f892][ICMP id:58390 seq:1]
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1f52][ICMP id:24041 seq:1]
 100.0.0.1 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:02.1
-Packet Overview: [1a:8b:3e:b1:17:24>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:df25][ICMP id:58390 seq:2]
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
+Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1f52][ICMP id:24041 seq:1]
 100.0.0.1 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 1a:8b:3e:b1:17:24.3
-Packet Overview: [00:00:00:00:00:02>1a:8b:3e:b1:17:24 IP] 2048 True [t:ECHO_REPLY c:0 chk:c8f1][ICMP id:58390 seq:3]
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
+Packet Overview: [00:00:00:00:00:02>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:2752][ICMP id:24041 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-Packet Overview: [00:00:00:00:00:02>1a:8b:3e:b1:17:24 IP] 2048 True [t:ECHO_REPLY c:0 chk:fad4][ICMP id:58390 seq:4]
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+Packet Overview: [00:00:00:00:00:02>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:2752][ICMP id:24041 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
 DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:20c8][ICMP id:32513 seq:1]
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:2e0d][ICMP id:20632 seq:1]
 NO FIREWALL CONDITIONS MATCHED
 WARNING:baseFirewall:
 FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 1a:8b:3e:b1:17:24.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1f9b][ICMP id:32513 seq:2]
-NO FIREWALL CONDITIONS MATCHED
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:122b][ICMP id:32513 seq:3]
-NO FIREWALL CONDITIONS MATCHED
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:69d9][ICMP id:32513 seq:4]
-NO FIREWALL CONDITIONS MATCHED
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:89e8][ICMP id:32513 seq:5]
-NO FIREWALL CONDITIONS MATCHED
-WARNING:baseFirewall:
-FW1 : Packet blocked by the Firewall!
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-('switch 5 - port 2', '2024-05-21T14:07:46.725435')
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:e7fd][ICMP id:56104 seq:1]
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+('switch 5 - port 2', '2024-05-21T20:50:31.810909')
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:cc8][ICMP id:13960 seq:1]
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   98 | 021570de 9ed10000 00000001 08004500 005459a2 40004001 18d06400 000a6400 002d0800 4e8bdb28 0002b3aa 4c660000 00000466 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 59a24000 400118d0 6400000a 6400002d 08004e8b db280002 b3aa4c66 00000000 04660b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 59a24000 400118d0 6400000a 6400002d 08004e8b db280002 b3aa4c66 00000000 04660b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 59a20000 ff0199cf 6400002d 6400000a 0000568b db280002 b3aa4c66 00000000 04660b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 59a20000 ff0199cf 6400002d 6400000a 0000568b db280002 b3aa4c66 00000000 04660b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   42 | ffffffff ffff0215 70de9ed1 08060001 08000604 00010215 70de9ed1 6400002d 00000000 00006400 000a
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-ARPQUERIER:   98 | 00000000 00010215 70de9ed1 08004500 005459a2 0000ff01 99cf6400 002d6400 000a0000 568bdb28 0002b3aa 4c660000 00000466 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REPLY c:0 chk:568b][ICMP id:56104 seq:2]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REPLY c:0 chk:14c8][ICMP id:13960 seq:1]
 Rule Installed on Output Port: 1
-BEFORESTRIP:   98 | 021570de 9ed10000 00000001 08004500 005459fc 40004001 18766400 000a6400 002d0800 4833db28 0003b4aa 4c660000 000009bd 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 59fc4000 40011876 6400000a 6400002d 08004833 db280003 b4aa4c66 00000000 09bd0b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 59fc4000 40011876 6400000a 6400002d 08004833 db280003 b4aa4c66 00000000 09bd0b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 59fc0000 ff019975 6400002d 6400000a 00005033 db280003 b4aa4c66 00000000 09bd0b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 59fc0000 ff019975 6400002d 6400000a 00005033 db280003 b4aa4c66 00000000 09bd0b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00010215 70de9ed1 08004500 005459fc 0000ff01 99756400 002d6400 000a0000 5033db28 0003b4aa 4c660000 000009bd 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   98 | 021570de 9ed10000 00000001 08004500 00545a78 40004001 17fa6400 000a6400 002d0800 bb2cdb28 0004b5aa 4c660000 000095c2 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 5a784000 400117fa 6400000a 6400002d 0800bb2c db280004 b5aa4c66 00000000 95c20b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 5a784000 400117fa 6400000a 6400002d 0800bb2c db280004 b5aa4c66 00000000 95c20b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 5a780000 ff0198f9 6400002d 6400000a 0000c32c db280004 b5aa4c66 00000000 95c20b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 5a780000 ff0198f9 6400002d 6400000a 0000c32c db280004 b5aa4c66 00000000 95c20b00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00010215 70de9ed1 08004500 00545a78 0000ff01 98f96400 002d6400 000a0000 c32cdb28 0004b5aa 4c660000 000095c2 0b000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed10000 00000001 08004500 00545b1f 40004001 17536400 000a6400 002d0800 c0ccdb28 0005b6aa 4c660000 00008e21 0c000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 5b1f4000 40011753 6400000a 6400002d 0800c0cc db280005 b6aa4c66 00000000 8e210c00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 5b1f4000 40011753 6400000a 6400002d 0800c0cc db280005 b6aa4c66 00000000 8e210c00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 5b1f0000 ff019852 6400002d 6400000a 0000c8cc db280005 b6aa4c66 00000000 8e210c00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 5b1f0000 ff019852 6400002d 6400000a 0000c8cc db280005 b6aa4c66 00000000 8e210c00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00010215 70de9ed1 08004500 00545b1f 0000ff01 98526400 002d6400 000a0000 c8ccdb28 0005b6aa 4c660000 00008e21 0c000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:02>02:15:70:de:9e:d1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:e33f][ICMP id:13906 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:02>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:570e][ICMP id:9790 seq:1]
 100.0.0.11 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   98 | 021570de 9ed10000 00000002 08004500 00543225 40004001 404c6400 000b6400 002d0800 a0363652 0002b9aa 4c660000 00004f91 0d000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 32254000 4001404c 6400000b 6400002d 0800a036 36520002 b9aa4c66 00000000 4f910d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 32254000 4001404c 6400000b 6400002d 0800a036 36520002 b9aa4c66 00000000 4f910d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 32250000 ff01c14b 6400002d 6400000b 0000a836 36520002 b9aa4c66 00000000 4f910d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 32250000 ff01c14b 6400002d 6400000b 0000a836 36520002 b9aa4c66 00000000 4f910d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   42 | ffffffff ffff0215 70de9ed1 08060001 08000604 00010215 70de9ed1 6400002d 00000000 00006400 000b
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 02:15:70:de:9e:d1.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 02:15:70:de:9e:d1.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 02:15:70:de:9e:d1.3
-ARPQUERIER:   98 | 00000000 00020215 70de9ed1 08004500 00543225 0000ff01 c14b6400 002d6400 000b0000 a8363652 0002b9aa 4c660000 00004f91 0d000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:02.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REPLY c:0 chk:a836][ICMP id:13906 seq:2]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REPLY c:0 chk:5f0e][ICMP id:9790 seq:1]
 Rule Installed on Output Port: 1
-BEFORESTRIP:   98 | 021570de 9ed10000 00000002 08004500 005432eb 40004001 3f866400 000b6400 002d0800 b5c93652 0003baaa 4c660000 000038fd 0d000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 32eb4000 40013f86 6400000b 6400002d 0800b5c9 36520003 baaa4c66 00000000 38fd0d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 32eb4000 40013f86 6400000b 6400002d 0800b5c9 36520003 baaa4c66 00000000 38fd0d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 32eb0000 ff01c085 6400002d 6400000b 0000bdc9 36520003 baaa4c66 00000000 38fd0d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 32eb0000 ff01c085 6400002d 6400000b 0000bdc9 36520003 baaa4c66 00000000 38fd0d00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00020215 70de9ed1 08004500 005432eb 0000ff01 c0856400 002d6400 000b0000 bdc93652 0003baaa 4c660000 000038fd 0d000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:02.2
-BEFORESTRIP:   98 | 021570de 9ed10000 00000002 08004500 00543395 40004001 3edc6400 000b6400 002d0800 a0c53652 0004bbaa 4c660000 00004c00 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 33954000 40013edc 6400000b 6400002d 0800a0c5 36520004 bbaa4c66 00000000 4c000e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 33954000 40013edc 6400000b 6400002d 0800a0c5 36520004 bbaa4c66 00000000 4c000e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 33950000 ff01bfdb 6400002d 6400000b 0000a8c5 36520004 bbaa4c66 00000000 4c000e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 33950000 ff01bfdb 6400002d 6400000b 0000a8c5 36520004 bbaa4c66 00000000 4c000e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00020215 70de9ed1 08004500 00543395 0000ff01 bfdb6400 002d6400 000b0000 a8c53652 0004bbaa 4c660000 00004c00 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed10000 00000002 08004500 00543409 40004001 3e686400 000b6400 002d0800 ecac3652 0005bcaa 4c660000 0000ff17 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 34094000 40013e68 6400000b 6400002d 0800ecac 36520005 bcaa4c66 00000000 ff170e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 34094000 40013e68 6400000b 6400002d 0800ecac 36520005 bcaa4c66 00000000 ff170e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 34090000 ff01bf67 6400002d 6400000b 0000f4ac 36520005 bcaa4c66 00000000 ff170e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 34090000 ff01bf67 6400002d 6400000b 0000f4ac 36520005 bcaa4c66 00000000 ff170e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 00000000 00020215 70de9ed1 08004500 00543409 0000ff01 bf676400 002d6400 000b0000 f4ac3652 0005bcaa 4c660000 0000ff17 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 1a:8b:3e:b1:17:24.2
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.1 -> 1a:8b:3e:b1:17:24.2
-Packet Overview: [1a:8b:3e:b1:17:24>02:15:70:de:9e:d1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:25b7][ICMP id:28189 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> fa:50:bd:b4:ad:0f.2
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.1 -> fa:50:bd:b4:ad:0f.2
+Packet Overview: [fa:50:bd:b4:ad:0f>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:ed58][ICMP id:57232 seq:1]
 100.0.0.1 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054709c 40004001 01df6400 00016400 002d0800 da976e1d 0002bfaa 4c660000 0000d664 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 709c4000 400101df 64000001 6400002d 0800da97 6e1d0002 bfaa4c66 00000000 d6640e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 709c4000 400101df 64000001 6400002d 0800da97 6e1d0002 bfaa4c66 00000000 d6640e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 709c0000 ff0182de 6400002d 64000001 0000e297 6e1d0002 bfaa4c66 00000000 d6640e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 709c0000 ff0182de 6400002d 64000001 0000e297 6e1d0002 bfaa4c66 00000000 d6640e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   42 | ffffffff ffff0215 70de9ed1 08060001 08000604 00010215 70de9ed1 6400002d 00000000 00006400 0001
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 02:15:70:de:9e:d1.1
-DEBUG:forwarding.l2_learning:installing flow for 1a:8b:3e:b1:17:24.2 -> 02:15:70:de:9e:d1.3
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054709c 0000ff01 82de6400 002d6400 00010000 e2976e1d 0002bfaa 4c660000 0000d664 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 1a:8b:3e:b1:17:24.2
-Packet Overview: [02:15:70:de:9e:d1>1a:8b:3e:b1:17:24 IP] 2048 True [t:ECHO_REPLY c:0 chk:e297][ICMP id:28189 seq:2]
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.1
+DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> fa:50:bd:b4:ad:0f.2
+Packet Overview: [be:82:fe:6c:f3:2b>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f558][ICMP id:57232 seq:1]
 Rule Installed on Output Port: 2
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 00547117 40004001 01646400 00016400 002d0800 b14e6e1d 0003c0aa 4c660000 0000feac 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 71174000 40010164 64000001 6400002d 0800b14e 6e1d0003 c0aa4c66 00000000 feac0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 71174000 40010164 64000001 6400002d 0800b14e 6e1d0003 c0aa4c66 00000000 feac0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 71170000 ff018263 6400002d 64000001 0000b94e 6e1d0003 c0aa4c66 00000000 feac0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 71170000 ff018263 6400002d 64000001 0000b94e 6e1d0003 c0aa4c66 00000000 feac0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 00547117 0000ff01 82636400 002d6400 00010000 b94e6e1d 0003c0aa 4c660000 0000feac 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:03.1
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 00547187 40004001 00f46400 00016400 002d0800 462f6e1d 0004c1aa 4c660000 000068cb 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 71874000 400100f4 64000001 6400002d 0800462f 6e1d0004 c1aa4c66 00000000 68cb0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 71874000 400100f4 64000001 6400002d 0800462f 6e1d0004 c1aa4c66 00000000 68cb0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 71870000 ff0181f3 6400002d 64000001 00004e2f 6e1d0004 c1aa4c66 00000000 68cb0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 71870000 ff0181f3 6400002d 64000001 00004e2f 6e1d0004 c1aa4c66 00000000 68cb0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 00547187 0000ff01 81f36400 002d6400 00010000 4e2f6e1d 0004c1aa 4c660000 000068cb 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054720d 40004001 006e6400 00016400 002d0800 ee196e1d 0005c2aa 4c660000 0000bfdf 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 720d4000 4001006e 64000001 6400002d 0800ee19 6e1d0005 c2aa4c66 00000000 bfdf0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 720d4000 4001006e 64000001 6400002d 0800ee19 6e1d0005 c2aa4c66 00000000 bfdf0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 720d0000 ff01816d 6400002d 64000001 0000f619 6e1d0005 c2aa4c66 00000000 bfdf0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 720d0000 ff01816d 6400002d 64000001 0000f619 6e1d0005 c2aa4c66 00000000 bfdf0e00 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054720d 0000ff01 816d6400 002d6400 00010000 f6196e1d 0005c2aa 4c660000 0000bfdf 0e000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 46:2b:d1:87:5c:d5.3
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054fadd 40004001 779d6400 00016400 002d0800 ce125be7 0001c5aa 4c660000 0000fc20 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 fadd4000 4001779d 64000001 6400002d 0800ce12 5be70001 c5aa4c66 00000000 fc200100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 fadd4000 4001779d 64000001 6400002d 0800ce12 5be70001 c5aa4c66 00000000 fc200100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 fadd0000 ff01f89c 6400002d 64000001 0000d612 5be70001 c5aa4c66 00000000 fc200100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 fadd0000 ff01f89c 6400002d 64000001 0000d612 5be70001 c5aa4c66 00000000 fc200100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054fadd 0000ff01 f89c6400 002d6400 00010000 d6125be7 0001c5aa 4c660000 0000fc20 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 46:2b:d1:87:5c:d5.3
-DEBUG:forwarding.l2_learning:installing flow for 46:2b:d1:87:5c:d5.3 -> 00:00:00:00:00:04.2
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054fb8c 40004001 76ee6400 00016400 002d0800 4cec5be7 0002c6aa 4c660000 00007c46 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 fb8c4000 400176ee 64000001 6400002d 08004cec 5be70002 c6aa4c66 00000000 7c460100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 fb8c4000 400176ee 64000001 6400002d 08004cec 5be70002 c6aa4c66 00000000 7c460100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 fb8c0000 ff01f7ed 6400002d 64000001 000054ec 5be70002 c6aa4c66 00000000 7c460100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 fb8c0000 ff01f7ed 6400002d 64000001 000054ec 5be70002 c6aa4c66 00000000 7c460100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054fb8c 0000ff01 f7ed6400 002d6400 00010000 54ec5be7 0002c6aa 4c660000 00007c46 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054fbee 40004001 768c6400 00016400 002d0800 a9e15be7 0003c7aa 4c660000 00001e50 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 fbee4000 4001768c 64000001 6400002d 0800a9e1 5be70003 c7aa4c66 00000000 1e500100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 fbee4000 4001768c 64000001 6400002d 0800a9e1 5be70003 c7aa4c66 00000000 1e500100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 fbee0000 ff01f78b 6400002d 64000001 0000b1e1 5be70003 c7aa4c66 00000000 1e500100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 fbee0000 ff01f78b 6400002d 64000001 0000b1e1 5be70003 c7aa4c66 00000000 1e500100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054fbee 0000ff01 f78b6400 002d6400 00010000 b1e15be7 0003c7aa 4c660000 00001e50 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054fccf 40004001 75ab6400 00016400 002d0800 e7b75be7 0004c8aa 4c660000 0000df78 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 fccf4000 400175ab 64000001 6400002d 0800e7b7 5be70004 c8aa4c66 00000000 df780100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 fccf4000 400175ab 64000001 6400002d 0800e7b7 5be70004 c8aa4c66 00000000 df780100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 fccf0000 ff01f6aa 6400002d 64000001 0000efb7 5be70004 c8aa4c66 00000000 df780100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 fccf0000 ff01f6aa 6400002d 64000001 0000efb7 5be70004 c8aa4c66 00000000 df780100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054fccf 0000ff01 f6aa6400 002d6400 00010000 efb75be7 0004c8aa 4c660000 0000df78 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORESTRIP:   98 | 021570de 9ed11a8b 3eb11724 08004500 0054fdc1 40004001 74b96400 00016400 002d0800 dbb05be7 0005c9aa 4c660000 0000ea7e 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-BEFORECHECKSUM:   84 | 45000054 fdc14000 400174b9 64000001 6400002d 0800dbb0 5be70005 c9aa4c66 00000000 ea7e0100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-CLASSIFIED_Ext_PING:   84 | 45000054 fdc14000 400174b9 64000001 6400002d 0800dbb0 5be70005 c9aa4c66 00000000 ea7e0100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_GETIPADDRESS16:   84 | 45000054 fdc10000 ff01f5b8 6400002d 64000001 0000e3b0 5be70005 c9aa4c66 00000000 ea7e0100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-TOEXT_CHECKHEADER:   84 | 45000054 fdc10000 ff01f5b8 6400002d 64000001 0000e3b0 5be70005 c9aa4c66 00000000 ea7e0100 00000000 10111213 14151617 18191a1b 1c1d1e1f 20212223 24252627 28292a2b 2c2d2e2f 30313233 34353637
-ARPQUERIER:   98 | 1a8b3eb1 17240215 70de9ed1 08004500 0054fdc1 0000ff01 f5b86400 002d6400 00010000 e3b05be7 0005c9aa 4c660000 0000ea7e 01000000 00001011 12131415 16171819 1a1b1c1d 1e1f2021 22232425 26272829 2a2b2c2d 2e2f3031 32333435 3637
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:04.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 4e:54:04:80:1f:43.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 4e:54:04:80:1f:43.3
+DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:04.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003c105c 40004006 62296400 000a6400 002d82b2 00507284 72490000 0000a002 a564adec 00000204 05b40402 080a4c0e 78970000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c 105c4000 40066229 6400000a 6400002d 82b20050 72847249 00000000 a002a564 adec0000 020405b4 0402080a 4c0e7897 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c 105c4000 4006620b 6400002d 64000028 82b20050 72847249 00000000 a002a564 adce0000 020405b4 0402080a 4c0e7897 00000000 01030309
-TOINT_AFTERARP:   42 | ffffffff ffff3e2b 25d3815e 08060001 08000604 00013e2b 25d3815e 6400002d 00000000 00006400 0028
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 3e:2b:25:d3:81:5e.1
-TOINT_AFTERARP:   74 | 00000000 00063e2b 25d3815e 08004500 003c105c 40004006 620b6400 002d6400 002882b2 00507284 72490000 0000a002 a564adce 00000204 05b40402 080a4c0e 78970000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 82b2336b 2b067284 724aa012 a9b0a6bf 00000204 05b40402 080af850 abef4c0e 78970103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 005082b2 336b2b06 7284724a a012a9b0 a6bf0000 020405b4 0402080a f850abef 4c0e7897 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b2 336b2b06 7284724a a012a9b0 a6dd0000 020405b4 0402080a f850abef 4c0e7897 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b2 336b2b06 7284724a a012a9b0 a6dd0000 020405b4 0402080a f850abef 4c0e7897 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82b2336b 2b067284 724aa012 a9b0a6dd 00000204 05b40402 080af850 abef4c0e 78970103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 82b2336b 2b067284 724aa012 a9b0a2c1 00000204 05b40402 080af850 afed4c0e 78970103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 005082b2 336b2b06 7284724a a012a9b0 a2c10000 020405b4 0402080a f850afed 4c0e7897 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b2 336b2b06 7284724a a012a9b0 a2df0000 020405b4 0402080a f850afed 4c0e7897 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b2 336b2b06 7284724a a012a9b0 a2df0000 020405b4 0402080a f850afed 4c0e7897 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82b2336b 2b067284 724aa012 a9b0a2df 00000204 05b40402 080af850 afed4c0e 78970103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034105d 40004006 62306400 000a6400 002d82b2 00507284 724a336b 2b078010 00537647 00000101 080a4c0e 7d5bf850 afed
-BEFORECHECKSUM:   52 | 45000034 105d4000 40066230 6400000a 6400002d 82b20050 7284724a 336b2b07 80100053 76470000 0101080a 4c0e7d5b f850afed
-TOINT_GETIPADDRESS16:   52 | 45000034 105d4000 40066212 6400002d 64000028 82b20050 7284724a 336b2b07 80100053 76290000 0101080a 4c0e7d5b f850afed
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 0034105d 40004006 62126400 002d6400 002882b2 00507284 724a336b 2b078010 00537629 00000101 080a4c0e 7d5bf850 afed
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034105f 40004006 622e6400 000a6400 002d82b2 00507284 72db336b 2b078011 005372f9 00000101 080a4c0e 8017f850 afed
-BEFORECHECKSUM:   52 | 45000034 105f4000 4006622e 6400000a 6400002d 82b20050 728472db 336b2b07 80110053 72f90000 0101080a 4c0e8017 f850afed
-TOINT_GETIPADDRESS16:   52 | 45000034 105f4000 40066210 6400002d 64000028 82b20050 728472db 336b2b07 80110053 72db0000 0101080a 4c0e8017 f850afed
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 0034105f 40004006 62106400 002d6400 002882b2 00507284 72db336b 2b078011 005372db 00000101 080a4c0e 8017f850 afed
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000006 08004500 00400969 40004006 68fa6400 00286400 002d0050 82b2336b 2b077284 724ab010 0055c887 00000101 080af850 b2fb4c0e 7d5b0101 050a7284 72db7284 72dc
-BEFORECHECKSUM:   64 | 45000040 09694000 400668fa 64000028 6400002d 005082b2 336b2b07 7284724a b0100055 c8870000 0101080a f850b2fb 4c0e7d5b 0101050a 728472db 728472dc
-TOEXT_GETIPADDRESS16:   64 | 45000040 09694000 40066918 6400002d 6400000a 005082b2 336b2b07 7284724a b0100055 725f0000 0101080a f850b2fb 4c0e7d5b 0101050a 728472db 728472dc
-TOEXT_CHECKHEADER:   64 | 45000040 09694000 40066918 6400002d 6400000a 005082b2 336b2b07 7284724a b0100055 725f0000 0101080a f850b2fb 4c0e7d5b 0101050a 728472db 728472dc
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 00400969 40004006 69186400 002d6400 000a0050 82b2336b 2b077284 724ab010 0055725f 00000101 080af850 b2fb4c0e 7d5b0101 050a7284 72db7284 72dc
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003c46e5 40004006 2ba06400 000a6400 002d82b6 00500604 c50c0000 0000a002 a564bb9b 00000204 05b40402 080a4c0e 84a10000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c 46e54000 40062ba0 6400000a 6400002d 82b60050 0604c50c 00000000 a002a564 bb9b0000 020405b4 0402080a 4c0e84a1 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c 46e54000 40062b81 6400002d 64000029 82b60050 0604c50c 00000000 a002a564 bb7c0000 020405b4 0402080a 4c0e84a1 00000000 01030309
-TOINT_AFTERARP:   42 | ffffffff ffff3e2b 25d3815e 08060001 08000604 00013e2b 25d3815e 6400002d 00000000 00006400 0029
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 3e:2b:25:d3:81:5e.1
-TOINT_AFTERARP:   74 | 00000000 00073e2b 25d3815e 08004500 003c46e5 40004006 2b816400 002d6400 002982b6 00500604 c50c0000 0000a002 a564bb7c 00000204 05b40402 080a4c0e 84a10000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 82b6582b fffc0604 c50da012 a9b0f898 00000204 05b40402 080a41a6 24b84c0e 84a10103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 005082b6 582bfffc 0604c50d a012a9b0 f8980000 020405b4 0402080a 41a624b8 4c0e84a1 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b6 582bfffc 0604c50d a012a9b0 f8b70000 020405b4 0402080a 41a624b8 4c0e84a1 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b6 582bfffc 0604c50d a012a9b0 f8b70000 020405b4 0402080a 41a624b8 4c0e84a1 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82b6582b fffc0604 c50da012 a9b0f8b7 00000204 05b40402 080a41a6 24b84c0e 84a10103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 82b6582b fffc0604 c50da012 a9b0f49f 00000204 05b40402 080a41a6 28b14c0e 84a10103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 005082b6 582bfffc 0604c50d a012a9b0 f49f0000 020405b4 0402080a 41a628b1 4c0e84a1 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b6 582bfffc 0604c50d a012a9b0 f4be0000 020405b4 0402080a 41a628b1 4c0e84a1 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082b6 582bfffc 0604c50d a012a9b0 f4be0000 020405b4 0402080a 41a628b1 4c0e84a1 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82b6582b fffc0604 c50da012 a9b0f4be 00000204 05b40402 080a41a6 28b14c0e 84a10103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 003446e6 40004006 2ba76400 000a6400 002d82b6 00500604 c50d582b fffd8010 0053c831 00000101 080a4c0e 895a41a6 28b1
-BEFORECHECKSUM:   52 | 45000034 46e64000 40062ba7 6400000a 6400002d 82b60050 0604c50d 582bfffd 80100053 c8310000 0101080a 4c0e895a 41a628b1
-TOINT_GETIPADDRESS16:   52 | 45000034 46e64000 40062b88 6400002d 64000029 82b60050 0604c50d 582bfffd 80100053 c8120000 0101080a 4c0e895a 41a628b1
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 003446e6 40004006 2b886400 002d6400 002982b6 00500604 c50d582b fffd8010 0053c812 00000101 080a4c0e 895a41a6 28b1
-BEFORESTRIP:  213 | 021570de 9ed10000 00000001 08004500 00c746e7 40004006 2b136400 000a6400 002d82b6 00500604 c50d582b fffd8018 00532fc0 00000101 080a4c0e 895a41a6 28b1504f 5354202f 706f7374 20485454 502f312e 310d0a48 6f73743a 20313030 2e302e30 2e34350d 0a557365 722d4167 656e743a 20637572 6c2f372e 38312e30 0d0a4163 63657074 3a202a2f 2a0d0a43 6f6e7465 6e742d4c 656e6774 683a2030 0d0a436f 6e74656e 742d5479 70653a20 6170706c 69636174 696f6e2f 782d7777 772d666f 726d2d75 726c656e 636f6465 640d0a0d 0a
-BEFORECHECKSUM:  199 | 450000c7 46e74000 40062b13 6400000a 6400002d 82b60050 0604c50d 582bfffd 80180053 2fc00000 0101080a 4c0e895a 41a628b1 504f5354 202f706f 73742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-TOINT_GETIPADDRESS16:  199 | 450000c7 46e74000 40062af4 6400002d 64000029 82b60050 0604c50d 582bfffd 80180053 2fa10000 0101080a 4c0e895a 41a628b1 504f5354 202f706f 73742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-TOINT_AFTERARP:  213 | 00000000 00073e2b 25d3815e 08004500 00c746e7 40004006 2af46400 002d6400 002982b6 00500604 c50d582b fffd8018 00532fa1 00000101 080a4c0e 895a41a6 28b1504f 5354202f 706f7374 20485454 502f312e 310d0a48 6f73743a 20313030 2e302e30 2e34350d 0a557365 722d4167 656e743a 20637572 6c2f372e 38312e30 0d0a4163 63657074 3a202a2f 2a0d0a43 6f6e7465 6e742d4c 656e6774 683a2030 0d0a436f 6e74656e 742d5479 70653a20 6170706c 69636174 696f6e2f 782d7777 772d666f 726d2d75 726c656e 636f6465 640d0a0d 0a
-BEFORESTRIP:   66 | 3e2b25d3 815e0000 00000007 08004500 0034c3f0 40004006 ae7d6400 00296400 002d0050 82b6582b fffd0604 c5a08010 0055c87c 00000101 080a41a6 28f94c0e 895a
-BEFORECHECKSUM:   52 | 45000034 c3f04000 4006ae7d 64000029 6400002d 005082b6 582bfffd 0604c5a0 80100055 c87c0000 0101080a 41a628f9 4c0e895a
-TOEXT_GETIPADDRESS16:   52 | 45000034 c3f04000 4006ae9c 6400002d 6400000a 005082b6 582bfffd 0604c5a0 80100055 c7540000 0101080a 41a628f9 4c0e895a
-TOEXT_CHECKHEADER:   52 | 45000034 c3f04000 4006ae9c 6400002d 6400000a 005082b6 582bfffd 0604c5a0 80100055 c7540000 0101080a 41a628f9 4c0e895a
-ARPQUERIER:   66 | 00000000 00010215 70de9ed1 08004500 0034c3f0 40004006 ae9c6400 002d6400 000a0050 82b6582b fffd0604 c5a08010 0055c754 00000101 080a41a6 28f94c0e 895a
-BEFORESTRIP:  265 | 3e2b25d3 815e0000 00000007 08004500 00fbc3f1 40004006 adb56400 00296400 002d0050 82b6582b fffd0604 c5a08018 0055c943 00000101 080a41a6 29054c0e 895a4854 54502f31 2e302035 30312055 6e737570 706f7274 6564206d 6574686f 64202827 504f5354 27290d0a 53657276 65723a20 53696d70 6c654854 54502f30 2e362050 7974686f 6e2f332e 31302e31 320d0a44 6174653a 20547565 2c203231 204d6179 20323032 34203134 3a30383a 31342047 4d540d0a 436f6e6e 65637469 6f6e3a20 636c6f73 650d0a43 6f6e7465 6e742d54 7970653a 20746578 742f6874 6d6c3b63 68617273 65743d75 74662d38 0d0a436f 6e74656e 742d4c65 6e677468 3a203439 370d0a0d 0a
-BEFORECHECKSUM:  251 | 450000fb c3f14000 4006adb5 64000029 6400002d 005082b6 582bfffd 0604c5a0 80180055 c9430000 0101080a 41a62905 4c0e895a 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 2827504f 53542729 0d0a5365 72766572 3a205369 6d706c65 48545450 2f302e36 20507974 686f6e2f 332e3130 2e31320d 0a446174 653a2054 75652c20 3231204d 61792032 30323420 31343a30 383a3134 20474d54 0d0a436f 6e6e6563 74696f6e 3a20636c 6f73650d 0a436f6e 74656e74 2d547970 653a2074 6578742f 68746d6c 3b636861 72736574 3d757466 2d380d0a 436f6e74 656e742d 4c656e67 74683a20 3439370d 0a0d0a
-TOEXT_GETIPADDRESS16:  251 | 450000fb c3f14000 4006add4 6400002d 6400000a 005082b6 582bfffd 0604c5a0 80180055 7f020000 0101080a 41a62905 4c0e895a 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 2827504f 53542729 0d0a5365 72766572 3a205369 6d706c65 48545450 2f302e36 20507974 686f6e2f 332e3130 2e31320d 0a446174 653a2054 75652c20 3231204d 61792032 30323420 31343a30 383a3134 20474d54 0d0a436f 6e6e6563 74696f6e 3a20636c 6f73650d 0a436f6e 74656e74 2d547970 653a2074 6578742f 68746d6c 3b636861 72736574 3d757466 2d380d0a 436f6e74 656e742d 4c656e67 74683a20 3439370d 0a0d0a
-TOEXT_CHECKHEADER:  251 | 450000fb c3f14000 4006add4 6400002d 6400000a 005082b6 582bfffd 0604c5a0 80180055 7f020000 0101080a 41a62905 4c0e895a 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 2827504f 53542729 0d0a5365 72766572 3a205369 6d706c65 48545450 2f302e36 20507974 686f6e2f 332e3130 2e31320d 0a446174 653a2054 75652c20 3231204d 61792032 30323420 31343a30 383a3134 20474d54 0d0a436f 6e6e6563 74696f6e 3a20636c 6f73650d 0a436f6e 74656e74 2d547970 653a2074 6578742f 68746d6c 3b636861 72736574 3d757466 2d380d0a 436f6e74 656e742d 4c656e67 74683a20 3439370d 0a0d0a
-ARPQUERIER:  265 | 00000000 00010215 70de9ed1 08004500 00fbc3f1 40004006 add46400 002d6400 000a0050 82b6582b fffd0604 c5a08018 00557f02 00000101 080a41a6 29054c0e 895a4854 54502f31 2e302035 30312055 6e737570 706f7274 6564206d 6574686f 64202827 504f5354 27290d0a 53657276 65723a20 53696d70 6c654854 54502f30 2e362050 7974686f 6e2f332e 31302e31 320d0a44 6174653a 20547565 2c203231 204d6179 20323032 34203134 3a30383a 31342047 4d540d0a 436f6e6e 65637469 6f6e3a20 636c6f73 650d0a43 6f6e7465 6e742d54 7970653a 20746578 742f6874 6d6c3b63 68617273 65743d75 74662d38 0d0a436f 6e74656e 742d4c65 6e677468 3a203439 370d0a0d 0a
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 003446e8 40004006 2ba56400 000a6400 002d82b6 00500604 c5a0582c 00c48010 0053c646 00000101 080a4c0e 899741a6 2905
-BEFORECHECKSUM:   52 | 45000034 46e84000 40062ba5 6400000a 6400002d 82b60050 0604c5a0 582c00c4 80100053 c6460000 0101080a 4c0e8997 41a62905
-TOINT_GETIPADDRESS16:   52 | 45000034 46e84000 40062b86 6400002d 64000029 82b60050 0604c5a0 582c00c4 80100053 c6270000 0101080a 4c0e8997 41a62905
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 003446e8 40004006 2b866400 002d6400 002982b6 00500604 c5a0582c 00c48010 0053c627 00000101 080a4c0e 899741a6 2905
-BEFORESTRIP:  563 | 3e2b25d3 815e0000 00000007 08004500 0225c3f2 40004006 ac8a6400 00296400 002d0050 82b6582c 00c40604 c5a08019 0055ca6d 00000101 080a41a6 29054c0e 895a3c21 444f4354 59504520 48544d4c 20505542 4c494320 222d2f2f 5733432f 2f445444 2048544d 4c20342e 30312f2f 454e220a 20202020 20202020 22687474 703a2f2f 7777772e 77332e6f 72672f54 522f6874 6d6c342f 73747269 63742e64 7464223e 0a3c6874 6d6c3e0a 20202020 3c686561 643e0a20 20202020 2020203c 6d657461 20687474 702d6571 7569763d 22436f6e 74656e74 2d547970 65222063 6f6e7465 6e743d22 74657874 2f68746d 6c3b6368 61727365 743d7574 662d3822 3e0a2020 20202020 20203c74 69746c65 3e457272 6f722072 6573706f 6e73653c 2f746974 6c653e0a 20202020 3c2f6865 61643e0a 20202020 3c626f64 793e0a20 20202020 2020203c 68313e45 72726f72 20726573 706f6e73 653c2f68 313e0a20 20202020 2020203c 703e4572 726f7220 636f6465 3a203530 313c2f70 3e0a2020 20202020 20203c70 3e4d6573 73616765 3a20556e 73757070 6f727465 64206d65 74686f64 20282750 4f535427 292e3c2f 703e0a20 20202020 2020203c 703e4572 726f7220 636f6465 20657870 6c616e61 74696f6e 3a204854 54505374 61747573 2e4e4f54 5f494d50 4c454d45 4e544544 202d2053 65727665 7220646f 6573206e 6f742073 7570706f 72742074 68697320 6f706572 6174696f 6e2e3c2f 703e0a20 2020203c 2f626f64 793e0a3c 2f68746d 6c3e0a
-BEFORECHECKSUM:  549 | 45000225 c3f24000 4006ac8a 64000029 6400002d 005082b6 582c00c4 0604c5a0 80190055 ca6d0000 0101080a 41a62905 4c0e895a 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27504f53 5427292e 3c2f703e 0a202020 20202020 203c703e 4572726f 7220636f 64652065 78706c61 6e617469 6f6e3a20 48545450 53746174 75732e4e 4f545f49 4d504c45 4d454e54 4544202d 20536572 76657220 646f6573 206e6f74 20737570 706f7274 20746869 73206f70 65726174 696f6e2e 3c2f703e 0a202020 203c2f62 6f64793e 0a3c2f68 746d6c3e 0a
-TOEXT_GETIPADDRESS16:  549 | 45000225 c3f24000 4006aca9 6400002d 6400000a 005082b6 582c00c4 0604c5a0 80190055 ccc60000 0101080a 41a62905 4c0e895a 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27504f53 5427292e 3c2f703e 0a202020 20202020 203c703e 4572726f 7220636f 64652065 78706c61 6e617469 6f6e3a20 48545450 53746174 75732e4e 4f545f49 4d504c45 4d454e54 4544202d 20536572 76657220 646f6573 206e6f74 20737570 706f7274 20746869 73206f70 65726174 696f6e2e 3c2f703e 0a202020 203c2f62 6f64793e 0a3c2f68 746d6c3e 0a
-TOEXT_CHECKHEADER:  549 | 45000225 c3f24000 4006aca9 6400002d 6400000a 005082b6 582c00c4 0604c5a0 80190055 ccc60000 0101080a 41a62905 4c0e895a 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27504f53 5427292e 3c2f703e 0a202020 20202020 203c703e 4572726f 7220636f 64652065 78706c61 6e617469 6f6e3a20 48545450 53746174 75732e4e 4f545f49 4d504c45 4d454e54 4544202d 20536572 76657220 646f6573 206e6f74 20737570 706f7274 20746869 73206f70 65726174 696f6e2e 3c2f703e 0a202020 203c2f62 6f64793e 0a3c2f68 746d6c3e 0a
-ARPQUERIER:  563 | 00000000 00010215 70de9ed1 08004500 0225c3f2 40004006 aca96400 002d6400 000a0050 82b6582c 00c40604 c5a08019 0055ccc6 00000101 080a41a6 29054c0e 895a3c21 444f4354 59504520 48544d4c 20505542 4c494320 222d2f2f 5733432f 2f445444 2048544d 4c20342e 30312f2f 454e220a 20202020 20202020 22687474 703a2f2f 7777772e 77332e6f 72672f54 522f6874 6d6c342f 73747269 63742e64 7464223e 0a3c6874 6d6c3e0a 20202020 3c686561 643e0a20 20202020 2020203c 6d657461 20687474 702d6571 7569763d 22436f6e 74656e74 2d547970 65222063 6f6e7465 6e743d22 74657874 2f68746d 6c3b6368 61727365 743d7574 662d3822 3e0a2020 20202020 20203c74 69746c65 3e457272 6f722072 6573706f 6e73653c 2f746974 6c653e0a 20202020 3c2f6865 61643e0a 20202020 3c626f64 793e0a20 20202020 2020203c 68313e45 72726f72 20726573 706f6e73 653c2f68 313e0a20 20202020 2020203c 703e4572 726f7220 636f6465 3a203530 313c2f70 3e0a2020 20202020 20203c70 3e4d6573 73616765 3a20556e 73757070 6f727465 64206d65 74686f64 20282750 4f535427 292e3c2f 703e0a20 20202020 2020203c 703e4572 726f7220 636f6465 20657870 6c616e61 74696f6e 3a204854 54505374 61747573 2e4e4f54 5f494d50 4c454d45 4e544544 202d2053 65727665 7220646f 6573206e 6f742073 7570706f 72742074 68697320 6f706572 6174696f 6e2e3c2f 703e0a20 2020203c 2f626f64 793e0a3c 2f68746d 6c3e0a
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 003446e9 40004006 2ba46400 000a6400 002d82b6 00500604 c5a0582c 02b68011 0053c44b 00000101 080a4c0e 899f41a6 2905
-BEFORECHECKSUM:   52 | 45000034 46e94000 40062ba4 6400000a 6400002d 82b60050 0604c5a0 582c02b6 80110053 c44b0000 0101080a 4c0e899f 41a62905
-TOINT_GETIPADDRESS16:   52 | 45000034 46e94000 40062b85 6400002d 64000029 82b60050 0604c5a0 582c02b6 80110053 c42c0000 0101080a 4c0e899f 41a62905
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 003446e9 40004006 2b856400 002d6400 002982b6 00500604 c5a0582c 02b68011 0053c42c 00000101 080a4c0e 899f41a6 2905
-BEFORESTRIP:   66 | 3e2b25d3 815e0000 00000007 08004500 0034c3f3 40004006 ae7a6400 00296400 002d0050 82b6582c 02b60604 c5a18010 0055c87c 00000101 080a41a6 291a4c0e 899f
-BEFORECHECKSUM:   52 | 45000034 c3f34000 4006ae7a 64000029 6400002d 005082b6 582c02b6 0604c5a1 80100055 c87c0000 0101080a 41a6291a 4c0e899f
-TOEXT_GETIPADDRESS16:   52 | 45000034 c3f34000 4006ae99 6400002d 6400000a 005082b6 582c02b6 0604c5a1 80100055 c4340000 0101080a 41a6291a 4c0e899f
-TOEXT_CHECKHEADER:   52 | 45000034 c3f34000 4006ae99 6400002d 6400000a 005082b6 582c02b6 0604c5a1 80100055 c4340000 0101080a 41a6291a 4c0e899f
-ARPQUERIER:   66 | 00000000 00010215 70de9ed1 08004500 0034c3f3 40004006 ae996400 002d6400 000a0050 82b6582c 02b60604 c5a18010 0055c434 00000101 080a41a6 291a4c0e 899f
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003cbbba 40004006 b6ca6400 000a6400 002d82c4 0050a69b 503b0000 0000a002 a56486a9 00000204 05b40402 080a4c0e 8dbf0000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c bbba4000 4006b6ca 6400000a 6400002d 82c40050 a69b503b 00000000 a002a564 86a90000 020405b4 0402080a 4c0e8dbf 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c bbba4000 4006b6aa 6400002d 6400002a 82c40050 a69b503b 00000000 a002a564 86890000 020405b4 0402080a 4c0e8dbf 00000000 01030309
-TOINT_AFTERARP:   42 | ffffffff ffff3e2b 25d3815e 08060001 08000604 00013e2b 25d3815e 6400002d 00000000 00006400 002a
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 3e:2b:25:d3:81:5e.1
-TOINT_AFTERARP:   74 | 00000000 00083e2b 25d3815e 08004500 003cbbba 40004006 b6aa6400 002d6400 002a82c4 0050a69b 503b0000 0000a002 a5648689 00000204 05b40402 080a4c0e 8dbf0000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:08.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000008 08004500 003c0000 40004006 72656400 002a6400 002d0050 82c4c4a2 1f9da69b 503ca012 a9b0f084 00000204 05b40402 080aef03 be634c0e 8dbf0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067265 6400002a 6400002d 005082c4 c4a21f9d a69b503c a012a9b0 f0840000 020405b4 0402080a ef03be63 4c0e8dbf 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082c4 c4a21f9d a69b503c a012a9b0 f0a40000 020405b4 0402080a ef03be63 4c0e8dbf 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082c4 c4a21f9d a69b503c a012a9b0 f0a40000 020405b4 0402080a ef03be63 4c0e8dbf 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82c4c4a2 1f9da69b 503ca012 a9b0f0a4 00000204 05b40402 080aef03 be634c0e 8dbf0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000008 08004500 003c0000 40004006 72656400 002a6400 002d0050 82c4c4a2 1f9da69b 503ca012 a9b0ec4d 00000204 05b40402 080aef03 c29a4c0e 8dbf0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067265 6400002a 6400002d 005082c4 c4a21f9d a69b503c a012a9b0 ec4d0000 020405b4 0402080a ef03c29a 4c0e8dbf 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082c4 c4a21f9d a69b503c a012a9b0 ec6d0000 020405b4 0402080a ef03c29a 4c0e8dbf 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082c4 c4a21f9d a69b503c a012a9b0 ec6d0000 020405b4 0402080a ef03c29a 4c0e8dbf 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82c4c4a2 1f9da69b 503ca012 a9b0ec6d 00000204 05b40402 080aef03 c29a4c0e 8dbf0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-AFTER_UNSTRIP_TO_SERVER:  211 | 021570de 9ed10000 00000001 08004500 00c5bbbc 40004006 b63f6400 000a6400 002d82c4 0050a69b 503cc4a2 1f9e8018 00538590 00000101 080a4c0e 92b5ef03 c29a5055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034bbbb 40004006 b6d16400 000a6400 002d82c4 0050a69b 503cc4a2 1f9e8010 0053bfa4 00000101 080a4c0e 92b4ef03 c29a
-BEFORECHECKSUM:   52 | 45000034 bbbb4000 4006b6d1 6400000a 6400002d 82c40050 a69b503c c4a21f9e 80100053 bfa40000 0101080a 4c0e92b4 ef03c29a
-TOINT_GETIPADDRESS16:   52 | 45000034 bbbb4000 4006b6b1 6400002d 6400002a 82c40050 a69b503c c4a21f9e 80100053 bf840000 0101080a 4c0e92b4 ef03c29a
-TOINT_AFTERARP:   66 | 00000000 00083e2b 25d3815e 08004500 0034bbbb 40004006 b6b16400 002d6400 002a82c4 0050a69b 503cc4a2 1f9e8010 0053bf84 00000101 080a4c0e 92b4ef03 c29a
-BEFORESTRIP:  211 | 021570de 9ed10000 00000001 08004500 00c5bbbc 40004006 b63f6400 000a6400 002d82c4 0050a69b 503cc4a2 1f9e8018 00538590 00000101 080a4c0e 92b5ef03 c29a5055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-BEFORECHECKSUM:  197 | 450000c5 bbbc4000 4006b63f 6400000a 6400002d 82c40050 a69b503c c4a21f9e 80180053 85900000 0101080a 4c0e92b5 ef03c29a 50555420 2f707574 20485454 502f312e 310d0a48 6f73743a 20313030 2e302e30 2e34350d 0a557365 722d4167 656e743a 20637572 6c2f372e 38312e30 0d0a4163 63657074 3a202a2f 2a0d0a43 6f6e7465 6e742d4c 656e6774 683a2030 0d0a436f 6e74656e 742d5479 70653a20 6170706c 69636174 696f6e2f 782d7777 772d666f 726d2d75 726c656e 636f6465 640d0a0d 0a
-TOINT_GETIPADDRESS16:  197 | 450000c5 bbbc4000 4006b61f 6400002d 6400002a 82c40050 a69b503c c4a21f9e 80180053 85700000 0101080a 4c0e92b5 ef03c29a 50555420 2f707574 20485454 502f312e 310d0a48 6f73743a 20313030 2e302e30 2e34350d 0a557365 722d4167 656e743a 20637572 6c2f372e 38312e30 0d0a4163 63657074 3a202a2f 2a0d0a43 6f6e7465 6e742d4c 656e6774 683a2030 0d0a436f 6e74656e 742d5479 70653a20 6170706c 69636174 696f6e2f 782d7777 772d666f 726d2d75 726c656e 636f6465 640d0a0d 0a
-TOINT_AFTERARP:  211 | 00000000 00083e2b 25d3815e 08004500 00c5bbbc 40004006 b61f6400 002d6400 002a82c4 0050a69b 503cc4a2 1f9e8018 00538570 00000101 080a4c0e 92b5ef03 c29a5055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-BEFORESTRIP:   66 | 3e2b25d3 815e0000 00000008 08004500 0034bbe9 40004006 b6836400 002a6400 002d0050 82c4c4a2 1f9ea69b 50cd8010 0055c87d 00000101 080aef03 c2e44c0e 92b5
-BEFORECHECKSUM:   52 | 45000034 bbe94000 4006b683 6400002a 6400002d 005082c4 c4a21f9e a69b50cd 80100055 c87d0000 0101080a ef03c2e4 4c0e92b5
-TOEXT_GETIPADDRESS16:   52 | 45000034 bbe94000 4006b6a3 6400002d 6400000a 005082c4 c4a21f9e a69b50cd 80100055 bec60000 0101080a ef03c2e4 4c0e92b5
-TOEXT_CHECKHEADER:   52 | 45000034 bbe94000 4006b6a3 6400002d 6400000a 005082c4 c4a21f9e a69b50cd 80100055 bec60000 0101080a ef03c2e4 4c0e92b5
-ARPQUERIER:   66 | 00000000 00010215 70de9ed1 08004500 0034bbe9 40004006 b6a36400 002d6400 000a0050 82c4c4a2 1f9ea69b 50cd8010 0055bec6 00000101 080aef03 c2e44c0e 92b5
-BEFORESTRIP:  264 | 3e2b25d3 815e0000 00000008 08004500 00fabbea 40004006 b5bc6400 002a6400 002d0050 82c4c4a2 1f9ea69b 50cd8018 0055c943 00000101 080aef03 c2ec4c0e 92b54854 54502f31 2e302035 30312055 6e737570 706f7274 6564206d 6574686f 64202827 50555427 290d0a53 65727665 723a2053 696d706c 65485454 502f302e 36205079 74686f6e 2f332e31 302e3132 0d0a4461 74653a20 5475652c 20323120 4d617920 32303234 2031343a 30383a31 3620474d 540d0a43 6f6e6e65 6374696f 6e3a2063 6c6f7365 0d0a436f 6e74656e 742d5479 70653a20 74657874 2f68746d 6c3b6368 61727365 743d7574 662d380d 0a436f6e 74656e74 2d4c656e 6774683a 20343936 0d0a0d0a
-BEFORECHECKSUM:  250 | 450000fa bbea4000 4006b5bc 6400002a 6400002d 005082c4 c4a21f9e a69b50cd 80180055 c9430000 0101080a ef03c2ec 4c0e92b5 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 28275055 5427290d 0a536572 7665723a 2053696d 706c6548 5454502f 302e3620 50797468 6f6e2f33 2e31302e 31320d0a 44617465 3a205475 652c2032 31204d61 79203230 32342031 343a3038 3a313620 474d540d 0a436f6e 6e656374 696f6e3a 20636c6f 73650d0a 436f6e74 656e742d 54797065 3a207465 78742f68 746d6c3b 63686172 7365743d 7574662d 380d0a43 6f6e7465 6e742d4c 656e6774 683a2034 39360d0a 0d0a
-TOEXT_GETIPADDRESS16:  250 | 450000fa bbea4000 4006b5dc 6400002d 6400000a 005082c4 c4a21f9e a69b50cd 80180055 b8830000 0101080a ef03c2ec 4c0e92b5 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 28275055 5427290d 0a536572 7665723a 2053696d 706c6548 5454502f 302e3620 50797468 6f6e2f33 2e31302e 31320d0a 44617465 3a205475 652c2032 31204d61 79203230 32342031 343a3038 3a313620 474d540d 0a436f6e 6e656374 696f6e3a 20636c6f 73650d0a 436f6e74 656e742d 54797065 3a207465 78742f68 746d6c3b 63686172 7365743d 7574662d 380d0a43 6f6e7465 6e742d4c 656e6774 683a2034 39360d0a 0d0a
-TOEXT_CHECKHEADER:  250 | 450000fa bbea4000 4006b5dc 6400002d 6400000a 005082c4 c4a21f9e a69b50cd 80180055 b8830000 0101080a ef03c2ec 4c0e92b5 48545450 2f312e30 20353031 20556e73 7570706f 72746564 206d6574 686f6420 28275055 5427290d 0a536572 7665723a 2053696d 706c6548 5454502f 302e3620 50797468 6f6e2f33 2e31302e 31320d0a 44617465 3a205475 652c2032 31204d61 79203230 32342031 343a3038 3a313620 474d540d 0a436f6e 6e656374 696f6e3a 20636c6f 73650d0a 436f6e74 656e742d 54797065 3a207465 78742f68 746d6c3b 63686172 7365743d 7574662d 380d0a43 6f6e7465 6e742d4c 656e6774 683a2034 39360d0a 0d0a
-ARPQUERIER:  264 | 00000000 00010215 70de9ed1 08004500 00fabbea 40004006 b5dc6400 002d6400 000a0050 82c4c4a2 1f9ea69b 50cd8018 0055b883 00000101 080aef03 c2ec4c0e 92b54854 54502f31 2e302035 30312055 6e737570 706f7274 6564206d 6574686f 64202827 50555427 290d0a53 65727665 723a2053 696d706c 65485454 502f302e 36205079 74686f6e 2f332e31 302e3132 0d0a4461 74653a20 5475652c 20323120 4d617920 32303234 2031343a 30383a31 3620474d 540d0a43 6f6e6e65 6374696f 6e3a2063 6c6f7365 0d0a436f 6e74656e 742d5479 70653a20 74657874 2f68746d 6c3b6368 61727365 743d7574 662d380d 0a436f6e 74656e74 2d4c656e 6774683a 20343936 0d0a0d0a
-BEFORESTRIP:  562 | 3e2b25d3 815e0000 00000008 08004500 0224bbeb 40004006 b4916400 002a6400 002d0050 82c4c4a2 2064a69b 50cd8019 0055ca6d 00000101 080aef03 c2ec4c0e 92b53c21 444f4354 59504520 48544d4c 20505542 4c494320 222d2f2f 5733432f 2f445444 2048544d 4c20342e 30312f2f 454e220a 20202020 20202020 22687474 703a2f2f 7777772e 77332e6f 72672f54 522f6874 6d6c342f 73747269 63742e64 7464223e 0a3c6874 6d6c3e0a 20202020 3c686561 643e0a20 20202020 2020203c 6d657461 20687474 702d6571 7569763d 22436f6e 74656e74 2d547970 65222063 6f6e7465 6e743d22 74657874 2f68746d 6c3b6368 61727365 743d7574 662d3822 3e0a2020 20202020 20203c74 69746c65 3e457272 6f722072 6573706f 6e73653c 2f746974 6c653e0a 20202020 3c2f6865 61643e0a 20202020 3c626f64 793e0a20 20202020 2020203c 68313e45 72726f72 20726573 706f6e73 653c2f68 313e0a20 20202020 2020203c 703e4572 726f7220 636f6465 3a203530 313c2f70 3e0a2020 20202020 20203c70 3e4d6573 73616765 3a20556e 73757070 6f727465 64206d65 74686f64 20282750 55542729 2e3c2f70 3e0a2020 20202020 20203c70 3e457272 6f722063 6f646520 6578706c 616e6174 696f6e3a 20485454 50537461 7475732e 4e4f545f 494d504c 454d454e 54454420 2d205365 72766572 20646f65 73206e6f 74207375 70706f72 74207468 6973206f 70657261 74696f6e 2e3c2f70 3e0a2020 20203c2f 626f6479 3e0a3c2f 68746d6c 3e0a
-BEFORECHECKSUM:  548 | 45000224 bbeb4000 4006b491 6400002a 6400002d 005082c4 c4a22064 a69b50cd 80190055 ca6d0000 0101080a ef03c2ec 4c0e92b5 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27505554 27292e3c 2f703e0a 20202020 20202020 3c703e45 72726f72 20636f64 65206578 706c616e 6174696f 6e3a2048 54545053 74617475 732e4e4f 545f494d 504c454d 454e5445 44202d20 53657276 65722064 6f657320 6e6f7420 73757070 6f727420 74686973 206f7065 72617469 6f6e2e3c 2f703e0a 20202020 3c2f626f 64793e0a 3c2f6874 6d6c3e0a
-TOEXT_GETIPADDRESS16:  548 | 45000224 bbeb4000 4006b4b1 6400002d 6400000a 005082c4 c4a22064 a69b50cd 80190055 65ea0000 0101080a ef03c2ec 4c0e92b5 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27505554 27292e3c 2f703e0a 20202020 20202020 3c703e45 72726f72 20636f64 65206578 706c616e 6174696f 6e3a2048 54545053 74617475 732e4e4f 545f494d 504c454d 454e5445 44202d20 53657276 65722064 6f657320 6e6f7420 73757070 6f727420 74686973 206f7065 72617469 6f6e2e3c 2f703e0a 20202020 3c2f626f 64793e0a 3c2f6874 6d6c3e0a
-TOEXT_CHECKHEADER:  548 | 45000224 bbeb4000 4006b4b1 6400002d 6400000a 005082c4 c4a22064 a69b50cd 80190055 65ea0000 0101080a ef03c2ec 4c0e92b5 3c21444f 43545950 45204854 4d4c2050 55424c49 4320222d 2f2f5733 432f2f44 54442048 544d4c20 342e3031 2f2f454e 220a2020 20202020 20202268 7474703a 2f2f7777 772e7733 2e6f7267 2f54522f 68746d6c 342f7374 72696374 2e647464 223e0a3c 68746d6c 3e0a2020 20203c68 6561643e 0a202020 20202020 203c6d65 74612068 7474702d 65717569 763d2243 6f6e7465 6e742d54 79706522 20636f6e 74656e74 3d227465 78742f68 746d6c3b 63686172 7365743d 7574662d 38223e0a 20202020 20202020 3c746974 6c653e45 72726f72 20726573 706f6e73 653c2f74 69746c65 3e0a2020 20203c2f 68656164 3e0a2020 20203c62 6f64793e 0a202020 20202020 203c6831 3e457272 6f722072 6573706f 6e73653c 2f68313e 0a202020 20202020 203c703e 4572726f 7220636f 64653a20 3530313c 2f703e0a 20202020 20202020 3c703e4d 65737361 67653a20 556e7375 70706f72 74656420 6d657468 6f642028 27505554 27292e3c 2f703e0a 20202020 20202020 3c703e45 72726f72 20636f64 65206578 706c616e 6174696f 6e3a2048 54545053 74617475 732e4e4f 545f494d 504c454d 454e5445 44202d20 53657276 65722064 6f657320 6e6f7420 73757070 6f727420 74686973 206f7065 72617469 6f6e2e3c 2f703e0a 20202020 3c2f626f 64793e0a 3c2f6874 6d6c3e0a
-ARPQUERIER:  562 | 00000000 00010215 70de9ed1 08004500 0224bbeb 40004006 b4b16400 002d6400 000a0050 82c4c4a2 2064a69b 50cd8019 005565ea 00000101 080aef03 c2ec4c0e 92b53c21 444f4354 59504520 48544d4c 20505542 4c494320 222d2f2f 5733432f 2f445444 2048544d 4c20342e 30312f2f 454e220a 20202020 20202020 22687474 703a2f2f 7777772e 77332e6f 72672f54 522f6874 6d6c342f 73747269 63742e64 7464223e 0a3c6874 6d6c3e0a 20202020 3c686561 643e0a20 20202020 2020203c 6d657461 20687474 702d6571 7569763d 22436f6e 74656e74 2d547970 65222063 6f6e7465 6e743d22 74657874 2f68746d 6c3b6368 61727365 743d7574 662d3822 3e0a2020 20202020 20203c74 69746c65 3e457272 6f722072 6573706f 6e73653c 2f746974 6c653e0a 20202020 3c2f6865 61643e0a 20202020 3c626f64 793e0a20 20202020 2020203c 68313e45 72726f72 20726573 706f6e73 653c2f68 313e0a20 20202020 2020203c 703e4572 726f7220 636f6465 3a203530 313c2f70 3e0a2020 20202020 20203c70 3e4d6573 73616765 3a20556e 73757070 6f727465 64206d65 74686f64 20282750 55542729 2e3c2f70 3e0a2020 20202020 20203c70 3e457272 6f722063 6f646520 6578706c 616e6174 696f6e3a 20485454 50537461 7475732e 4e4f545f 494d504c 454d454e 54454420 2d205365 72766572 20646f65 73206e6f 74207375 70706f72 74207468 6973206f 70657261 74696f6e 2e3c2f70 3e0a2020 20203c2f 626f6479 3e0a3c2f 68746d6c 3e0a
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034bbbd 40004006 b6cf6400 000a6400 002d82c4 0050a69b 50cdc4a2 20648010 0053bdb6 00000101 080a4c0e 92f9ef03 c2ec
-BEFORECHECKSUM:   52 | 45000034 bbbd4000 4006b6cf 6400000a 6400002d 82c40050 a69b50cd c4a22064 80100053 bdb60000 0101080a 4c0e92f9 ef03c2ec
-TOINT_GETIPADDRESS16:   52 | 45000034 bbbd4000 4006b6af 6400002d 6400002a 82c40050 a69b50cd c4a22064 80100053 bd960000 0101080a 4c0e92f9 ef03c2ec
-TOINT_AFTERARP:   66 | 00000000 00083e2b 25d3815e 08004500 0034bbbd 40004006 b6af6400 002d6400 002a82c4 0050a69b 50cdc4a2 20648010 0053bd96 00000101 080a4c0e 92f9ef03 c2ec
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034bbbe 40004006 b6ce6400 000a6400 002d82c4 0050a69b 50cdc4a2 22558011 0053bbc3 00000101 080a4c0e 92faef03 c2ec
-BEFORECHECKSUM:   52 | 45000034 bbbe4000 4006b6ce 6400000a 6400002d 82c40050 a69b50cd c4a22255 80110053 bbc30000 0101080a 4c0e92fa ef03c2ec
-TOINT_GETIPADDRESS16:   52 | 45000034 bbbe4000 4006b6ae 6400002d 6400002a 82c40050 a69b50cd c4a22255 80110053 bba30000 0101080a 4c0e92fa ef03c2ec
-TOINT_AFTERARP:   66 | 00000000 00083e2b 25d3815e 08004500 0034bbbe 40004006 b6ae6400 002d6400 002a82c4 0050a69b 50cdc4a2 22558011 0053bba3 00000101 080a4c0e 92faef03 c2ec
-BEFORESTRIP:   66 | 3e2b25d3 815e0000 00000008 08004500 0034bbec 40004006 b6806400 002a6400 002d0050 82c4c4a2 2255a69b 50ce8010 0055c87d 00000101 080aef03 c2ff4c0e 92fa
-BEFORECHECKSUM:   52 | 45000034 bbec4000 4006b680 6400002a 6400002d 005082c4 c4a22255 a69b50ce 80100055 c87d0000 0101080a ef03c2ff 4c0e92fa
-TOEXT_GETIPADDRESS16:   52 | 45000034 bbec4000 4006b6a0 6400002d 6400000a 005082c4 c4a22255 a69b50ce 80100055 bbae0000 0101080a ef03c2ff 4c0e92fa
-TOEXT_CHECKHEADER:   52 | 45000034 bbec4000 4006b6a0 6400002d 6400000a 005082c4 c4a22255 a69b50ce 80100055 bbae0000 0101080a ef03c2ff 4c0e92fa
-ARPQUERIER:   66 | 00000000 00010215 70de9ed1 08004500 0034bbec 40004006 b6a06400 002d6400 000a0050 82c4c4a2 2255a69b 50ce8010 0055bbae 00000101 080aef03 c2ff4c0e 92fa
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+AFTER_UNSTRIP_TO_SERVER:  211 | be82fe6c f32b0000 00000001 08004500 00c560ea 40004006 11126400 000a6400 002dcea2 00504411 70207ab3 ecc58018 005376f9 00000101 080a1bac 3abb76c1 45605055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003ce606 40004006 8c7e6400 000a6400 002d82d4 0050865c a4ad0000 0000a002 a56448d7 00000204 05b40402 080a4c0e 974e0000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c e6064000 40068c7e 6400000a 6400002d 82d40050 865ca4ad 00000000 a002a564 48d70000 020405b4 0402080a 4c0e974e 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c e6064000 40068c60 6400002d 64000028 82d40050 865ca4ad 00000000 a002a564 48b90000 020405b4 0402080a 4c0e974e 00000000 01030309
-TOINT_AFTERARP:   74 | 00000000 00063e2b 25d3815e 08004500 003ce606 40004006 8c606400 002d6400 002882d4 0050865c a4ad0000 0000a002 a56448b9 00000204 05b40402 080a4c0e 974e0000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 82d40f4a 5f6e865c a4aea012 a9b012b5 00000204 05b40402 080af850 ca9d4c0e 974e0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 005082d4 0f4a5f6e 865ca4ae a012a9b0 12b50000 020405b4 0402080a f850ca9d 4c0e974e 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082d4 0f4a5f6e 865ca4ae a012a9b0 12d30000 020405b4 0402080a f850ca9d 4c0e974e 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082d4 0f4a5f6e 865ca4ae a012a9b0 12d30000 020405b4 0402080a f850ca9d 4c0e974e 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82d40f4a 5f6e865c a4aea012 a9b012d3 00000204 05b40402 080af850 ca9d4c0e 974e0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 82d40f4a 5f6e865c a4aea012 a9b00ddc 00000204 05b40402 080af850 cf764c0e 974e0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 005082d4 0f4a5f6e 865ca4ae a012a9b0 0ddc0000 020405b4 0402080a f850cf76 4c0e974e 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082d4 0f4a5f6e 865ca4ae a012a9b0 0dfa0000 020405b4 0402080a f850cf76 4c0e974e 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 005082d4 0f4a5f6e 865ca4ae a012a9b0 0dfa0000 020405b4 0402080a f850cf76 4c0e974e 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 82d40f4a 5f6e865c a4aea012 a9b00dfa 00000204 05b40402 080af850 cf764c0e 974e0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034e607 40004006 8c856400 000a6400 002d82d4 0050865c a4ae0f4a 5f6f8010 0053e01a 00000101 080a4c0e 9d59f850 cf76
-BEFORECHECKSUM:   52 | 45000034 e6074000 40068c85 6400000a 6400002d 82d40050 865ca4ae 0f4a5f6f 80100053 e01a0000 0101080a 4c0e9d59 f850cf76
-TOINT_GETIPADDRESS16:   52 | 45000034 e6074000 40068c67 6400002d 64000028 82d40050 865ca4ae 0f4a5f6f 80100053 dffc0000 0101080a 4c0e9d59 f850cf76
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 0034e607 40004006 8c676400 002d6400 002882d4 0050865c a4ae0f4a 5f6f8010 0053dffc 00000101 080a4c0e 9d59f850 cf76
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034e609 40004006 8c836400 000a6400 002d82d4 0050865c a5500f4a 5f6f8011 0053dddd 00000101 080a4c0e 9ef3f850 cf76
-BEFORECHECKSUM:   52 | 45000034 e6094000 40068c83 6400000a 6400002d 82d40050 865ca550 0f4a5f6f 80110053 dddd0000 0101080a 4c0e9ef3 f850cf76
-TOINT_GETIPADDRESS16:   52 | 45000034 e6094000 40068c65 6400002d 64000028 82d40050 865ca550 0f4a5f6f 80110053 ddbf0000 0101080a 4c0e9ef3 f850cf76
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 0034e609 40004006 8c656400 002d6400 002882d4 0050865c a5500f4a 5f6f8011 0053ddbf 00000101 080a4c0e 9ef3f850 cf76
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000006 08004500 0040dbd9 40004006 96896400 00286400 002d0050 82d40f4a 5f6f865c a4aeb010 0055c887 00000101 080af850 d1d14c0e 9d590101 050a865c a550865c a551
-BEFORECHECKSUM:   64 | 45000040 dbd94000 40069689 64000028 6400002d 005082d4 0f4a5f6f 865ca4ae b0100055 c8870000 0101080a f850d1d1 4c0e9d59 0101050a 865ca550 865ca551
-TOEXT_GETIPADDRESS16:   64 | 45000040 dbd94000 400696a7 6400002d 6400000a 005082d4 0f4a5f6f 865ca4ae b0100055 504b0000 0101080a f850d1d1 4c0e9d59 0101050a 865ca550 865ca551
-TOEXT_CHECKHEADER:   64 | 45000040 dbd94000 400696a7 6400002d 6400000a 005082d4 0f4a5f6f 865ca4ae b0100055 504b0000 0101080a f850d1d1 4c0e9d59 0101050a 865ca550 865ca551
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 0040dbd9 40004006 96a76400 002d6400 000a0050 82d40f4a 5f6f865c a4aeb010 0055504b 00000101 080af850 d1d14c0e 9d590101 050a865c a550865c a551
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003cd74b 40004006 9b396400 000a6400 002db5f4 0050c538 240d0000 0000a002 a5644ab6 00000204 05b40402 080a4c0e a4130000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c d74b4000 40069b39 6400000a 6400002d b5f40050 c538240d 00000000 a002a564 4ab60000 020405b4 0402080a 4c0ea413 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c d74b4000 40069b1a 6400002d 64000029 b5f40050 c538240d 00000000 a002a564 4a970000 020405b4 0402080a 4c0ea413 00000000 01030309
-TOINT_AFTERARP:   74 | 00000000 00073e2b 25d3815e 08004500 003cd74b 40004006 9b1a6400 002d6400 0029b5f4 0050c538 240d0000 0000a002 a5644a97 00000204 05b40402 080a4c0e a4130000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 b5f41e4b 238bc538 240ea012 a9b07e95 00000204 05b40402 080a41a6 44284c0e a4130103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 0050b5f4 1e4b238b c538240e a012a9b0 7e950000 020405b4 0402080a 41a64428 4c0ea413 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b5f4 1e4b238b c538240e a012a9b0 7eb40000 020405b4 0402080a 41a64428 4c0ea413 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b5f4 1e4b238b c538240e a012a9b0 7eb40000 020405b4 0402080a 41a64428 4c0ea413 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b5f41e4b 238bc538 240ea012 a9b07eb4 00000204 05b40402 080a41a6 44284c0e a4130103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 b5f41e4b 238bc538 240ea012 a9b07aa3 00000204 05b40402 080a41a6 481a4c0e a4130103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 0050b5f4 1e4b238b c538240e a012a9b0 7aa30000 020405b4 0402080a 41a6481a 4c0ea413 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b5f4 1e4b238b c538240e a012a9b0 7ac20000 020405b4 0402080a 41a6481a 4c0ea413 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b5f4 1e4b238b c538240e a012a9b0 7ac20000 020405b4 0402080a 41a6481a 4c0ea413 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b5f41e4b 238bc538 240ea012 a9b07ac2 00000204 05b40402 080a41a6 481a4c0e a4130103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034d74c 40004006 9b406400 000a6400 002db5f4 0050c538 240e1e4b 238c8010 00534e12 00000101 080a4c0e a8ef41a6 481a
-BEFORECHECKSUM:   52 | 45000034 d74c4000 40069b40 6400000a 6400002d b5f40050 c538240e 1e4b238c 80100053 4e120000 0101080a 4c0ea8ef 41a6481a
-TOINT_GETIPADDRESS16:   52 | 45000034 d74c4000 40069b21 6400002d 64000029 b5f40050 c538240e 1e4b238c 80100053 4df30000 0101080a 4c0ea8ef 41a6481a
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 0034d74c 40004006 9b216400 002d6400 0029b5f4 0050c538 240e1e4b 238c8010 00534df3 00000101 080a4c0e a8ef41a6 481a
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 0034d74e 40004006 9b3e6400 000a6400 002db5f4 0050c538 24ae1e4b 238c8011 00534ae7 00000101 080a4c0e ab7941a6 481a
-BEFORECHECKSUM:   52 | 45000034 d74e4000 40069b3e 6400000a 6400002d b5f40050 c53824ae 1e4b238c 80110053 4ae70000 0101080a 4c0eab79 41a6481a
-TOINT_GETIPADDRESS16:   52 | 45000034 d74e4000 40069b1f 6400002d 64000029 b5f40050 c53824ae 1e4b238c 80110053 4ac80000 0101080a 4c0eab79 41a6481a
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 0034d74e 40004006 9b1f6400 002d6400 0029b5f4 0050c538 24ae1e4b 238c8011 00534ac8 00000101 080a4c0e ab7941a6 481a
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000007 08004500 0040d126 40004006 a13b6400 00296400 002d0050 b5f41e4b 238cc538 240eb010 0055c888 00000101 080a41a6 4af34c0e a8ef0101 050ac538 24aec538 24af
-BEFORECHECKSUM:   64 | 45000040 d1264000 4006a13b 64000029 6400002d 0050b5f4 1e4b238c c538240e b0100055 c8880000 0101080a 41a64af3 4c0ea8ef 0101050a c53824ae c53824af
-TOEXT_GETIPADDRESS16:   64 | 45000040 d1264000 4006a15a 6400002d 6400000a 0050b5f4 1e4b238c c538240e b0100055 41510000 0101080a 41a64af3 4c0ea8ef 0101050a c53824ae c53824af
-TOEXT_CHECKHEADER:   64 | 45000040 d1264000 4006a15a 6400002d 6400000a 0050b5f4 1e4b238c c538240e b0100055 41510000 0101080a 41a64af3 4c0ea8ef 0101050a c53824ae c53824af
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 0040d126 40004006 a15a6400 002d6400 000a0050 b5f41e4b 238cc538 240eb010 00554151 00000101 080a41a6 4af34c0e a8ef0101 050ac538 24aec538 24af
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003c0ec4 40004006 63c16400 000a6400 002db604 0050ed53 8f9c0000 0000a002 a564ab50 00000204 05b40402 080a4c0e afbe0000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c 0ec44000 400663c1 6400000a 6400002d b6040050 ed538f9c 00000000 a002a564 ab500000 020405b4 0402080a 4c0eafbe 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c 0ec44000 400663a1 6400002d 6400002a b6040050 ed538f9c 00000000 a002a564 ab300000 020405b4 0402080a 4c0eafbe 00000000 01030309
-TOINT_AFTERARP:   74 | 00000000 00083e2b 25d3815e 08004500 003c0ec4 40004006 63a16400 002d6400 002ab604 0050ed53 8f9c0000 0000a002 a564ab30 00000204 05b40402 080a4c0e afbe0000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:08.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000008 08004500 003c0000 40004006 72656400 002a6400 002d0050 b604a269 79e2ed53 8f9da012 a9b0bb37 00000204 05b40402 080aef03 e04b4c0e afbe0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067265 6400002a 6400002d 0050b604 a26979e2 ed538f9d a012a9b0 bb370000 020405b4 0402080a ef03e04b 4c0eafbe 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b604 a26979e2 ed538f9d a012a9b0 bb570000 020405b4 0402080a ef03e04b 4c0eafbe 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b604 a26979e2 ed538f9d a012a9b0 bb570000 020405b4 0402080a ef03e04b 4c0eafbe 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b604a269 79e2ed53 8f9da012 a9b0bb57 00000204 05b40402 080aef03 e04b4c0e afbe0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000008 08004500 003c0000 40004006 72656400 002a6400 002d0050 b604a269 79e2ed53 8f9da012 a9b0b747 00000204 05b40402 080aef03 e43b4c0e afbe0103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067265 6400002a 6400002d 0050b604 a26979e2 ed538f9d a012a9b0 b7470000 020405b4 0402080a ef03e43b 4c0eafbe 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b604 a26979e2 ed538f9d a012a9b0 b7670000 020405b4 0402080a ef03e43b 4c0eafbe 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b604 a26979e2 ed538f9d a012a9b0 b7670000 020405b4 0402080a ef03e43b 4c0eafbe 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b604a269 79e2ed53 8f9da012 a9b0b767 00000204 05b40402 080aef03 e43b4c0e afbe0103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00340ec5 40004006 63c86400 000a6400 002db604 0050ed53 8f9da269 79e38010 00538af2 00000101 080a4c0e b45fef03 e43b
-BEFORECHECKSUM:   52 | 45000034 0ec54000 400663c8 6400000a 6400002d b6040050 ed538f9d a26979e3 80100053 8af20000 0101080a 4c0eb45f ef03e43b
-TOINT_GETIPADDRESS16:   52 | 45000034 0ec54000 400663a8 6400002d 6400002a b6040050 ed538f9d a26979e3 80100053 8ad20000 0101080a 4c0eb45f ef03e43b
-TOINT_AFTERARP:   66 | 00000000 00083e2b 25d3815e 08004500 00340ec5 40004006 63a86400 002d6400 002ab604 0050ed53 8f9da269 79e38010 00538ad2 00000101 080a4c0e b45fef03 e43b
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00340ec7 40004006 63c66400 000a6400 002db604 0050ed53 9034a269 79e38011 00538718 00000101 080a4c0e b7a1ef03 e43b
-BEFORECHECKSUM:   52 | 45000034 0ec74000 400663c6 6400000a 6400002d b6040050 ed539034 a26979e3 80110053 87180000 0101080a 4c0eb7a1 ef03e43b
-TOINT_GETIPADDRESS16:   52 | 45000034 0ec74000 400663a6 6400002d 6400002a b6040050 ed539034 a26979e3 80110053 86f80000 0101080a 4c0eb7a1 ef03e43b
-TOINT_AFTERARP:   66 | 00000000 00083e2b 25d3815e 08004500 00340ec7 40004006 63a66400 002d6400 002ab604 0050ed53 9034a269 79e38011 005386f8 00000101 080a4c0e b7a1ef03 e43b
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000008 08004500 0040ded0 40004006 93906400 002a6400 002d0050 b604a269 79e3ed53 8f9db010 0055c889 00000101 080aef03 e7d04c0e b45f0101 050aed53 9034ed53 9035
-BEFORECHECKSUM:   64 | 45000040 ded04000 40069390 6400002a 6400002d 0050b604 a26979e3 ed538f9d b0100055 c8890000 0101080a ef03e7d0 4c0eb45f 0101050a ed539034 ed539035
-TOEXT_GETIPADDRESS16:   64 | 45000040 ded04000 400693b0 6400002d 6400000a 0050b604 a26979e3 ed538f9d b0100055 56320000 0101080a ef03e7d0 4c0eb45f 0101050a ed539034 ed539035
-TOEXT_CHECKHEADER:   64 | 45000040 ded04000 400693b0 6400002d 6400000a 0050b604 a26979e3 ed538f9d b0100055 56320000 0101080a ef03e7d0 4c0eb45f 0101050a ed539034 ed539035
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 0040ded0 40004006 93b06400 002d6400 000a0050 b604a269 79e3ed53 8f9db010 00555632 00000101 080aef03 e7d04c0e b45f0101 050aed53 9034ed53 9035
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003c6c50 40004006 06356400 000a6400 002db610 005013b3 50770000 0000a002 a564b760 00000204 05b40402 080a4c0e bc680000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c 6c504000 40060635 6400000a 6400002d b6100050 13b35077 00000000 a002a564 b7600000 020405b4 0402080a 4c0ebc68 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c 6c504000 40060617 6400002d 64000028 b6100050 13b35077 00000000 a002a564 b7420000 020405b4 0402080a 4c0ebc68 00000000 01030309
-TOINT_AFTERARP:   74 | 00000000 00063e2b 25d3815e 08004500 003c6c50 40004006 06176400 002d6400 0028b610 005013b3 50770000 0000a002 a564b742 00000204 05b40402 080a4c0e bc680000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 b6108052 931713b3 5078a012 a9b0b77f 00000204 05b40402 080af850 efaa4c0e bc680103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 0050b610 80529317 13b35078 a012a9b0 b77f0000 020405b4 0402080a f850efaa 4c0ebc68 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b610 80529317 13b35078 a012a9b0 b79d0000 020405b4 0402080a f850efaa 4c0ebc68 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b610 80529317 13b35078 a012a9b0 b79d0000 020405b4 0402080a f850efaa 4c0ebc68 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b6108052 931713b3 5078a012 a9b0b79d 00000204 05b40402 080af850 efaa4c0e bc680103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000006 08004500 003c0000 40004006 72676400 00286400 002d0050 b6108052 931713b3 5078a012 a9b0b37d 00000204 05b40402 080af850 f3ac4c0e bc680103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067267 64000028 6400002d 0050b610 80529317 13b35078 a012a9b0 b37d0000 020405b4 0402080a f850f3ac 4c0ebc68 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b610 80529317 13b35078 a012a9b0 b39b0000 020405b4 0402080a f850f3ac 4c0ebc68 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b610 80529317 13b35078 a012a9b0 b39b0000 020405b4 0402080a f850f3ac 4c0ebc68 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b6108052 931713b3 5078a012 a9b0b39b 00000204 05b40402 080af850 f3ac4c0e bc680103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00346c51 40004006 063c6400 000a6400 002db610 005013b3 50788052 93188010 0053870f 00000101 080a4c0e c120f850 f3ac
-BEFORECHECKSUM:   52 | 45000034 6c514000 4006063c 6400000a 6400002d b6100050 13b35078 80529318 80100053 870f0000 0101080a 4c0ec120 f850f3ac
-TOINT_GETIPADDRESS16:   52 | 45000034 6c514000 4006061e 6400002d 64000028 b6100050 13b35078 80529318 80100053 86f10000 0101080a 4c0ec120 f850f3ac
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 00346c51 40004006 061e6400 002d6400 0028b610 005013b3 50788052 93188010 005386f1 00000101 080a4c0e c120f850 f3ac
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00346c53 40004006 063a6400 000a6400 002db610 005013b3 510f8052 93188011 005383b4 00000101 080a4c0e c3e3f850 f3ac
-BEFORECHECKSUM:   52 | 45000034 6c534000 4006063a 6400000a 6400002d b6100050 13b3510f 80529318 80110053 83b40000 0101080a 4c0ec3e3 f850f3ac
-TOINT_GETIPADDRESS16:   52 | 45000034 6c534000 4006061c 6400002d 64000028 b6100050 13b3510f 80529318 80110053 83960000 0101080a 4c0ec3e3 f850f3ac
-TOINT_AFTERARP:   66 | 00000000 00063e2b 25d3815e 08004500 00346c53 40004006 061c6400 002d6400 0028b610 005013b3 510f8052 93188011 00538396 00000101 080a4c0e c3e3f850 f3ac
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000006 08004500 004097b3 40004006 daaf6400 00286400 002d0050 b6108052 931813b3 5078b010 0055c887 00000101 080af850 f6b64c0e c1200101 050a13b3 510f13b3 5110
-BEFORECHECKSUM:   64 | 45000040 97b34000 4006daaf 64000028 6400002d 0050b610 80529318 13b35078 b0100055 c8870000 0101080a f850f6b6 4c0ec120 0101050a 13b3510f 13b35110
-TOEXT_GETIPADDRESS16:   64 | 45000040 97b34000 4006dacd 6400002d 6400000a 0050b610 80529318 13b35078 b0100055 84660000 0101080a f850f6b6 4c0ec120 0101050a 13b3510f 13b35110
-TOEXT_CHECKHEADER:   64 | 45000040 97b34000 4006dacd 6400002d 6400000a 0050b610 80529318 13b35078 b0100055 84660000 0101080a f850f6b6 4c0ec120 0101050a 13b3510f 13b35110
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 004097b3 40004006 dacd6400 002d6400 000a0050 b6108052 931813b3 5078b010 00558466 00000101 080af850 f6b64c0e c1200101 050a13b3 510f13b3 5110
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-Packet Overview: [00:00:00:00:00:01>02:15:70:de:9e:d1 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 02:15:70:de:9e:d1.3
-BEFORESTRIP:   74 | 021570de 9ed10000 00000001 08004500 003c2aba 40004006 47cb6400 000a6400 002db118 0050db9c e2fc0000 0000a002 a564564d 00000204 05b40402 080a4c0e c8040000 00000103 0309
-BEFORECHECKSUM:   60 | 4500003c 2aba4000 400647cb 6400000a 6400002d b1180050 db9ce2fc 00000000 a002a564 564d0000 020405b4 0402080a 4c0ec804 00000000 01030309
-TOINT_GETIPADDRESS16:   60 | 4500003c 2aba4000 400647ac 6400002d 64000029 b1180050 db9ce2fc 00000000 a002a564 562e0000 020405b4 0402080a 4c0ec804 00000000 01030309
-TOINT_AFTERARP:   74 | 00000000 00073e2b 25d3815e 08004500 003c2aba 40004006 47ac6400 002d6400 0029b118 0050db9c e2fc0000 0000a002 a564562e 00000204 05b40402 080a4c0e c8040000 00000103 0309
-DEBUG:forwarding.l2_learning:installing flow for 3e:2b:25:d3:81:5e.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 3e:2b:25:d3:81:5e.1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 b118f77d d3bcdb9c e2fda012 a9b0dd42 00000204 05b40402 080a41a6 67ad4c0e c8040103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 0050b118 f77dd3bc db9ce2fd a012a9b0 dd420000 020405b4 0402080a 41a667ad 4c0ec804 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b118 f77dd3bc db9ce2fd a012a9b0 dd610000 020405b4 0402080a 41a667ad 4c0ec804 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b118 f77dd3bc db9ce2fd a012a9b0 dd610000 020405b4 0402080a 41a667ad 4c0ec804 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b118f77d d3bcdb9c e2fda012 a9b0dd61 00000204 05b40402 080a41a6 67ad4c0e c8040103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-Packet Overview: [02:15:70:de:9e:d1>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
+DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-BEFORESTRIP:   74 | 3e2b25d3 815e0000 00000007 08004500 003c0000 40004006 72666400 00296400 002d0050 b118f77d d3bcdb9c e2fda012 a9b0d868 00000204 05b40402 080a41a6 6c874c0e c8040103 0309
-BEFORECHECKSUM:   60 | 4500003c 00004000 40067266 64000029 6400002d 0050b118 f77dd3bc db9ce2fd a012a9b0 d8680000 020405b4 0402080a 41a66c87 4c0ec804 01030309
-TOEXT_GETIPADDRESS16:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b118 f77dd3bc db9ce2fd a012a9b0 d8870000 020405b4 0402080a 41a66c87 4c0ec804 01030309
-TOEXT_CHECKHEADER:   60 | 4500003c 00004000 40067285 6400002d 6400000a 0050b118 f77dd3bc db9ce2fd a012a9b0 d8870000 020405b4 0402080a 41a66c87 4c0ec804 01030309
-ARPQUERIER:   74 | 00000000 00010215 70de9ed1 08004500 003c0000 40004006 72856400 002d6400 000a0050 b118f77d d3bcdb9c e2fda012 a9b0d887 00000204 05b40402 080a41a6 6c874c0e c8040103 0309
-DEBUG:forwarding.l2_learning:installing flow for 02:15:70:de:9e:d1.3 -> 00:00:00:00:00:01.1
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00342abb 40004006 47d26400 000a6400 002db118 0050db9c e2fdf77d d3bd8010 0053ab39 00000101 080a4c0e cd7e41a6 6c87
-BEFORECHECKSUM:   52 | 45000034 2abb4000 400647d2 6400000a 6400002d b1180050 db9ce2fd f77dd3bd 80100053 ab390000 0101080a 4c0ecd7e 41a66c87
-TOINT_GETIPADDRESS16:   52 | 45000034 2abb4000 400647b3 6400002d 64000029 b1180050 db9ce2fd f77dd3bd 80100053 ab1a0000 0101080a 4c0ecd7e 41a66c87
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 00342abb 40004006 47b36400 002d6400 0029b118 0050db9c e2fdf77d d3bd8010 0053ab1a 00000101 080a4c0e cd7e41a6 6c87
-BEFORESTRIP:   66 | 021570de 9ed10000 00000001 08004500 00342abd 40004006 47d06400 000a6400 002db118 0050db9c e394f77d d3bd8011 0053a851 00000101 080a4c0e cfce41a6 6c87
-BEFORECHECKSUM:   52 | 45000034 2abd4000 400647d0 6400000a 6400002d b1180050 db9ce394 f77dd3bd 80110053 a8510000 0101080a 4c0ecfce 41a66c87
-TOINT_GETIPADDRESS16:   52 | 45000034 2abd4000 400647b1 6400002d 64000029 b1180050 db9ce394 f77dd3bd 80110053 a8320000 0101080a 4c0ecfce 41a66c87
-TOINT_AFTERARP:   66 | 00000000 00073e2b 25d3815e 08004500 00342abd 40004006 47b16400 002d6400 0029b118 0050db9c e394f77d d3bd8011 0053a832 00000101 080a4c0e cfce41a6 6c87
-BEFORESTRIP:   78 | 3e2b25d3 815e0000 00000007 08004500 0040a748 40004006 cb196400 00296400 002d0050 b118f77d d3bddb9c e2fdb010 0055c888 00000101 080a41a6 6f5e4c0e cd7e0101 050adb9c e394db9c e395
-BEFORECHECKSUM:   64 | 45000040 a7484000 4006cb19 64000029 6400002d 0050b118 f77dd3bd db9ce2fd b0100055 c8880000 0101080a 41a66f5e 4c0ecd7e 0101050a db9ce394 db9ce395
-TOEXT_GETIPADDRESS16:   64 | 45000040 a7484000 4006cb38 6400002d 6400000a 0050b118 f77dd3bd db9ce2fd b0100055 f3e40000 0101080a 41a66f5e 4c0ecd7e 0101050a db9ce394 db9ce395
-TOEXT_CHECKHEADER:   64 | 45000040 a7484000 4006cb38 6400002d 6400000a 0050b118 f77dd3bd db9ce2fd b0100055 f3e40000 0101080a 41a66f5e 4c0ecd7e 0101050a db9ce394 db9ce395
-ARPQUERIER:   78 | 00000000 00010215 70de9ed1 08004500 0040a748 40004006 cb386400 002d6400 000a0050 b118f77d d3bddb9c e2fdb010 0055f3e4 00000101 080a41a6 6f5e4c0e cd7e0101 050adb9c e394db9c e395
+DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
 FromDevice(napt-eth1): recvfrom: Network is down
-FromDevice(lb-eth2): recvfrom: Network is down
 FromDevice(ids-eth1): recvfrom: Network is down
+FromDevice(lb-eth2): recvfrom: Network is down
 FromDevice(lb-eth1): recvfrom: Network is down
-INFO:openflow.of_01:[00-00-00-00-00-03 1] closed
-INFO:openflow.of_01:[00-00-00-00-00-02 2] closed
-INFO:openflow.of_01:[00-00-00-00-00-07 3] closed
+iptables v1.8.7 (nf_tables):  RULE_DELETE failed (No such file or directory): rule in chain INPUT
+INFO:openflow.of_01:[00-00-00-00-00-07 1] closed
+INFO:openflow.of_01:[00-00-00-00-00-03 2] closed
+INFO:openflow.of_01:[00-00-00-00-00-02 3] closed
 INFO:openflow.of_01:[00-00-00-00-00-04 4] closed
 INFO:openflow.of_01:[00-00-00-00-00-09 5] closed
 INFO:openflow.of_01:[00-00-00-00-00-05 6] closed
 INFO:openflow.of_01:[00-00-00-00-00-06 7] closed
 INFO:openflow.of_01:[00-00-00-00-00-01 8] closed
 INFO:openflow.of_01:[00-00-00-00-00-08 9] closed
+INFO:openflow.of_01:[00-00-00-00-00-03 11] connected
+INFO:openflow.of_01:[00-00-00-00-00-07 12] connected
+Launching click with command sudo click applications/nfv/lb.click 2>&1 | tee results/lb.stdout &
+Click launched with PID 9007
+INFO:baseController:
+Starting click process for LB Switch = 7
+INFO:openflow.of_01:[00-00-00-00-00-02 13] connected
+INFO:openflow.of_01:[00-00-00-00-00-09 14] connected
+Launching click with command sudo click applications/nfv/napt.click 2>&1 | tee results/napt.stdout &
+Click launched with PID 9028
+INFO:baseController:
+Starting a Click process for NAPT Switch 9
+INFO:openflow.of_01:[00-00-00-00-00-04 15] connected
+INFO:openflow.of_01:[00-00-00-00-00-05 16] connected
+Firewall FW1 is running
+INFO:openflow.of_01:[00-00-00-00-00-06 17] connected
+Firewall FW2 is running
+INFO:openflow.of_01:[00-00-00-00-00-01 18] connected
+INFO:openflow.of_01:[00-00-00-00-00-08 19] connected
+Launching click with command sudo click applications/nfv/ids.click 2>&1 | tee results/ids.stdout &
+Click launched with PID 9035
+INFO:baseController:
+Starting a Click process for IDS Switch 8
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-21T20:51:28.086831')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 6 - port 1', '2024-05-21T20:51:28.088485')
+Test LB if running?????
+Click NAPT on napt-eth1 napt-eth2
+Test NAPT if running?????
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 6 - port 2', '2024-05-21T20:51:28.125997')
+('switch 6 - port 1', '2024-05-21T20:51:28.126237')
+('switch 5 - port 2', '2024-05-21T20:51:28.130566')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+('switch 5 - port 1', '2024-05-21T20:51:28.149124')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+Test IDS if running?????
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-21T20:51:28.752028')
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 66:d8:cd:e5:32:25.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 66:d8:cd:e5:32:25.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+Packet Overview: [52:89:3c:41:56:44>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:b8ef][ICMP id:22646 seq:1]
+100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
+INFO:baseFirewall:
+FW2 : Packet allowed by the Firewall
+Rule Installed on Output Port: 1
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
+Packet Overview: [52:89:3c:41:56:44>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:b8ef][ICMP id:22646 seq:1]
+100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
+INFO:baseFirewall:
+FW1 : Packet allowed by the Firewall
+Rule Installed on Output Port: 1
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
+Packet Overview: [00:00:00:00:00:01>52:89:3c:41:56:44 IP] 2048 True [t:ECHO_REPLY c:0 chk:c0ef][ICMP id:22646 seq:1]
+Rule Installed on Output Port: 2
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+Packet Overview: [00:00:00:00:00:01>52:89:3c:41:56:44 IP] 2048 True [t:ECHO_REPLY c:0 chk:c0ef][ICMP id:22646 seq:1]
+Rule Installed on Output Port: 2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 66:d8:cd:e5:32:25.3
+DEBUG:forwarding.l2_learning:installing flow for 66:d8:cd:e5:32:25.3 -> 00:00:00:00:00:03.1
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.3 -> 00:00:00:00:00:01.1
+DEBUG:openflow.of_01:1 connection aborted
+FromDevice(napt-eth1): recvfrom: Network is down
+FromDevice(lb-eth2): recvfrom: Network is down
+FromDevice(ids-eth1): recvfrom: Network is down
+FromDevice(lb-eth1): recvfrom: Network is down
+INFO:openflow.of_01:[00-00-00-00-00-03 11] closed
+INFO:openflow.of_01:[00-00-00-00-00-07 12] closed
+INFO:openflow.of_01:[00-00-00-00-00-02 13] closed
+INFO:openflow.of_01:[00-00-00-00-00-09 14] closed
+INFO:openflow.of_01:[00-00-00-00-00-04 15] closed
+INFO:openflow.of_01:[00-00-00-00-00-05 16] closed
+INFO:openflow.of_01:[00-00-00-00-00-06 17] closed
+INFO:openflow.of_01:[00-00-00-00-00-01 18] closed
+INFO:openflow.of_01:[00-00-00-00-00-08 19] closed

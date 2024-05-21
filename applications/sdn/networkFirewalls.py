@@ -61,7 +61,6 @@ class FW2 (Firewall):
             # [2, 'any', 'any', 'any', 'any', 'any', 'allow']
 
 
-
             ### experiment
             [2, 'TCP', 'any', 'any', '10.0.0.40/28', '80', 'allow'], # allow Prz to Dmz http
             [2, 'any', 'any', 'any', '10.0.0.40/28', 'any', 'block'], # block Prz to Dmz others

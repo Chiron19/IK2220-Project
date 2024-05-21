@@ -188,6 +188,15 @@ class Firewall (l2_learning.LearningSwitch):
         msg.hard_timeout = 30
         self.connection.send(msg)
         
+        # Explicitly send the packet out after installing the rule
+        packet_out = of.ofp_packet_out()
+        packet_out.data = packet
+        packet_out.actions.append(of.ofp_action_output(port=out_port))
+        packet_out.in_port = received_port
+        
+        # Send the packet out message to the switch
+        self.connection.send(packet_out)
+        
         if install_allow_reverse:
             self.rules_for_specific_reply_packets.append(of.ofp_match(in_port = out_port, 
                                                                       dl_src = packet.dst, 
