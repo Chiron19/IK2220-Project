@@ -66,7 +66,7 @@ ipClassifierExt[3] -> icmpReplyDropExt -> Discard;
 
 
 
-DriverManager(wait, print > /home/ik2220/version1/click_results/napt.report "
+DriverManager(wait, print > ./results/napt.report "
         ===================== NAPT Report ====================
         Input Packet Rate (pps): $(add $(fromPrz.rate) $(fromDmz.rate))
         Output Packet Rate(pps): $(add $(toPrz.rate) $(toDmz.rate))
