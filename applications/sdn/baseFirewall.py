@@ -51,12 +51,12 @@ class Firewall (l2_learning.LearningSwitch):
                 # print(ip_in_subnet, "False")
                 return False
 
-    def protocol_check(self, rule, tcp_udp):
+    def protocol_check(self, rule, tcp_icmp):
         if rule == 'any':
             return True
 
-        #tcp_udp = 'TCP'or'UDP' or None
-        if rule != tcp_udp:
+        #tcp_icmp = 'TCP'or'UDP' or None
+        if rule != tcp_icmp:
             return False 
             
         else: 
@@ -82,18 +82,18 @@ class Firewall (l2_learning.LearningSwitch):
         ### COMPLETE THIS PART ###
         
         ipp_payload = ip_packet.payload
-        tcp_udp = ""
+        tcp_icmp = ""
         tcp_src_port = -1
         tcp_dst_port = -1
         
         # check packet type
         if ip_packet.find('tcp'):
-            tcp_udp = 'TCP'
+            tcp_icmp = 'TCP'
             tcp_src_port = ip_packet.find('tcp').srcport
             tcp_dst_port = ip_packet.find('tcp').dstport
                
-        if ip_packet.find('udp'):
-            tcp_udp = 'UDP'
+        if ip_packet.find('icmp'):
+            tcp_icmp = 'ICMP'
         
         src_addr = ipp_payload.srcip
         dst_addr = ipp_payload.dstip
@@ -132,7 +132,7 @@ class Firewall (l2_learning.LearningSwitch):
             #allow_or_block = rules[6]
 
             r0 = (rule[0] == input_port)
-            r1 = self.protocol_check(rule[1],tcp_udp)
+            r1 = self.protocol_check(rule[1],tcp_icmp)
             r2 = self.subnet_check(rule[2], src_addr)
             r3 = self.tcp_port_check(rule[3], tcp_src_port)
             r4 = self.subnet_check(rule[4], dst_addr)
