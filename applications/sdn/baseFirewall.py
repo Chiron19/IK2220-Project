@@ -171,8 +171,6 @@ class Firewall (l2_learning.LearningSwitch):
         msg.match = of.ofp_match.from_packet(packet, received_port)
         
         out_port = -1
-        
-        #self.macToPort[]
         dst_mac = packet.dst
         
         if dst_mac in self.macToPort:
@@ -181,20 +179,18 @@ class Firewall (l2_learning.LearningSwitch):
         else:
             out_port = of.OFPP_FLOOD 	                
         
-    
+        # Install the rule in corresponding out_port of the switch
         print(f"Rule Installed on Output Port: {out_port}")
         msg.actions.append(of.ofp_action_output(port = out_port))
         msg.idle_timeout = 10
         msg.hard_timeout = 30
         self.connection.send(msg)
         
-        # Explicitly send the packet out after installing the rule
+        # Explicitly send the packet out to the switch after installing the rule
         packet_out = of.ofp_packet_out()
         packet_out.data = packet
-        packet_out.actions.append(of.ofp_action_output(port=out_port))
+        packet_out.actions.append(of.ofp_action_output(port = out_port))
         packet_out.in_port = received_port
-        
-        # Send the packet out message to the switch
         self.connection.send(packet_out)
         
         if install_allow_reverse:

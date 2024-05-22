@@ -1,15 +1,18 @@
 
-=================== LB1 Report ===================
-Input Packet Rate (pps):    0.412152677722
-Output Packet Rate (pps):   0
+=================== IDS Report ===================
+Input Packet rate (pps):    4.79266277022
+Output Packet rate (pps):   2.81426801653
 
-Total # of  input packets:  58
-Total # of  output packets: 0
+Total # of  input packets:  138
+Total # of  output packets: 74
 
-Total # of  ARP requests:   1
-Total # of  ARP responses:  0
+Total # of  IP  packets:    98
+Total # of  ARP  packets:   15 
+Total # of  HTTP packets:   41 
 
-Total # of  service packets:    0
-Total # of  ICMP packets:       0
-Total # of  dropped packets:    57
+Total # of  PUT packets:    31
+Total # of  POST packets:   1 
+
+Total # of  to INSP packets:    39
+Total # of  dropped packets:    25
 =================================================

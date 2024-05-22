@@ -3,622 +3,323 @@ POX 0.7.0 (gar) / Copyright 2011-2020 James McCauley, et al.
  * Debug mode: off
 DEBUG:core:POX 0.7.0 (gar) going up...
 DEBUG:core:Running on CPython (3.10.12/Nov 20 2023 15:14:05)
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.0.2.15:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
 DEBUG:core:Platform is Linux-5.15.0-105-generic-x86_64-with-glibc2.35
 WARNING:version:POX requires one of the following versions of Python: 3.6 3.7 3.8 3.9
 WARNING:version:You're running Python 3.10.
 WARNING:version:If you run into problems, try using a supported version.
 INFO:core:POX 0.7.0 (gar) is up.
 DEBUG:openflow.of_01:Listening on 0.0.0.0:6633
-INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:8080
- * Running on http://192.168.0.103:8080
-INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:openflow.of_01:[00-00-00-00-00-05 6] connected
-Firewall FW1 is running
 INFO:openflow.of_01:[00-00-00-00-00-07 1] connected
 Launching click with command sudo click applications/nfv/lb.click 2>&1 | tee results/lb.stdout &
-Click launched with PID 7732
+Click launched with PID 2750
 INFO:baseController:
 Starting click process for LB Switch = 7
 INFO:openflow.of_01:[00-00-00-00-00-03 2] connected
 INFO:openflow.of_01:[00-00-00-00-00-02 3] connected
-INFO:openflow.of_01:[00-00-00-00-00-04 4] connected
-INFO:openflow.of_01:[00-00-00-00-00-09 5] connected
+INFO:openflow.of_01:[00-00-00-00-00-09 4] connected
 Launching click with command sudo click applications/nfv/napt.click 2>&1 | tee results/napt.stdout &
-Click launched with PID 7733
+Click launched with PID 2751
 INFO:baseController:
 Starting a Click process for NAPT Switch 9
-INFO:openflow.of_01:[00-00-00-00-00-06 7] connected
-Firewall FW2 is running
-INFO:openflow.of_01:[00-00-00-00-00-01 8] connected
+INFO:openflow.of_01:[00-00-00-00-00-04 5] connected
+INFO:openflow.of_01:[00-00-00-00-00-05 6] connected
+Firewall FW1 is running
+INFO:openflow.of_01:[00-00-00-00-00-01 7] connected
 INFO:openflow.of_01:[00-00-00-00-00-08 9] connected
 Launching click with command sudo click applications/nfv/ids.click 2>&1 | tee results/ids.stdout &
-Click launched with PID 7734
+Click launched with PID 2754
 INFO:baseController:
 Starting a Click process for IDS Switch 8
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 5 - port 2', '2024-05-21T20:50:27.076330')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 6 - port 1', '2024-05-21T20:50:27.121514')
-('switch 5 - port 1', '2024-05-21T20:50:27.131264')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 6 - port 1', '2024-05-21T20:50:27.146379')
+INFO:openflow.of_01:[00-00-00-00-00-06 8] connected
+Firewall FW2 is running
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-22T07:59:07.568265')
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 6 - port 2', '2024-05-22T07:59:07.625381')
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-22T07:59:07.639148')
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+Test LB if running?????
 Click NAPT on napt-eth1 napt-eth2
 Test NAPT if running?????
-('switch 5 - port 2', '2024-05-21T20:50:27.162010')
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-('switch 6 - port 2', '2024-05-21T20:50:27.196384')
-Test LB if running?????
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 5 - port 2', '2024-05-21T20:50:27.214999')
 Test IDS if running?????
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
 DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:02 unknown -- flooding
-('switch 5 - port 1', '2024-05-21T20:50:27.983106')
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:3bcf][ICMP id:23085 seq:1]
-NO FIREWALL CONDITIONS MATCHED
+('switch 5 - port 1', '2024-05-22T07:59:08.444305')
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1668][ICMP id:9415 seq:1]
+100.0.0.10 -> 100.0.0.11: BLOCKED [True, True, True, True, True, True, block]
 WARNING:baseFirewall:
 FW1 : Packet blocked by the Firewall!
 DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
-('switch 5 - port 1', '2024-05-21T20:50:28.030088')
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:03.1
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+('switch 5 - port 2', '2024-05-22T07:59:08.555549')
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 32:c1:ce:af:31:21.3
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:ebd7][ICMP id:59090 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [ae:a5:9c:4f:ae:56>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:43ad][ICMP id:61870 seq:1]
 100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
-Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:ebd7][ICMP id:59090 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:01.1
+Packet Overview: [ae:a5:9c:4f:ae:56>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:43ad][ICMP id:61870 seq:1]
 100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
-Packet Overview: [00:00:00:00:00:01>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f3d7][ICMP id:59090 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.3
+Packet Overview: [00:00:00:00:00:01>ae:a5:9c:4f:ae:56 IP] 2048 True [t:ECHO_REPLY c:0 chk:4bad][ICMP id:61870 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-Packet Overview: [00:00:00:00:00:01>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f3d7][ICMP id:59090 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [00:00:00:00:00:01>ae:a5:9c:4f:ae:56 IP] 2048 True [t:ECHO_REPLY c:0 chk:4bad][ICMP id:61870 seq:1]
 Rule Installed on Output Port: 2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 32:c1:ce:af:31:21.3
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 32:c1:ce:af:31:21.3
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
 ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1f52][ICMP id:24041 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> ae:a5:9c:4f:ae:56.3
+('switch 5 - port 1', '2024-05-22T07:59:09.197293')
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [ae:a5:9c:4f:ae:56>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:c43f][ICMP id:49113 seq:1]
 100.0.0.1 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
-Packet Overview: [fa:50:bd:b4:ad:0f>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1f52][ICMP id:24041 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:02.1
+Packet Overview: [ae:a5:9c:4f:ae:56>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REQUEST c:0 chk:c43f][ICMP id:49113 seq:1]
 100.0.0.1 -> 100.0.0.11: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
-Packet Overview: [00:00:00:00:00:02>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:2752][ICMP id:24041 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> ae:a5:9c:4f:ae:56.3
+Packet Overview: [00:00:00:00:00:02>ae:a5:9c:4f:ae:56 IP] 2048 True [t:ECHO_REPLY c:0 chk:cc3f][ICMP id:49113 seq:1]
 Rule Installed on Output Port: 2
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-Packet Overview: [00:00:00:00:00:02>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:2752][ICMP id:24041 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [00:00:00:00:00:02>ae:a5:9c:4f:ae:56 IP] 2048 True [t:ECHO_REPLY c:0 chk:cc3f][ICMP id:49113 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:03.1
 DEBUG:forwarding.l2_learning:Port for 00:00:00:00:00:06 unknown -- flooding
-Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:2e0d][ICMP id:20632 seq:1]
-NO FIREWALL CONDITIONS MATCHED
+Packet Overview: [00:00:00:00:00:01>00:00:00:00:00:06 IP] 2048 True [t:ECHO_REQUEST c:0 chk:1fae][ICMP id:60698 seq:1]
+100.0.0.10 -> 100.0.0.40: BLOCKED [True, True, True, True, True, True, block]
 WARNING:baseFirewall:
 FW1 : Packet blocked by the Firewall!
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-('switch 5 - port 2', '2024-05-21T20:50:31.810909')
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:cc8][ICMP id:13960 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 32:c1:ce:af:31:21.3
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+('switch 5 - port 2', '2024-05-22T07:59:13.070367')
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:fb0a][ICMP id:48781 seq:1]
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REPLY c:0 chk:14c8][ICMP id:13960 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REPLY c:0 chk:30b][ICMP id:48781 seq:1]
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:02>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:570e][ICMP id:9790 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:02>3e:49:2a:6d:d6:f1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:6c8f][ICMP id:12816 seq:1]
 100.0.0.11 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REPLY c:0 chk:5f0e][ICMP id:9790 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> ae:a5:9c:4f:ae:56.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 3e:49:2a:6d:d6:f1.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:02 IP] 2048 True [t:ECHO_REPLY c:0 chk:748f][ICMP id:12816 seq:1]
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.2 -> fa:50:bd:b4:ad:0f.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:02.1 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> 00:00:00:00:00:02.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.3 -> 00:00:00:00:00:02.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 4e:54:04:80:1f:43.3
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> fa:50:bd:b4:ad:0f.2
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.1 -> fa:50:bd:b4:ad:0f.2
-Packet Overview: [fa:50:bd:b4:ad:0f>be:82:fe:6c:f3:2b IP] 2048 True [t:ECHO_REQUEST c:0 chk:ed58][ICMP id:57232 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 00:00:00:00:00:02.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:02.2
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.3 -> 00:00:00:00:00:02.2
+('switch 5 - port 1', '2024-05-22T07:59:14.983884')
+('switch 6 - port 1', '2024-05-22T07:59:15.273273')
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 32:c1:ce:af:31:21.3
+('switch 6 - port 1', '2024-05-22T07:59:16.014024')
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> ae:a5:9c:4f:ae:56.2
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.1 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [ae:a5:9c:4f:ae:56>3e:49:2a:6d:d6:f1 IP] 2048 True [t:ECHO_REQUEST c:0 chk:4928][ICMP id:48021 seq:1]
 100.0.0.1 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW2 : Packet allowed by the Firewall
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.1
-DEBUG:forwarding.l2_learning:installing flow for fa:50:bd:b4:ad:0f.2 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> fa:50:bd:b4:ad:0f.2
-Packet Overview: [be:82:fe:6c:f3:2b>fa:50:bd:b4:ad:0f IP] 2048 True [t:ECHO_REPLY c:0 chk:f558][ICMP id:57232 seq:1]
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 3e:49:2a:6d:d6:f1.1
+DEBUG:forwarding.l2_learning:installing flow for ae:a5:9c:4f:ae:56.2 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> ae:a5:9c:4f:ae:56.2
+Packet Overview: [3e:49:2a:6d:d6:f1>ae:a5:9c:4f:ae:56 IP] 2048 True [t:ECHO_REPLY c:0 chk:5128][ICMP id:48021 seq:1]
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 4e:54:04:80:1f:43.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 4e:54:04:80:1f:43.3
-DEBUG:forwarding.l2_learning:installing flow for 4e:54:04:80:1f:43.3 -> 00:00:00:00:00:04.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:03.1
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:04.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 32:c1:ce:af:31:21.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:04.2 -> 32:c1:ce:af:31:21.3
+DEBUG:forwarding.l2_learning:installing flow for 32:c1:ce:af:31:21.3 -> 00:00:00:00:00:04.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:08.4
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-AFTER_UNSTRIP_TO_SERVER:  211 | be82fe6c f32b0000 00000001 08004500 00c560ea 40004006 11126400 000a6400 002dcea2 00504411 70207ab3 ecc58018 005376f9 00000101 080a1bac 3abb76c1 45605055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+AFTER_UNSTRIP_TO_SERVER:  211 | 3e492a6d d6f10000 00000001 08004500 00c5222e 40004006 4fce6400 000a6400 002da926 00505042 d9ac0177 2fd18018 0053d474 00000101 080af8a2 47867b7d df565055 54202f70 75742048 5454502f 312e310d 0a486f73 743a2031 30302e30 2e302e34 350d0a55 7365722d 4167656e 743a2063 75726c2f 372e3831 2e300d0a 41636365 70743a20 2a2f2a0d 0a436f6e 74656e74 2d4c656e 6774683a 20300d0a 436f6e74 656e742d 54797065 3a206170 706c6963 6174696f 6e2f782d 7777772d 666f726d 2d75726c 656e636f 6465640d 0a0d0a
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:08.4
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:08.4
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:08.4 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:06.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:06.2
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:06.2 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-Packet Overview: [00:00:00:00:00:01>be:82:fe:6c:f3:2b IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+Packet Overview: [00:00:00:00:00:01>3e:49:2a:6d:d6:f1 IP] 2048 True None
 100.0.0.10 -> 100.0.0.45: ALLOWED [True, True, True, True, True, True, allow]
 INFO:baseFirewall:
 FW1 : Packet allowed by the Firewall
 Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> be:82:fe:6c:f3:2b.3
-DEBUG:forwarding.l2_learning:installing flow for 56:da:86:a5:6c:a5.1 -> 00:00:00:00:00:07.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> 56:da:86:a5:6c:a5.1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
-Packet Overview: [be:82:fe:6c:f3:2b>00:00:00:00:00:01 IP] 2048 True None
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 3e:49:2a:6d:d6:f1.3
+DEBUG:forwarding.l2_learning:installing flow for e6:93:65:4e:52:ed.1 -> 00:00:00:00:00:07.3
+DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:07.3 -> e6:93:65:4e:52:ed.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
+Packet Overview: [3e:49:2a:6d:d6:f1>00:00:00:00:00:01 IP] 2048 True None
 Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for be:82:fe:6c:f3:2b.3 -> 00:00:00:00:00:01.1
+DEBUG:forwarding.l2_learning:installing flow for 3e:49:2a:6d:d6:f1.3 -> 00:00:00:00:00:01.1
 FromDevice(napt-eth1): recvfrom: Network is down
-FromDevice(ids-eth1): recvfrom: Network is down
 FromDevice(lb-eth2): recvfrom: Network is down
+FromDevice(ids-eth1): recvfrom: Network is down
 FromDevice(lb-eth1): recvfrom: Network is down
-iptables v1.8.7 (nf_tables):  RULE_DELETE failed (No such file or directory): rule in chain INPUT
 INFO:openflow.of_01:[00-00-00-00-00-07 1] closed
 INFO:openflow.of_01:[00-00-00-00-00-03 2] closed
 INFO:openflow.of_01:[00-00-00-00-00-02 3] closed
-INFO:openflow.of_01:[00-00-00-00-00-04 4] closed
-INFO:openflow.of_01:[00-00-00-00-00-09 5] closed
+INFO:openflow.of_01:[00-00-00-00-00-09 4] closed
+INFO:openflow.of_01:[00-00-00-00-00-04 5] closed
 INFO:openflow.of_01:[00-00-00-00-00-05 6] closed
-INFO:openflow.of_01:[00-00-00-00-00-06 7] closed
-INFO:openflow.of_01:[00-00-00-00-00-01 8] closed
+INFO:openflow.of_01:[00-00-00-00-00-01 7] closed
+INFO:openflow.of_01:[00-00-00-00-00-06 8] closed
 INFO:openflow.of_01:[00-00-00-00-00-08 9] closed
-INFO:openflow.of_01:[00-00-00-00-00-03 11] connected
-INFO:openflow.of_01:[00-00-00-00-00-07 12] connected
-Launching click with command sudo click applications/nfv/lb.click 2>&1 | tee results/lb.stdout &
-Click launched with PID 9007
-INFO:baseController:
-Starting click process for LB Switch = 7
-INFO:openflow.of_01:[00-00-00-00-00-02 13] connected
-INFO:openflow.of_01:[00-00-00-00-00-09 14] connected
-Launching click with command sudo click applications/nfv/napt.click 2>&1 | tee results/napt.stdout &
-Click launched with PID 9028
-INFO:baseController:
-Starting a Click process for NAPT Switch 9
-INFO:openflow.of_01:[00-00-00-00-00-04 15] connected
-INFO:openflow.of_01:[00-00-00-00-00-05 16] connected
-Firewall FW1 is running
-INFO:openflow.of_01:[00-00-00-00-00-06 17] connected
-Firewall FW2 is running
-INFO:openflow.of_01:[00-00-00-00-00-01 18] connected
-INFO:openflow.of_01:[00-00-00-00-00-08 19] connected
-Launching click with command sudo click applications/nfv/ids.click 2>&1 | tee results/ids.stdout &
-Click launched with PID 9035
-INFO:baseController:
-Starting a Click process for IDS Switch 8
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 5 - port 2', '2024-05-21T20:51:28.086831')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 6 - port 1', '2024-05-21T20:51:28.088485')
-Test LB if running?????
-Click NAPT on napt-eth1 napt-eth2
-Test NAPT if running?????
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 6 - port 2', '2024-05-21T20:51:28.125997')
-('switch 6 - port 1', '2024-05-21T20:51:28.126237')
-('switch 5 - port 2', '2024-05-21T20:51:28.130566')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-('switch 5 - port 1', '2024-05-21T20:51:28.149124')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-Test IDS if running?????
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-('switch 5 - port 2', '2024-05-21T20:51:28.752028')
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing questions: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 66:d8:cd:e5:32:25.3 -> 00:00:00:00:00:03.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 66:d8:cd:e5:32:25.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-Packet Overview: [52:89:3c:41:56:44>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:b8ef][ICMP id:22646 seq:1]
-100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW2 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
-Packet Overview: [52:89:3c:41:56:44>00:00:00:00:00:01 IP] 2048 True [t:ECHO_REQUEST c:0 chk:b8ef][ICMP id:22646 seq:1]
-100.0.0.1 -> 100.0.0.10: ALLOWED [True, True, True, True, True, True, allow]
-INFO:baseFirewall:
-FW1 : Packet allowed by the Firewall
-Rule Installed on Output Port: 1
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.3 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
-Packet Overview: [00:00:00:00:00:01>52:89:3c:41:56:44 IP] 2048 True [t:ECHO_REPLY c:0 chk:c0ef][ICMP id:22646 seq:1]
-Rule Installed on Output Port: 2
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-Packet Overview: [00:00:00:00:00:01>52:89:3c:41:56:44 IP] 2048 True [t:ECHO_REPLY c:0 chk:c0ef][ICMP id:22646 seq:1]
-Rule Installed on Output Port: 2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:03.1 -> 66:d8:cd:e5:32:25.3
-DEBUG:forwarding.l2_learning:installing flow for 66:d8:cd:e5:32:25.3 -> 00:00:00:00:00:03.1
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-ERROR:packet:(dns) parsing answers: ord() expected string of length 1, but int found
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.3
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-DEBUG:forwarding.l2_learning:installing flow for 00:00:00:00:00:01.1 -> 52:89:3c:41:56:44.2
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.2 -> 00:00:00:00:00:01.1
-DEBUG:forwarding.l2_learning:installing flow for 52:89:3c:41:56:44.3 -> 00:00:00:00:00:01.1
-DEBUG:openflow.of_01:1 connection aborted
-FromDevice(napt-eth1): recvfrom: Network is down
-FromDevice(lb-eth2): recvfrom: Network is down
-FromDevice(ids-eth1): recvfrom: Network is down
-FromDevice(lb-eth1): recvfrom: Network is down
-INFO:openflow.of_01:[00-00-00-00-00-03 11] closed
-INFO:openflow.of_01:[00-00-00-00-00-07 12] closed
-INFO:openflow.of_01:[00-00-00-00-00-02 13] closed
-INFO:openflow.of_01:[00-00-00-00-00-09 14] closed
-INFO:openflow.of_01:[00-00-00-00-00-04 15] closed
-INFO:openflow.of_01:[00-00-00-00-00-05 16] closed
-INFO:openflow.of_01:[00-00-00-00-00-06 17] closed
-INFO:openflow.of_01:[00-00-00-00-00-01 18] closed
-INFO:openflow.of_01:[00-00-00-00-00-08 19] closed
