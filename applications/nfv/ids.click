@@ -1,23 +1,26 @@
+define($PORT1 ids-eth1, $PORT2 ids-eth2)
+
+Script(print "Click IDS on $PORT1 $PORT2")
 Script(print "Test IDS if running?????")
 
-elementclass IPChecksumFixer{ $print |
-    input
-    -> SetIPChecksum
-    -> class::IPClassifier(tcp, -)
+elementclass IPChecksumFixer { $print |
+    input ->
+    SetIPChecksum ->
+    class::IPClassifier(tcp, -)
 
     class[0] -> Print(TCP, ACTIVE $print) -> SetTCPChecksum -> output
     class[1] -> Print(OTH, ACTIVE $print) -> output
 }
 
 // Use before passing to ToDevice
-elementclass FixedForwarder{ 
-    input
-    -> Strip(14)
-    -> SetIPChecksum
-    -> CheckIPHeader
-    -> IPChecksumFixer(0)
-    -> Unstrip(14)
-    -> output
+elementclass FixedForwarder {
+    input ->
+    Strip(14) ->
+    SetIPChecksum ->
+    CheckIPHeader ->
+    IPChecksumFixer(0) ->
+    Unstrip(14) ->
+    output
 }
 
 // Counter Definition
@@ -49,7 +52,7 @@ classify_HTTPmethod :: Classifier(
     66/504f5354,    // POST				   
     -               // Other		
 );
-										
+
 classify_PUT_keywords :: Classifier(
     0/636174202f6574632f706173737764,   //cat/etc/passwd  [0x63', '0x61', '0x74', '0x2f', '0x65', '0x74', '0x63', '0x2f', '0x70', '0x61', '0x73', '0x73', '0x77', '0x64']。
     0/636174202f7661722f6c6f67,         //cat/var/log ['0x63', '0x61', '0x74', '0x2f', '0x76', '0x61', '0x72', '0x2f', '0x6c', '0x6f', '0x67'] 
@@ -58,7 +61,7 @@ classify_PUT_keywords :: Classifier(
     0/44454C455445,         //DELETE ['0x44', '0x45', '0x4c', '0x45', '0x54', '0x45']
     -
 );
-        
+
 search_PUT_keywords :: Search("\r\n\r\n")
 
 // Check Client Packet Type
@@ -94,7 +97,7 @@ serverPacketType[0] -> serverARP -> toSWITCH;
 serverPacketType[1] -> serverIP -> FixedForwarder -> toSWITCH;
 serverPacketType[2] -> serverDrop -> Discard;
 
- DriverManager(wait, print > ./results/lb.report "
+DriverManager(wait, print > ./results/ids.report "
 =================== IDS Report ===================
 Input Packet rate (pps):    $(add $(switchInput.rate) $(serverInput.rate))
 Output Packet rate (pps):   $(add $(switchOutput.rate) $(serverOutput.rate))

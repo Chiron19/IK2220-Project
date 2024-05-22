@@ -33,12 +33,6 @@ Removes all junks added to different directories to run the application.
 Generate report with output files automatically.
 
 **about Click**
-```
-cd /opt/click
-make clean
-make -j4
-sudo make install
-```
 
 A more detailed troubleshooting, since some of you seems to face the same "Illegal instruction issue":
 
@@ -65,4 +59,4 @@ https://forums.virtualbox.org/viewtopic.php?f=25&t=99390
 
 However, I didn't validated these instructions and I don't recommend changing random settings unless you know what you are doing!
 
-Edited by Massimo Girondi on 15 May at 18:10
+-- Massimo Girondi on 15 May at 18:10

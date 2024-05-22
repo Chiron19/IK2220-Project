@@ -54,9 +54,6 @@ class FW2 (Firewall):
         The following is just a sample to give you the idea.
         """
 
-        # Hardware ports:
-# DmZ ----------------- 1 FW2 2 ------------ private-zone
-
         Firewall.__init__(self, connection, "FW2")
         self.rules = [
             # [1, 'any', 'any', 'any', 'any', 'any', 'allow'], 

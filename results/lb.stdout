@@ -1,3 +1,4 @@
+Click LB on lb-eth1 lb-eth2
 Test LB if running?????
 FromDevice(lb-eth2): recvfrom: Network is down
 FromDevice(lb-eth1): recvfrom: Network is down

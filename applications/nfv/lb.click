@@ -1,5 +1,9 @@
-// Element Definitions
+define($PORT1 lb-eth1, $PORT2 lb-eth2)
+
+Script(print "Click LB on $PORT1 $PORT2")
 Script(print "Test LB if running?????")
+
+// Element Definitions
 
 elementclass IPChecksumFixer { $print |
     input ->

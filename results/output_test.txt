@@ -5,6 +5,7 @@ Unable to contact the remote controller at 127.0.0.1:6633
 tcpdump on insp start
 ----------- Basic Ping Test-----------
 h1 ping h2 working as expected, ping True
+h3 ping h4 working as expected, ping True
 h3 ping h1 working as expected, ping True
 h1 ping h3 working as expected, ping False
 h3 ping h2 working as expected, ping True
@@ -26,5 +27,5 @@ h1 operates PUT IDS System works correctly
 h1 operates PUT IDS System works correctly
 h1 operates PUT IDS System works correctly
 h1 operates PUT IDS System works correctly
-Passed 19/19 tests.
+Passed 20/20 tests.
 mininet> 

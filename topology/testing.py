@@ -2,7 +2,10 @@ import topology
 from time import sleep
 
 def ping(client, server, expected, count=1, wait=1):
-
+    """
+    run ping for ICMP echo request. Default send 1 packet for efficiency
+    Server can only be a host
+    """
     # TODO: What if ping fails? How long does it take? Add a timeout to the command!
     cmd = f"ping {server.IP()} -c {count} -W {wait} >/dev/null 2>&1; echo $?"
     # print(f"Initiating ping test from client {client} to server {server}. Expected success: {expected}") 
@@ -60,6 +63,7 @@ def ping_virtual(client, expected, virtual_ip="100.0.0.45", count=1, wait=1):
     """
     ping virtual IP address, simply using ping function but substituting the dst_ip with the virtual IP address
     """
+
     cmd = f"ping {virtual_ip} -c {count} -W {wait} >/dev/null 2>&1; echo $?"
     sleep(1)
     ret = client.cmd(cmd)
@@ -75,6 +79,7 @@ def http_test(client, method, method2, payload="", expected=True, virtual_ip="10
     """
     http test, using curl function but with the virtual IP address and methods other than "GET"
     """
+
     cmd = f"curl --connect-timeout 3 --max-time 3 -X {method} -d '{payload}' -s {virtual_ip}{method2} > /dev/null 2>&1; echo $? "
     ret = client.cmd(cmd).strip()
 

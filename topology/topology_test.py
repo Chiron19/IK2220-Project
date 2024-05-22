@@ -88,6 +88,7 @@ def run_tests(net):
     # phase 2
     print("----------- Basic Ping Test-----------")   
     total_tests += 1; pass_tests += testing.ping(h1, h2, True)
+    total_tests += 1; pass_tests += testing.ping(h3, h4, True)
     total_tests += 1; pass_tests += testing.ping(h3, h1, True)
     total_tests += 1; pass_tests += testing.ping(h1, h3, False)
     total_tests += 1; pass_tests += testing.ping(h3, h2, True)
