@@ -27,9 +27,9 @@ elementclass FixedForwarder {
 // Counters
 
 clientInputCount, serverInputCount, clientOutputCount, serverOutputCount :: AverageCounter
-ArpReqSrvCounter, ArpReqExtCounter, ArpRspSrvCounter, ArpRspExtCounter :: Counter
-dropcountFromExtEth, dropcountFromExtIP, dropcountFromSvrEth, dropcountFromSvrIP :: Counter
-Lb1servedFromExtcounter, Lb1servedFromSrvcounter, IcmpFromExtcounter, IcmpFromIntcounter :: Counter
+ArpReqSrvCount, ArpReqExtCount, ArpRspSrvCount, ArpRspExtCount :: Counter
+dropFromExtEthCount, dropFromExtIPCount, dropFromSvrEthCount, dropFromSvrIPCount :: Counter
+Lb1servedFromExtCount, Lb1servedFromSrvCount, IcmpFromExtCount, IcmpFromIntCount :: Counter
 
 
 // Devices
@@ -95,28 +95,28 @@ ipRewrite[1] -> ipPacketClient
 
 fromClient -> clientInputCount -> ClientClassifier
 
-ClientClassifier[0] -> ArpReqExtCounter -> arpRespondClient -> toClient     // ARP request
-ClientClassifier[1] -> ArpRspExtCounter -> [1]arpQuerierClient              // ARP response
-ClientClassifier[2] -> Lb1servedFromExtcounter -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierClient  // IP
-ClientClassifier[3] -> dropcountFromExtEth -> Discard                       // Others
+ClientClassifier[0] -> ArpReqExtCount -> arpRespondClient -> toClient     // ARP request
+ClientClassifier[1] -> ArpRspExtCount -> [1]arpQuerierClient              // ARP response
+ClientClassifier[2] -> Lb1servedFromExtCount -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierClient  // IP
+ClientClassifier[3] -> dropFromExtEthCount -> Discard                       // Others
 
 // icmp
-ipPacketClassifierClient[0] -> IcmpFromExtcounter -> ICMPPingResponder -> ipPacketClient
+ipPacketClassifierClient[0] -> IcmpFromExtCount -> ICMPPingResponder -> ipPacketClient
 
 // permited ip packet, lb apply
 ipPacketClassifierClient[1] -> [0]ipRewrite
-ipPacketClassifierClient[2] -> dropcountFromExtIP -> Discard
+ipPacketClassifierClient[2] -> dropFromExtIPCount -> Discard
 
 fromServer -> serverInputCount -> ServerClassifier
 
-ServerClassifier[0] -> ArpReqSrvCounter -> arpRespondServer -> toServer         // ARP request
-ServerClassifier[1] -> ArpRspSrvCounter -> [1]arpQuerierServer                  // ARP response
-ServerClassifier[2] -> Lb1servedFromSrvcounter -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierServer  // IP
-ServerClassifier[3] -> dropcountFromSvrEth -> Discard                           // Others
+ServerClassifier[0] -> ArpReqSrvCount -> arpRespondServer -> toServer         // ARP request
+ServerClassifier[1] -> ArpRspSrvCount -> [1]arpQuerierServer                  // ARP response
+ServerClassifier[2] -> Lb1servedFromSrvCount -> FixedForwarder -> Strip(14) -> CheckIPHeader -> ipPacketClassifierServer  // IP
+ServerClassifier[3] -> dropFromSvrEthCount -> Discard                           // Others
 
-ipPacketClassifierServer[0] -> IcmpFromIntcounter -> ICMPPingResponder -> ipPacketServer
+ipPacketClassifierServer[0] -> IcmpFromIntCount -> ICMPPingResponder -> ipPacketServer
 ipPacketClassifierServer[1] -> [0]ipRewrite
-ipPacketClassifierServer[2] -> dropcountFromSvrIP -> Discard
+ipPacketClassifierServer[2] -> dropFromSvrIPCount -> Discard
 
 // Report
 DriverManager(wait, print > ./results/lb.report "
@@ -127,11 +127,11 @@ Output Packet Rate (pps):   $(add $(clientOutputCount.rate) $(serverOutputCount.
 Total # of  input packets:  $(add $(clientInputCount.count) $(serverInputCount.count))
 Total # of  output packets: $(add $(clientOutputCount.count) $(serverOutputCount.count))
 
-Total # of  ARP requests:   $(add $(ArpReqExtCounter.count) $(ArpReqSrvCounter.count))
-Total # of  ARP responses:  $(add $(ArpRspExtCounter.count) $(ArpRspSrvCounter.count))
+Total # of  ARP requests:   $(add $(ArpReqExtCount.count) $(ArpReqSrvCount.count))
+Total # of  ARP responses:  $(add $(ArpRspExtCount.count) $(ArpRspSrvCount.count))
 
-Total # of  service packets:    $(add $(Lb1servedFromSrvcounter.count) $(Lb1servedFromExtcounter.count))
-Total # of  ICMP packets:       $(add $(IcmpFromIntcounter.count) $(IcmpFromExtcounter.count))
-Total # of  dropped packets:    $(add $(dropcountFromSvrEth.count) $(dropcountFromSvrIP.count) $(dropcountFromExtEth.count) $(dropcountFromExtIP.count))
+Total # of  service packets:    $(add $(Lb1servedFromSrvCount.count) $(Lb1servedFromExtCount.count))
+Total # of  ICMP packets:       $(add $(IcmpFromIntCount.count) $(IcmpFromExtCount.count))
+Total # of  dropped packets:    $(add $(dropFromSvrEthCount.count) $(dropFromSvrIPCount.count) $(dropFromExtEthCount.count) $(dropFromExtIPCount.count))
 =================================================
 ")

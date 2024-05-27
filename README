@@ -60,3 +60,13 @@ https://forums.virtualbox.org/viewtopic.php?f=25&t=99390
 However, I didn't validated these instructions and I don't recommend changing random settings unless you know what you are doing!
 
 -- Massimo Girondi on 15 May at 18:10
+
+**dump packets**
+```
+sudo tcpdump -i lb-eth1 -w ./lb_server.pcap &
+sudo tcpdump -i lb-eth2 -w ./lb_client.pcap &
+sudo tcpdump -i ids-eth1 -w ./ids_server.pcap &
+sudo tcpdump -i ids-eth2 -w ./ids_client.pcap &
+sudo tcpdump -i napt-eth1 -w ./napt_server.pcap &
+sudo tcpdump -i napt-eth2 -w ./napt_client.pcap &
+```

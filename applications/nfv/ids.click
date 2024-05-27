@@ -31,7 +31,7 @@ fromSWITCH :: FromDevice(ids-eth2, METHOD LINUX, SNIFFER false);
 fromSERVER :: FromDevice(ids-eth1, METHOD LINUX, SNIFFER false);
 toSWITCH :: Queue -> switchOutput -> ToDevice(ids-eth2, METHOD LINUX);
 toSERVER :: Queue -> serverOutput-> ToDevice(ids-eth1, METHOD LINUX);
-toINSP :: Queue -> ToDevice(ids-eth3, METHOD LINUX);
+toINSP :: Queue -> toInsp -> ToDevice(ids-eth3, METHOD LINUX);
 
 serverPacketType, clientPacketType :: Classifier(
     12/0806,    // ARP
@@ -54,11 +54,11 @@ classify_HTTPmethod :: Classifier(
 );
 
 classify_PUT_keywords :: Classifier(
-    0/636174202f6574632f706173737764,   //cat/etc/passwd  [0x63', '0x61', '0x74', '0x2f', '0x65', '0x74', '0x63', '0x2f', '0x70', '0x61', '0x73', '0x73', '0x77', '0x64']。
-    0/636174202f7661722f6c6f67,         //cat/var/log ['0x63', '0x61', '0x74', '0x2f', '0x76', '0x61', '0x72', '0x2f', '0x6c', '0x6f', '0x67'] 
-    0/494E53455254,         //INSERT ['0x49', '0x4e', '0x53', '0x45', '0x52', '0x54']
-    0/555044415445,         //UPDATE ['0x55', '0x50', '0x44', '0x41', '0x54', '0x45']
-    0/44454C455445,         //DELETE ['0x44', '0x45', '0x4c', '0x45', '0x54', '0x45']
+    0/636174202f6574632f706173737764,   // cat/etc/passwd  [0x63', '0x61', '0x74', '0x2f', '0x65', '0x74', '0x63', '0x2f', '0x70', '0x61', '0x73', '0x73', '0x77', '0x64']
+    0/636174202f7661722f6c6f67,         // cat/var/log ['0x63', '0x61', '0x74', '0x2f', '0x76', '0x61', '0x72', '0x2f', '0x6c', '0x6f', '0x67'] 
+    0/494E53455254,         // INSERT ['0x49', '0x4e', '0x53', '0x45', '0x52', '0x54']
+    0/555044415445,         // UPDATE ['0x55', '0x50', '0x44', '0x41', '0x54', '0x45']
+    0/44454C455445,         // DELETE ['0x44', '0x45', '0x4c', '0x45', '0x54', '0x45']
     -
 );
 
@@ -77,18 +77,18 @@ classify_HTTP_others[0] -> httpPacket -> Unstrip(14) -> /*Print(TO_HTTP_CLASSIFI
 // Check HTTP Method
 classify_HTTPmethod[0] -> putOptions -> search_PUT_keywords;    // PUT, so we check keywords
 classify_HTTPmethod[1] -> postOptions -> toSERVER;              // POST, pass to server
-classify_HTTPmethod[2] -> toInsp -> toINSP;                     // Others, pass to INSP
+classify_HTTPmethod[2] -> toINSP;                               // Others, pass to INSP
 
 // If PUT, search for PUT data
 search_PUT_keywords[0] -> /*Print(AFTER_SEARCH, -1) ->*/ classify_PUT_keywords;
 search_PUT_keywords[1] -> toINSP;
 
 // If Harmful keywords found, sent to INSP, otherwise send to SERVER
-classify_PUT_keywords[0] -> UnstripAnno() -> toInsp -> toINSP;
-classify_PUT_keywords[1] -> UnstripAnno() -> toInsp -> toINSP;
-classify_PUT_keywords[2] -> UnstripAnno() -> toInsp -> toINSP;
-classify_PUT_keywords[3] -> UnstripAnno() -> toInsp -> toINSP;
-classify_PUT_keywords[4] -> UnstripAnno() -> toInsp -> toINSP;
+classify_PUT_keywords[0] -> UnstripAnno() -> toINSP;
+classify_PUT_keywords[1] -> UnstripAnno() -> toINSP;
+classify_PUT_keywords[2] -> UnstripAnno() -> toINSP;
+classify_PUT_keywords[3] -> UnstripAnno() -> toINSP;
+classify_PUT_keywords[4] -> UnstripAnno() -> toINSP;
 classify_PUT_keywords[5] -> /*Print(BEFORE_UNSTRIPAnnoToServer, -1) ->*/  UnstripAnno() -> Print(AFTER_UNSTRIP_TO_SERVER, -1) -> toSERVER;
 
 // For the Server Side, check packet type forward accordingly

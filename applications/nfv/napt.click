@@ -20,9 +20,11 @@ arpReplyExt :: ARPResponder(100.0.0.1 napt-eth1);
 
 arpRequestInt :: ARPQuerier(10.0.0.1, napt-eth2);
 arpRequestExt :: ARPQuerier(100.0.0.1, napt-eth1);
+// [0]arpRequestInt for handeling the response   accept IP packets   https://github.com/kohler/click/wiki/ARPQuerier
+// [1]arpRequestInt for sending a packet         accept including Eth-header
 
-ipNAT :: IPRewriter(pattern 100.0.0.1 20000-65535 - - 0 1);
-icmpNAT :: ICMPPingRewriter(pattern 100.0.0.1 20000-65535 - - 0 1);
+ipNAT :: IPRewriter(pattern 100.0.0.1 1024-65535 - - 0 1);
+icmpNAT :: ICMPPingRewriter(pattern 100.0.0.1 - - - 0 1);
 
 packetClassifierInt, packetClassifierExt :: Classifier(
     12/0806 20/0001,    //ARP request
@@ -38,16 +40,13 @@ ipClassifierInt, ipClassifierExt :: IPClassifier(
     -
 )
 
-// [0]arpRequestInt for handeling the response   accept IP packets   https://github.com/kohler/click/wiki/ARPQuerier
-// [1]arpRequestInt for sending a packet         accept including Eth-header
-// CheckIPHeader only forward valid packet 
 
-// when packet come in from prz
-fromInt -> fromPrz -> packetClassifierInt;
-// tell host its mac add
-packetClassifierInt[0] -> arpQueryInt -> arpReplyInt -> toInt;
-// knowing the mac update arp table
-packetClassifierInt[1] -> arpRespondInt -> [1]arpRequestInt;
+// CheckIPHeader only forward valid packet
+
+fromInt -> fromPrz -> packetClassifierInt; // when packet come in from prz
+
+packetClassifierInt[0] -> arpQueryInt -> arpReplyInt -> toInt; // tell host its mac add
+packetClassifierInt[1] -> arpRespondInt -> [1]arpRequestInt; // knowing the mac update arp table
 packetClassifierInt[2] -> Strip(14) -> CheckIPHeader -> ipClassifierInt;
 packetClassifierInt[3] -> dropInt -> Discard;
 
@@ -56,7 +55,8 @@ ipClassifierInt[1] -> icmpInt -> icmpNAT[0] -> [0]arpRequestExt -> toExt;
 ipClassifierInt[2] -> icmpEchoDropInt -> Discard;
 ipClassifierInt[3] -> icmpReplyDropInt -> Discard;
 
-fromExt -> fromDmz -> packetClassifierExt;
+fromExt -> fromDmz -> packetClassifierExt; // when packet come in from dmz / pbz
+
 packetClassifierExt[0] -> arpQueryExt -> arpReplyExt -> toExt;
 packetClassifierExt[1] -> arpRespondExt -> [1]arpRequestExt;
 packetClassifierExt[2] -> Strip(14) -> CheckIPHeader -> ipClassifierExt;
