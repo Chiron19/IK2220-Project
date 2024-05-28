@@ -7,6 +7,7 @@ from time import sleep
 from datetime import datetime
 import json
 import struct
+import app
 
 controller = None
 app = Flask(__name__)

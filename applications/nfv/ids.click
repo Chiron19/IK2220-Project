@@ -39,26 +39,24 @@ serverPacketType, clientPacketType :: Classifier(
     -           // Other
 );
 
-
-classify_HTTP_others:: IPClassifier(
-    psh,    // HTTP 
-    -       // Other, or Non-HTTP	
+classify_HTTP_others :: IPClassifier(
+    tcp and psh and dst port 80,    // HTTP
+    -                               // others
 );
 
-
 classify_HTTPmethod :: Classifier(
-    //66/474554,    // GET
-    66/505554,      // PUT
-    66/504f5354,    // POST				   
+    0/474554,       // GET
+    0/505554,       // PUT
+    0/504f5354,     // POST	   
     -               // Other		
 );
 
 classify_PUT_keywords :: Classifier(
-    0/636174202f6574632f706173737764,   // cat/etc/passwd  [0x63', '0x61', '0x74', '0x2f', '0x65', '0x74', '0x63', '0x2f', '0x70', '0x61', '0x73', '0x73', '0x77', '0x64']
-    0/636174202f7661722f6c6f67,         // cat/var/log ['0x63', '0x61', '0x74', '0x2f', '0x76', '0x61', '0x72', '0x2f', '0x6c', '0x6f', '0x67'] 
-    0/494E53455254,         // INSERT ['0x49', '0x4e', '0x53', '0x45', '0x52', '0x54']
-    0/555044415445,         // UPDATE ['0x55', '0x50', '0x44', '0x41', '0x54', '0x45']
-    0/44454C455445,         // DELETE ['0x44', '0x45', '0x4c', '0x45', '0x54', '0x45']
+    0/636174202f6574632f706173737764,   // cat /etc/passwd
+    0/636174202f7661722f6c6f67,         // cat /var/log
+    0/494E53455254,                     // INSERT
+    0/555044415445,                     // UPDATE
+    0/44454C455445,                     // DELETE
     -
 );
 
@@ -66,33 +64,46 @@ search_PUT_keywords :: Search("\r\n\r\n")
 
 // Check Client Packet Type
 fromSWITCH -> switchInput -> clientPacketType;
+
 clientPacketType[0] -> switchARP -> toSERVER;           // ARP
-clientPacketType[1] -> switchIP -> FixedForwarder -> Strip(14) ->  /*Print(CLIENT_IP_PACKETS, -1)->*/ classify_HTTP_others; // ip packets
+clientPacketType[1] -> switchIP 
+                    -> FixedForwarder 
+                    // -> Print(CLIENT_IP_PKT_IDS, -1) 
+                    -> Strip(14) 
+                    -> classify_HTTP_others; // ip packets
 clientPacketType[2] -> switchDrop -> Discard;           // others
 
 // Check HTTP vs Non-HTTP
-classify_HTTP_others[1] -> Unstrip(14) -> toSERVER;     // non-http 
-classify_HTTP_others[0] -> httpPacket -> Unstrip(14) -> /*Print(TO_HTTP_CLASSIFIER, -1) ->*/ classify_HTTPmethod;   // http
+classify_HTTP_others[0] -> httpPacket
+                        -> StripIPHeader()
+                        -> StripTCPHeader()
+                        // -> Print(HTTP_TO_CLASSIFIER, -1)
+                        -> classify_HTTPmethod;   // http
+classify_HTTP_others[1] // -> Print(NON_HTTP_TO_SERVER, -1)
+                        -> Unstrip(14) -> toSERVER;     // non-http
 
 // Check HTTP Method
-classify_HTTPmethod[0] -> putOptions -> search_PUT_keywords;    // PUT, so we check keywords
-classify_HTTPmethod[1] -> postOptions -> toSERVER;              // POST, pass to server
-classify_HTTPmethod[2] -> toINSP;                               // Others, pass to INSP
+classify_HTTPmethod[0] -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;                     // GET, pass to INSP
+classify_HTTPmethod[1] -> putOptions -> search_PUT_keywords;                                                    // PUT, check keywords
+classify_HTTPmethod[2] -> postOptions -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toSERVER;    // POST, pass to server
+classify_HTTPmethod[3] -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;                     // Others, pass to INSP
 
 // If PUT, search for PUT data
-search_PUT_keywords[0] -> /*Print(AFTER_SEARCH, -1) ->*/ classify_PUT_keywords;
-search_PUT_keywords[1] -> toINSP;
+search_PUT_keywords[0] -> classify_PUT_keywords; // strip to 2 CRLF pattern (where HTTP header ends)
+search_PUT_keywords[1] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;  // If no 2 CRLF pattern, pass to INSP
 
 // If Harmful keywords found, sent to INSP, otherwise send to SERVER
-classify_PUT_keywords[0] -> UnstripAnno() -> toINSP;
-classify_PUT_keywords[1] -> UnstripAnno() -> toINSP;
-classify_PUT_keywords[2] -> UnstripAnno() -> toINSP;
-classify_PUT_keywords[3] -> UnstripAnno() -> toINSP;
-classify_PUT_keywords[4] -> UnstripAnno() -> toINSP;
-classify_PUT_keywords[5] -> /*Print(BEFORE_UNSTRIPAnnoToServer, -1) ->*/  UnstripAnno() -> Print(AFTER_UNSTRIP_TO_SERVER, -1) -> toSERVER;
+classify_PUT_keywords[0] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;
+classify_PUT_keywords[1] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;
+classify_PUT_keywords[2] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;
+classify_PUT_keywords[3] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;
+classify_PUT_keywords[4] -> UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> toINSP;
+classify_PUT_keywords[5] -> /*Print(BEFORE_UNSTRIPAnnoToServer, -1) ->*/  UnstripAnno() -> UnstripTCPHeader() -> UnstripIPHeader() -> Unstrip(14) -> /*Print(AFTER_UNSTRIP_TO_SERVER, -1) ->*/ toSERVER;
 
-// For the Server Side, check packet type forward accordingly
+
+// Check Server Packet Type
 fromSERVER -> serverInput -> serverPacketType;
+
 serverPacketType[0] -> serverARP -> toSWITCH;
 serverPacketType[1] -> serverIP -> FixedForwarder -> toSWITCH;
 serverPacketType[2] -> serverDrop -> Discard;

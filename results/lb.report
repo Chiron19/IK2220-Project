@@ -1,15 +1,15 @@
 
 =================== LB1 Report ===================
-Input Packet Rate (pps):    3.74108207095
-Output Packet Rate (pps):   3.00753224109
+Input Packet Rate (pps):    2.93197231892
+Output Packet Rate (pps):   2.9650373901
 
-Total # of  input packets:  104
-Total # of  output packets: 63
+Total # of  input packets:  84
+Total # of  output packets: 64
 
-Total # of  ARP requests:   6
+Total # of  ARP requests:   8
 Total # of  ARP responses:  6
 
 Total # of  service packets:    54
 Total # of  ICMP packets:       4
-Total # of  dropped packets:    38
+Total # of  dropped packets:    16
 =================================================

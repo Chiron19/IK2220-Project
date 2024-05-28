@@ -43,6 +43,7 @@ clean:
 # @echo "$(SRC_FILES)"
 	if [ -n "$(SRC_FILES)" ]; then sudo rm -rf -v $(SRC_FILES); fi
 	- find . | grep -E "(__pycache__|.pyc$$)" | sudo xargs rm -rf
+# Note: the '-' in the front is to ignore any errors that might occur
 # rm -rf -v $(SRC_FILES)
 # - rm -rf -v /opt/pox/ext/!(*skeleton.py|README)
 # @echo $(CURDIR)

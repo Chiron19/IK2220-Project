@@ -103,11 +103,13 @@ def run_tests(net):
     total_tests += 1; pass_tests += testing.ping_virtual(h4, True)
 
     print("----------- HTTP method Test-----------")
+    # h1 curl -X PUT 100.0.0.45/put
     total_tests += 1; pass_tests += testing.http_test(h1, "GET", "/get", "", False)
     total_tests += 1; pass_tests += testing.http_test(h1, "POST", "/post", "", True)
     total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "", True)
 
     print("----------- Linux and SQL code injection Test-----------")
+    # h1 curl -X PUT -d 'cat /etc/passwd' -s 100.0.0.45/put
     total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "cat /etc/passwd ", False)
     total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "cat /var/log/ ", False)
     total_tests += 1; pass_tests += testing.http_test(h1, "PUT", "/put", "INSERT", False)
